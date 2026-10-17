@@ -39,7 +39,7 @@ jobs:
             -out .backup/pokkan-snapshot.tar.gz.enc \
             -pass env:BACKUP_ENCRYPTION_KEY
           rm -rf .backup/raw .backup/pokkan-snapshot.tar.gz
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: pokkan-production-snapshot-${{ github.run_id }}
           path: .backup/pokkan-snapshot.tar.gz.enc
