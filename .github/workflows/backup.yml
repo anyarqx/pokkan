@@ -22,7 +22,7 @@ jobs:
       SQUARE_APP_ID: ${{ vars.SQUARE_APP_ID }}
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Verify backup configuration
