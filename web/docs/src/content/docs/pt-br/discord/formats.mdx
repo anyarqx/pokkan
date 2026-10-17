@@ -1,0 +1,39 @@
+---
+title: Legacy ou Components V2
+description: Compare dois templates completos de painel de tickets e escolha o formato da mensagem.
+sidebar:
+  order: 3
+---
+
+import messages from "../../../../generated/messages.json";
+
+Legacy e Components V2 podem apresentar um anúncio parecido, mas organizam o conteúdo de formas diferentes. Legacy parte do texto comum e dos embeds. V2 monta uma sequência de textos, mídias e grupos, permitindo colocar um Botão ao lado da explicação de uma Seção.
+
+| Use Legacy quando precisar de                                 | Use Components V2 quando precisar de                                           |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [Texto comum](/pt-br/discord/message-content/) acima do corpo | Vários [Blocos de texto](/pt-br/discord/text-displays/) entre outros elementos |
+| [Embeds](/pt-br/discord/embeds/) com autor, campos e rodapé   | [Contêineres](/pt-br/discord/containers/) e [Seções](/pt-br/discord/sections/) |
+| Uma [enquete](/pt-br/discord/polls/)                          | Mais liberdade na ordem de textos, galerias e controles                        |
+| Blocos tradicionais de anúncio                                | Botão ou Miniatura ao lado de um grupo curto de textos                         |
+
+## O mesmo painel de suporte nos dois formatos
+
+Estes templates de tickets em inglês mostram a diferença com mensagens completas e editáveis. O painel Legacy coloca as instruções e a imagem em um embed, seguido de uma Linha de ação com o Botão de ticket. O painel V2 reúne imagem, instruções e Botão acessório de Seção em um Contêiner.
+
+### Template de tickets Legacy
+
+<div class="message-example" set:html={messages["pt-br"]["ticket-legacy"]} />
+
+### Template de tickets Components V2
+
+<div class="message-example" set:html={messages["pt-br"]["ticket-v2"]} />
+
+Os dois painéis são modelos para editar e exportar. Para abrir tickets de verdade, uma aplicação externa precisaria responder ao Botão, que usa o ID ilustrativo `ticket:create`. O envio direto da Pokkan por webhook não oferece essa ação e recusa esse Botão interativo. Use **Abrir no editor**, na barra acima do exemplo, para criar uma cópia editável na Pokkan.
+
+## Mantenha os formatos separados
+
+Os dois formatos aceitam Botões em posições compatíveis, mas V2 não pode conter também conteúdo Legacy, embeds, enquetes ou figurinhas. Colocar um embed dentro de um Contêiner não faz uma conversão válida: substitua-o pelos textos e mídias adequados ao formato V2.
+
+Depois que o Discord aceita uma mensagem como V2, essa opção não pode ser removida daquela mensagem publicada. A Pokkan atualmente envia mensagens novas, sem atualizar posts existentes. Guarde uma cópia antes de adaptar um modelo e use o [catálogo de elementos](/pt-br/discord/components/) para encontrar as peças equivalentes.
+
+Para um primeiro anúncio, siga [o guia Legacy](/pt-br/guide/first-message/). Para praticar a disposição, [experimente Components V2](/pt-br/guide/components-v2/).

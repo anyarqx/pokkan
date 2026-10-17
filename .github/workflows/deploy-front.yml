@@ -1,0 +1,35 @@
+name: Deploy frontend
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "web/front/**"
+      - "locales/**"
+      - "scripts/deploy-front.sh"
+      - ".github/workflows/deploy-front.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-frontend
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      VITE_API_ORIGIN: https://pokkan.squareweb.app
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/front/package-lock.json
+      - name: Verify deployment credential
+        run: test -n "$CLOUDFLARE_API_TOKEN"
+      - run: ./scripts/deploy-front.sh

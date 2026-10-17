@@ -1,0 +1,36 @@
+---
+title: String Select
+description: Write options with labels, values, descriptions and emoji and choose their initial state.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A String Select contains the options you write yourself, such as “Design” and “Programming”. Add it inside an empty Action Row, or choose String Select from Legacy's root menu to create the row automatically.
+
+Select it, write the visible prompt and open Configure. **Add option** creates another choice. Each option has a label shown to the reader, a value sent to the application, an optional description, optional emoji and a default-selection toggle. Label, value and description each allow up to 100 characters. The value is not a website address unless your application deliberately treats it as one.
+
+Use drag or move controls to reorder options, and remove unused entries. A menu supports up to 25 options. Keep minimum/maximum selection counts compatible with the available options and defaults. For one-choice questions, set both counts to one.
+
+<img
+  src="/screenshots/pokkan-string-select-settings.webp"
+  alt="String Select settings with selection counts and the start of its option list"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+<img
+  src="/screenshots/pokkan-string-select-options.webp"
+  alt="The option section scrolled to show label, value, description, emoji and default selection"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+The example below includes all five menu types. Its first row is the String Select. Open it to change the option labels without changing their stored values.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+Read [shared select settings](/en/discord/select-menus/) for custom IDs and disabled state. Choosing an option does not run an action in Pokkan.

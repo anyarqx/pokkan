@@ -1,0 +1,34 @@
+---
+title: Configurações de seleção
+description: Configure os campos comuns aos cinco tipos de seleção e saiba de onde vêm suas opções.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Um menu de seleção oferece escolhas e ocupa uma [Linha de ação](/pt-br/discord/action-rows/) inteira. Diferentemente de um Botão de link, ele envia a escolha para uma aplicação. A Pokkan permite montar seus dados, mas não implementa a ação associada, por isso o envio direto por webhook não aceita esses controles.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Selecione o menu, edite a indicação visível e abra **Configurar** para os campos restantes:
+
+| Campo              | Como afeta o menu                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| ID do componente   | Identificador numérico opcional, diferente do ID personalizado. Normalmente pode ficar vazio.                                          |
+| ID personalizado   | Identifica o menu para a aplicação, com até 100 caracteres. Não deve repetir outro controle interativo da mensagem.                    |
+| Placeholder        | Indicação antes da escolha, como “Escolha um assunto”. Não cria uma alternativa.                                                       |
+| Mínimo de seleções | Quantas opções precisam ser marcadas. O controle numérico atual começa em um.                                                          |
+| Máximo de seleções | Quantas opções podem ser marcadas, até 25, sem ficar abaixo do mínimo. No Select de texto também precisa caber nas opções disponíveis. |
+| Desabilitado       | Impede o uso do menu sem remover seus dados.                                                                                           |
+
+<img
+  src="/screenshots/pokkan-string-select-settings.webp"
+  alt="Configurações de Select de texto com quantidades e campos das opções"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+O [Select de texto](/pt-br/discord/string-selects/) contém as opções que você escreve. Os menus de [usuário](/pt-br/discord/user-selects/), [cargo](/pt-br/discord/role-selects/), [menção](/pt-br/discord/mentionable-selects/) e [canal](/pt-br/discord/channel-selects/) recebem suas opções do Discord. Seus valores iniciais usam IDs reais, não nomes inventados no editor.
+
+Uma escolha inicial não concede acesso a um usuário, cargo ou canal. Selecionar um cargo não o atribui a alguém. Se um ID deixar de existir ou não estiver disponível no destino, corrija-o ou remova-o, pois a prévia não verifica sua existência no servidor.

@@ -1,0 +1,42 @@
+---
+title: Action Rows
+description: Group Buttons or one select menu and see which controls fit each row.
+---
+
+import messages from "../../../../generated/messages.json";
+
+An Action Row keeps related controls together. It contains either **one to five Buttons** or **one select menu**. A menu occupies the row by itself, so you cannot add a Button beside it or combine two menus in the same row.
+
+In Legacy, the root insertion menu offers Buttons and the five menu types directly, creating the required row around your choice. In Components V2, add an **Action Row** at the message or Container level, then use the plus inside it to choose its child. An empty row remains an unfinished draft until it has a valid child.
+
+<div class="message-example" set:html={messages.en["button-styles"]} />
+
+## Choose what the row contains
+
+| Child                                                  | What the reader chooses    | Configuration                                                                  |
+| ------------------------------------------------------ | -------------------------- | ------------------------------------------------------------------------------ |
+| [Button](/en/discord/buttons/)                         | One visible action or link | Label, style, emoji, disabled state and the style's destination or identifier. |
+| [String Select](/en/discord/string-selects/)           | Options you write          | Each option's label, value, description, emoji and default state.              |
+| [User Select](/en/discord/user-selects/)               | Discord users              | Selection range and optional default users.                                    |
+| [Role Select](/en/discord/role-selects/)               | Server roles               | Selection range and optional default roles.                                    |
+| [Mentionable Select](/en/discord/mentionable-selects/) | Users and roles together   | Typed default entries distinguish a user from a role.                          |
+| [Channel Select](/en/discord/channel-selects/)         | Server channels            | Optional channel-type filter and default channels.                             |
+
+<img
+  src="/screenshots/pokkan-select-menus.webp"
+  alt="All five configured select menu types in the editor"
+  width="2560"
+  height="1520"
+  loading="lazy"
+  decoding="async"
+/>
+
+Select the row's surrounding edge to move, duplicate or remove the group. Select a Button or menu for that child's own controls. Dragging a child to another compatible row changes its parent, while moving the row keeps its children together. The insertion options reflect both row shape and the remaining message capacity.
+
+## What works when sending
+
+Link Buttons open their address without an application action. The other ordinary Button styles and select menus send interactions to a Discord application. Pokkan can author their message data, but does not execute actions, assign roles or run commands. Its direct webhook delivery rejects controls that require those interactions instead of pretending they work.
+
+Legacy supports up to five rows. In V2, a row and every child count toward the message's 40-component capacity. Pokkan keeps room for the missing child of an empty row, so another insertion cannot use up the capacity needed to finish it.
+
+The [shared select settings](/en/discord/select-menus/) explain custom IDs, defaults and selection counts. Discord's [component reference](https://docs.discord.com/developers/components/reference#action-row) describes the row payload.

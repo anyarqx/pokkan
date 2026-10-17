@@ -1,0 +1,61 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Community help desk — Components V2",
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 17,
+        "accent_color": 4232848,
+        "components": [
+          {
+            "type": 10,
+            "content": "# How can we help?\nContact the support team about an account issue, a purchase or a community question."
+          },
+          {
+            "type": 12,
+            "items": [
+              {
+                "media": {
+                  "url": "https://docs.pokkan.net/examples/ticket-v2.webp"
+                },
+                "description": "Community help desk: questions, requests and support."
+              }
+            ]
+          },
+          {
+            "type": 14,
+            "spacing": 1,
+            "divider": true
+          },
+          {
+            "type": 9,
+            "components": [
+              {
+                "type": 10,
+                "content": "## Start a ticket\nDescribe one issue and include the details the team needs. Never share passwords or authentication codes."
+              }
+            ],
+            "accessory": {
+              "type": 2,
+              "style": 1,
+              "label": "Open ticket",
+              "emoji": {
+                "name": "🎟️"
+              },
+              "custom_id": "ticket:create"
+            }
+          },
+          {
+            "type": 10,
+            "content": "-# Please avoid opening several tickets for the same issue."
+          }
+        ]
+      }
+    ]
+  },
+  "arguments": [],
+  "placeholders": []
+}

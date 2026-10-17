@@ -1,0 +1,14 @@
+---
+title: Attachments and reply references
+description: Edit attachment records and reply references and check their webhook delivery restrictions.
+---
+
+Imported Legacy messages can contain attachment records. They appear in the editor with item controls for moving, duplicating and deleting, but Pokkan does not currently provide file upload. A stored attachment record is metadata, not a copy of the original file.
+
+A V2 [File](/en/discord/files/) or media item can refer to an attachment that a sender supplies. Neither adding that component nor importing an old Discord response uploads the underlying file. Direct webhook Send rejects attachment uploads requiring multipart data.
+
+Reply references identify another Discord message. Open the blank canvas context menu and choose **Reply to** to configure the message ID and related reference fields. An existing reply line can be clicked to reopen those settings. The replied-user mention setting controls whether that author is included in the permitted mentions.
+
+Pokkan can keep reply data for payload interoperability, but the direct webhook transport does not support every general message field. Check the Send compatibility message rather than assuming a visible reply line means the webhook can deliver it.
+
+Use a [Link Button](/en/discord/buttons/) for a website destination and [JSON export](/en/using-pokkan/import-export/) when another sender needs the message data.

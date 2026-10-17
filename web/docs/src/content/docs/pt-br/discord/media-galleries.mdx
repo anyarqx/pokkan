@@ -1,0 +1,32 @@
+---
+title: Galerias de mídia
+description: Reúna mídias em V2, organize os itens e corrija endereços que não carregam.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Uma Galeria de mídia mostra de um a dez itens como uma coleção em Components V2. Adicione-a na raiz da mensagem ou em um Contêiner e clique na área da primeira imagem para informar seu endereço.
+
+Selecione a borda da galeria e abra Configurar para adicionar, remover e ordenar os itens. Cada entrada tem descrição e endereço próprios, e cada imagem tem um controle individual de spoiler no editor. Selecionar uma imagem para trocar sua URL é diferente de selecionar a galeria inteira para excluir ou duplicar o grupo.
+
+<div
+  class="message-example"
+  set:html={messages["pt-br"]["component-workshop"]}
+/>
+
+<img
+  src="/screenshots/pokkan-gallery-controls.webp"
+  alt="Galeria selecionada com controles da coleção e ícones individuais de spoiler"
+  width="2560"
+  height="1752"
+  loading="lazy"
+  decoding="async"
+/>
+
+## Endereços de mídia
+
+Use uma URL que devolva a própria mídia, não um caminho do computador ou uma página de hospedagem. Experimente abri-la em uma janela anônima: se exigir sua conta ou mostrar uma página de compartilhamento, o Discord pode não conseguir carregar o arquivo. Mesmo um endereço terminado em uma extensão de imagem pode estar bloqueado pelo site.
+
+Clique na imagem existente ou indisponível para corrigir seu endereço. A Pokkan mantém o valor inválido para permitir a correção, sem trocá-lo por outro conteúdo. A prévia carrega a mídia do site de origem, que pode receber informações dessa requisição. Isso não envia o arquivo à Pokkan.
+
+Para enviar uma galeria, mantenha pelo menos um item e forneça mídia válida para cada entrada. Excluir o último deixa o grupo incompleto. Veja [Itens de galeria](/pt-br/discord/gallery-items/) para descrições, spoilers e ordem.

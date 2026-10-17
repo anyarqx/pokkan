@@ -1,0 +1,18 @@
+---
+title: Arquivos
+description: Configure uma referência a um anexo em V2 e entenda por que ela não faz upload do arquivo.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Em Components V2, use **Arquivo** para apresentar um anexo dentro da mensagem ou de um Contêiner. Ele depende dos dados do anexo e não funciona como um link genérico ou controle de upload.
+
+<div class="message-example" set:html={messages["pt-br"]["file-workshop"]} />
+
+Clique na área do arquivo para editar sua referência, como `attachment://workshop-notes.pdf`. Esse nome precisa corresponder a um anexo enviado junto da mensagem. Digitá-lo não fornece os dados do arquivo nem disponibiliza um documento do computador ao Discord.
+
+Os controles oferecem spoiler, Configurar para o ID opcional, exclusão e as ações comuns de componente. O spoiler oculta a apresentação até ser revelado, mantendo a referência na mensagem.
+
+O envio atual pelo navegador não fornece os dados dos anexos, por isso não consegue entregar esse exemplo sozinho. Você pode manter o Kit ou exportar o Payload do Discord para uma ferramenta que envie a mensagem junto com o arquivo. Para um recurso já disponível em um site, um [Botão de link](/pt-br/discord/buttons/) pode ser mais adequado.
+
+Consulte [Anexos e respostas](/pt-br/discord/attachments-replies/) para distinguir os dados de anexo da mensagem do componente Arquivo V2.

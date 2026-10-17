@@ -1,0 +1,38 @@
+mysql: &mysql
+  adapter: mysql2
+  encoding: utf8mb4
+  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+  username: <%= ENV.fetch("DB_USER", "root") %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
+  port: <%= ENV.fetch("DB_PORT", 3306) %>
+
+development:
+  <% if ENV["DB_ADAPTER"] == "sqlite3" %>
+  adapter: sqlite3
+  database: <%= ENV.fetch("SQLITE_DATABASE", Rails.root.join("storage/pokkan_the_bot_development.sqlite3")) %>
+  <% else %>
+  <<: *mysql
+  database: <%= ENV.fetch("DB_NAME", "pokkan_the_bot_development") %>
+  <% end %>
+
+test:
+  <% if ENV["DB_ADAPTER"] == "sqlite3" %>
+  adapter: sqlite3
+  database: <%= ENV.fetch("SQLITE_DATABASE", Rails.root.join("tmp/pokkan_the_bot_test.sqlite3")) %>
+  <% else %>
+  <<: *mysql
+  database: <%= ENV.fetch("DB_TEST_NAME", "pokkan_the_bot_test") %>
+  <% end %>
+
+production:
+  <% if ENV["DB_ADAPTER"] == "sqlite3" %>
+  adapter: sqlite3
+  database: <%= ENV.fetch("SQLITE_DATABASE", Rails.root.join("storage/pokkan_the_bot_production.sqlite3")) %>
+  timeout: <%= ENV.fetch("SQLITE_TIMEOUT", 5_000) %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 3) %>
+  <% else %>
+  <<: *mysql
+  database: <%= ENV.fetch("DB_NAME", "pokkan_the_bot_production") %>
+  username: <%= ENV.fetch("DB_USER", "pokkan") %>
+  <% end %>

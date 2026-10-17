@@ -1,0 +1,31 @@
+---
+title: Polls
+description: Edit poll answers, emoji, duration and multiple-selection behavior.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A poll asks one question and offers choices people can vote on in Discord. It belongs to Legacy, not Components V2. Start from the example below or choose **Poll** in a Legacy insertion menu.
+
+<div class="message-example" set:html={messages.en["poll-workshop"]} />
+
+Click the question and each answer to write. The question accepts up to 300 characters and each answer up to 55. These fields are plain text, so Markdown does not turn them into headings or links. Add choices with the plus below the answers. Pokkan keeps between two and ten answers.
+
+## Duration, emoji and multiple choices
+
+Select the poll's edge to show its controls. The **clock** opens a field for a whole number of hours from 1 to 768. Enter applies and closes, while Escape closes the popover. The duration begins when the poll is created in Discord, not when you open the Kit.
+
+<img
+  src="/screenshots/pokkan-poll-controls.webp"
+  alt="Selected poll with duration popover and multiple-answer control"
+  width="2560"
+  height="1518"
+  loading="lazy"
+  decoding="async"
+/>
+
+The multiple-answer toggle allows voters to choose several alternatives without changing the stored answers. Each [answer](/en/discord/poll-answers/) has its own emoji control and list actions. Search for Unicode emoji or enter a custom Discord emoji ID, then use the answer's menu or move control to reorder it.
+
+Removing answers stops at two and duplicating stops at ten. To delete the entire poll, select its edge and use its trash control. Undo recovers the removed poll.
+
+The preview does not collect votes or show live results. Confirm the question, choices and duration in a test channel after sending. Editing the Kit does not update a poll already posted, and sending again creates another message. Continue with [Send](/en/guide/send/) or [the control reference](/en/using-pokkan/controls/).

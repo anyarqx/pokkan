@@ -1,0 +1,254 @@
+.account-page {
+  width: min(100% - 48px, 960px);
+  margin: 32px auto 64px;
+}
+
+.account-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  margin-top: 20px;
+}
+
+.account-profile-identity > img,
+.account-profile-identity > svg {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-profile-identity > div {
+  min-width: 0;
+}
+
+.account-profile-identity h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+
+.account-profile-identity p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.account-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: start;
+  gap: 36px;
+  margin-top: 28px;
+}
+
+.account-servers {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.account-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.account-section-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.account-servers > p {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.account-context-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.account-context-entry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.account-context-row {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: 64px;
+  padding: 12px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+}
+
+.account-context-row:hover {
+  background: var(--raised-hover);
+}
+
+.account-context-row[aria-pressed="true"] {
+  background: var(--selected);
+  box-shadow: inset 2px 0 var(--accent);
+}
+
+.account-context-row > :not(.account-guild-banner) {
+  position: relative;
+  z-index: 1;
+}
+
+.account-context-row > img:first-child,
+.account-context-row > svg:first-child {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.account-context-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.account-context-name strong,
+.account-context-name small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.account-context-name strong {
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.account-context-name small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.account-context-action {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.account-context-entry > .icon-button {
+  flex: 0 0 36px;
+  margin-right: 6px;
+}
+
+.account-guild-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.account-preferences {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.account-preferences label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.account-preferences select {
+  width: 100%;
+}
+
+.account-preferences .button {
+  align-self: start;
+  margin-top: 6px;
+}
+
+.account-metadata {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.account-signin {
+  margin-top: 22px;
+}
+
+@media (max-width: 700px) {
+  .account-page {
+    width: calc(100% - 32px);
+    margin-top: 24px;
+  }
+  .account-page-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    margin-top: 24px;
+  }
+  .account-preferences {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 190px) minmax(0, 1fr);
+    align-items: center;
+    gap: 8px 16px;
+    padding: 0;
+  }
+  .account-preferences label {
+    grid-column: 1 / -1;
+  }
+  .account-servers {
+    grid-row: 2;
+  }
+  .account-preferences .button {
+    margin: 0;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 360px) {
+  .account-context-row {
+    gap: 8px;
+    padding: 10px;
+  }
+  .account-preferences {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .account-preferences .button {
+    justify-self: start;
+  }
+}

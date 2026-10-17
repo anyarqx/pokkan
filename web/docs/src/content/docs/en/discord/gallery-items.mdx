@@ -1,0 +1,21 @@
+---
+title: Gallery items
+description: Edit each gallery item's media address, description, order and spoiler state.
+---
+
+A gallery item is one image or supported media entry inside a [Media Gallery](/en/discord/media-galleries/). It is not an independently addable root component.
+
+Click the media in the canvas to edit its URL. For the collection, select the gallery border and open Configure: **Add item** creates another entry, description explains that entry, and the move buttons or drag handles change the order. Removing an entry does not remove the other gallery items.
+
+<img
+  src="/screenshots/pokkan-gallery-settings.webp"
+  alt="Gallery configuration showing its item descriptions and ordering controls"
+  width="1216"
+  height="1194"
+  loading="lazy"
+  decoding="async"
+/>
+
+Use an item's spoiler control to hide only that item. This differs from a Container spoiler, which hides the whole group. Descriptions can explain a chart or identify what a photo shows without adding text to the message body.
+
+The editor supports up to ten entries in a gallery. Item changes participate in Undo/Redo, including spoiler changes and reordering. Before deleting the gallery, check that the outer collection rather than an individual image is selected.

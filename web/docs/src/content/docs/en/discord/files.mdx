@@ -1,0 +1,18 @@
+---
+title: Files
+description: Set a V2 attachment reference and understand why it does not upload the file.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A File component displays an attached file in Components V2. It can sit at message level or inside a Container. It is not a general website link or an upload control.
+
+<div class="message-example" set:html={messages.en["file-workshop"]} />
+
+Click the file area to edit its attachment reference, such as `attachment://workshop-notes.pdf`. That name must match an attachment supplied with the message. Typing it does not supply the file bytes or make an arbitrary local document available to Discord.
+
+The node controls offer spoiler, Configure for the optional component ID, deletion and the usual component actions. A spoiler hides the file presentation until revealed. The reference remains in the message.
+
+Pokkan's current browser Send flow does not upload multipart attachments, so it cannot deliver this example by itself. Keep the Kit or export its Discord payload for a compatible sender that also supplies the attachment. For a downloadable resource already on a website, a [Link Button](/en/discord/buttons/) may be the appropriate choice.
+
+See [Attachments and replies](/en/discord/attachments-replies/) for the distinction between the message attachment data and a V2 File component.

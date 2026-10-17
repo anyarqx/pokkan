@@ -1,0 +1,21 @@
+---
+title: Poll answers
+description: Edit answer text and emoji and change the order of choices in a poll.
+---
+
+Each poll answer combines plain text with an optional emoji. Answers belong inside a [Poll](/en/discord/polls/), not to the message root or an Action Row.
+
+Click an answer to write its text. Its emoji control opens the same picker used by Buttons: search Unicode emoji, browse categories or enter a custom Discord emoji ID. A poll answer does not become a Markdown link when you type link syntax.
+
+Use the plus below the answers to add another, up to ten. Pokkan keeps at least two answers, so deletion stops at that minimum. The answer's More actions menu offers duplication and movement when possible, and the move control changes its position without changing the question.
+
+<img
+  src="/screenshots/pokkan-poll-controls.webp"
+  alt="Poll with answer emoji controls, multiple-choice toggle and duration popover"
+  width="2560"
+  height="1518"
+  loading="lazy"
+  decoding="async"
+/>
+
+The duration and multiple-answer setting belong to the poll as a whole. They do not change how many answers are stored. Undo restores removed answers or previous text, and the preview does not submit a real Discord vote.

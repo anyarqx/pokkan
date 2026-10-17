@@ -1,0 +1,96 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Workshop planning",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 10,
+        "content": "## Plan Saturday's workshop\nChoose a topic and the people who will help organize it."
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 3,
+            "custom_id": "topic",
+            "placeholder": "Choose a workshop topic",
+            "min_values": 1,
+            "max_values": 1,
+            "options": [
+              {
+                "label": "Design",
+                "value": "design",
+                "description": "Discuss layouts and visual ideas",
+                "emoji": {
+                  "name": "🎨"
+                }
+              },
+              {
+                "label": "Programming",
+                "value": "programming",
+                "description": "Share code and ask questions",
+                "emoji": {
+                  "name": "💻"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 5,
+            "custom_id": "people",
+            "placeholder": "Choose people",
+            "min_values": 1,
+            "max_values": 1
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 6,
+            "custom_id": "roles",
+            "placeholder": "Choose roles",
+            "min_values": 1,
+            "max_values": 1
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 7,
+            "custom_id": "mentionables",
+            "placeholder": "Choose people or roles",
+            "min_values": 1,
+            "max_values": 1
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 8,
+            "custom_id": "channels",
+            "placeholder": "Choose a channel",
+            "min_values": 1,
+            "max_values": 1,
+            "channel_types": [0, 2]
+          }
+        ]
+      }
+    ]
+  }
+}

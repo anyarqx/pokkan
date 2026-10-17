@@ -1,0 +1,40 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Community support — Legacy",
+  "message": {
+    "content": "Need a hand? Our support team is here to help.",
+    "embeds": [
+      {
+        "title": "Open a support ticket",
+        "description": "Tell us what you need help with and include any details that will help the team understand the issue.\n\n**Before opening a ticket**\nCheck the pinned answers for common questions. Please open one ticket per issue and never send passwords or authentication codes.",
+        "color": 5793266,
+        "image": {
+          "url": "https://docs.pokkan.net/examples/ticket-legacy.webp"
+        },
+        "footer": {
+          "text": "Community support · One ticket per issue"
+        }
+      }
+    ],
+    "components": [
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 2,
+            "style": 1,
+            "label": "Open a ticket",
+            "emoji": {
+              "name": "🎫"
+            },
+            "custom_id": "ticket:create"
+          }
+        ]
+      }
+    ]
+  },
+  "arguments": [],
+  "placeholders": []
+}

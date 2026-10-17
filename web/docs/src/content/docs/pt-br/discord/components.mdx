@@ -1,0 +1,57 @@
+---
+title: Todos os elementos da mensagem
+description: Consulte os elementos disponíveis em Legacy e V2 e veja onde cada um pode ser inserido.
+---
+
+Escolha o formato antes de montar a estrutura. **Legacy** combina texto comum, embeds, enquete e linhas de controles. **Components V2** organiza blocos de texto, mídia e componentes de disposição. Cada sinal de mais oferece apenas os elementos permitidos naquele lugar.
+
+## Legacy
+
+| Elemento                                                  | Onde fica                       | O que permite                                              |
+| --------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------- |
+| [Conteúdo](/pt-br/discord/message-content/)               | Uma vez, na mensagem            | Texto acima de embeds, que pode ser removido por completo. |
+| [Embed](/pt-br/discord/embeds/)                           | Na mensagem                     | Título, descrição, campos, mídia, autor e rodapé.          |
+| [Campo de embed](/pt-br/discord/embed-fields/)            | Dentro do embed                 | Um par de nome e valor, em linha ou largura total.         |
+| [Enquete](/pt-br/discord/polls/)                          | Uma vez, na mensagem            | Pergunta, respostas, duração e múltiplas escolhas.         |
+| [Resposta de enquete](/pt-br/discord/poll-answers/)       | Dentro da enquete               | Uma alternativa com emoji opcional.                        |
+| [Linha de ação](/pt-br/discord/action-rows/)              | Na mensagem                     | Um grupo de Botões ou um menu de seleção.                  |
+| [Anexos e respostas](/pt-br/discord/attachments-replies/) | Dados importados ou da mensagem | Edição disponível e restrições de envio atuais.            |
+
+<img
+  src="/screenshots/pokkan-legacy-insert.webp"
+  alt="Menu de inserção Legacy com texto, embed, enquete e controles de linha"
+  width="2560"
+  height="2682"
+  loading="lazy"
+  decoding="async"
+/>
+
+## Components V2
+
+| Elemento                                            | Pai permitido                | Para que serve                                |
+| --------------------------------------------------- | ---------------------------- | --------------------------------------------- |
+| [Contêiner](/pt-br/discord/containers/)             | Mensagem                     | Agrupar conteúdo com cor ou spoiler opcional. |
+| [Seção](/pt-br/discord/sections/)                   | Mensagem ou Contêiner        | De um a três textos ao lado de um acessório.  |
+| [Bloco de texto](/pt-br/discord/text-displays/)     | Mensagem, Contêiner ou Seção | Texto com formatação.                         |
+| [Miniatura](/pt-br/discord/thumbnails/)             | Apenas acessório de Seção    | Imagem pequena ao lado do texto.              |
+| [Galeria de mídia](/pt-br/discord/media-galleries/) | Mensagem ou Contêiner        | Coleção de mídias.                            |
+| [Item de galeria](/pt-br/discord/gallery-items/)    | Dentro da galeria            | Endereço, descrição e spoiler de uma mídia.   |
+| [Arquivo](/pt-br/discord/files/)                    | Mensagem ou Contêiner        | Referência a um arquivo anexado.              |
+| [Separador](/pt-br/discord/separators/)             | Mensagem ou Contêiner        | Espaço com divisória opcional.                |
+| [Linha de ação](/pt-br/discord/action-rows/)        | Mensagem ou Contêiner        | Botões ou um menu de seleção.                 |
+
+<img
+  src="/screenshots/pokkan-v2-insert.webp"
+  alt="Menu da raiz V2 com Contêiner, Seção, Bloco de texto, Galeria, Arquivo, Separador e Linha de ação"
+  loading="lazy"
+  width="2560"
+  height="2138"
+/>
+
+## Controles dentro de linhas e Seções
+
+Um [Botão](/pt-br/discord/buttons/) pode ficar na Linha de ação ou no acessório único de uma Seção. A linha também pode receber um único [Select de texto](/pt-br/discord/string-selects/), [Select de usuário](/pt-br/discord/user-selects/), [Select de cargo](/pt-br/discord/role-selects/), [Select de menção](/pt-br/discord/mentionable-selects/) ou [Select de canal](/pt-br/discord/channel-selects/).
+
+Contêineres não podem conter outros Contêineres. Seções não aceitam galerias ou linhas em sua lista de textos. Botões e Miniaturas não são peças livres na raiz. Por isso uma opção pode aparecer em um sinal de mais e não em outro.
+
+A [referência de controles](/pt-br/using-pokkan/controls/) ajuda a identificar os ícones de um elemento selecionado. A [validação](/pt-br/using-pokkan/validation/) explica estruturas incompletas e capacidade. Componentes importados ainda não suportados são preservados no formato **Kit Pokkan**, mas não aparecem no **Payload do Discord** nem entre as opções de inserção.

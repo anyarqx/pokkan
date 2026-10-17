@@ -1,0 +1,45 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Next workshop",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "content": "Help us plan the next workshop.",
+    "poll": {
+      "question": {
+        "text": "What would you like to work on?"
+      },
+      "answers": [
+        {
+          "poll_media": {
+            "text": "Design",
+            "emoji": {
+              "name": "🎨"
+            }
+          }
+        },
+        {
+          "poll_media": {
+            "text": "Programming",
+            "emoji": {
+              "name": "💻"
+            }
+          }
+        },
+        {
+          "poll_media": {
+            "text": "Writing",
+            "emoji": {
+              "name": "📝"
+            }
+          }
+        }
+      ],
+      "duration": 24,
+      "allow_multiselect": true,
+      "layout_type": 1
+    }
+  }
+}

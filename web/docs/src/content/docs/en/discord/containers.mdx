@@ -1,0 +1,25 @@
+---
+title: Containers
+description: Group V2 content, set an accent or spoiler, and move or duplicate the group.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Container groups V2 content inside one bordered surface. Use it for a complete event notice: a heading, a Section with a thumbnail, a gallery and a row of links can stay together when you move or duplicate the Container.
+
+<div class="message-example" set:html={messages.en["component-workshop"]} />
+
+Add **Container** from a V2 root plus, then use its internal insertion points for Text Displays, Sections, galleries, Files, Separators or Action Rows. Another Container cannot be placed inside it. To select the group rather than a child, click its surrounding edge.
+
+The node controls offer accent color and spoiler. Clearing the color removes the chosen accent. Spoiler hides the group's contents until revealed, rather than deleting them. Configure contains the optional component ID. Deleting the Container removes its children too, while Undo restores the group.
+
+<img
+  src="/screenshots/pokkan-components-complete.webp"
+  alt="V2 editor with a Container grouping text, a Section, gallery and link row"
+  width="2560"
+  height="1752"
+  loading="lazy"
+  decoding="async"
+/>
+
+Use [Sections](/en/discord/sections/) for text beside one accessory, or [Separators](/en/discord/separators/) for breathing room between children. The Container and every nested component count toward capacity.

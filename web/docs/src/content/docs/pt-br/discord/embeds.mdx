@@ -1,0 +1,71 @@
+---
+title: Embeds
+description: Preencha título, descrição, campos, autor, imagens, rodapé e data de um embed.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Um embed reúne os detalhes de um anúncio abaixo do texto comum. No exemplo, o autor identifica a série de encontros, o título leva à sua página e os campos separam o local do que levar.
+
+<div class="message-example" set:html={messages["pt-br"]["embed-workshop"]} />
+
+## Adicione e preencha um embed
+
+Na mensagem Legacy, abra **Adicionar elemento** abaixo da mensagem e escolha **Embed**. Clique no título ou na descrição para escrever e selecione a borda para acessar os controles. A cor altera a faixa lateral, enquanto **Configurar** reúne autor, rodapé, link do título e data.
+
+<img
+  src="/screenshots/pokkan-embed-complete.webp"
+  alt="Anúncio com autor, título, descrição, campos, miniatura, imagem e rodapé no editor"
+  width="2560"
+  height="2254"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Campo     | Onde editar                      | Como usar                                                                                                |
+| --------- | -------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Título    | No próprio título                | Cabeçalho de até 256 caracteres. O destino do link fica em Configurar.                                   |
+| Descrição | No texto abaixo do título        | Explicação principal com até 4.096 caracteres. A barra oferece a formatação adequada ao campo.           |
+| Cor       | No controle do embed selecionado | Seletor ou código hexadecimal de seis dígitos. Limpar remove a escolha, enquanto preto é uma cor válida. |
+| Campos    | No sinal de mais dentro do embed | Pares de nome e valor para datas, locais ou requisitos. As duas partes precisam de texto.                |
+
+A página [Campos de embed](/pt-br/discord/embed-fields/) explica a disposição, a duplicação e a ordem desses pares.
+
+## Autor, link do título, rodapé e data
+
+Abra **Configurar** nos controles do embed. Essas propriedades não alteram a identidade do webhook: preencher o autor aqui não muda o nome de quem aparece enviando a mensagem.
+
+<img
+  src="/screenshots/pokkan-embed-settings.webp"
+  alt="Configurações do embed com todos os campos de autor, rodapé, URL do título e data"
+  width="1216"
+  height="1494"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Configuração           | Resultado                                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nome do autor          | Texto acima do título, como “Encontros da comunidade”, com até 256 caracteres.                                                              |
+| URL do autor           | Endereço aberto ao clicar no nome do autor. Use uma URL HTTPS completa.                                                                     |
+| URL do ícone do autor  | Imagem pequena ao lado do nome, fornecida por um endereço público.                                                                          |
+| Texto do rodapé        | Texto abaixo do conteúdo, com até 2.048 caracteres, para uma fonte ou detalhe final.                                                        |
+| URL do ícone do rodapé | Imagem pequena ao lado do rodapé.                                                                                                           |
+| URL do embed           | Destino do título. Não transforma todo o embed em um link.                                                                                  |
+| Data e hora            | Data no formato ISO, como `2026-10-24T18:00:00Z`. A prévia a apresenta conforme o ambiente de quem vê. Deixe vazio se não precisar de data. |
+
+O link só aparece quando há texto no nome ou título associado. Se você preencheu a URL do embed, mas não vê o link, confira o título. Autor e rodapé usam texto simples, sem as ferramentas de Markdown da descrição.
+
+## Miniatura e imagem
+
+A miniatura fica ao lado do texto, enquanto a imagem ocupa a área maior abaixo dele. Quando estiverem ausentes, selecione o embed e use o controle de mídia correspondente. Quando já houver imagem, clique nela para trocar o endereço. Limpar a URL remove aquela mídia.
+
+Use uma URL pública que abra a imagem diretamente. Uma página de compartilhamento costuma ser HTML, não o arquivo que o Discord precisa carregar. A mídia continua no site de origem e pode deixar de funcionar se o endereço expirar ou for bloqueado. Consulte [Endereços de mídia](/pt-br/discord/media-galleries/#endereços-de-mídia) para conferir uma imagem indisponível.
+
+## Limites e correções
+
+Uma mensagem Legacy aceita até 10 embeds, com até 25 campos em cada um. O nome de um campo aceita 256 caracteres e seu valor, 1.024. A soma de títulos, descrições, campos, nomes de autor e rodapés de todos os embeds não pode passar de 6.000 caracteres. Acrescentar outro embed não reinicia esse total.
+
+Preencha ou remova campos vazios indicados pela validação. Quando o problema for o total, reduza repetições ao longo da mensagem. Embeds não entram em Components V2: use [Contêineres](/pt-br/discord/containers/) para agrupar conteúdo nesse formato.
+
+A [referência de embeds do Discord](https://docs.discord.com/developers/resources/message#embed-object) descreve os dados correspondentes a esses controles.

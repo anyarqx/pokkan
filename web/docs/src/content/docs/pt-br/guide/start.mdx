@@ -1,0 +1,34 @@
+---
+title: Comece aqui
+description: Escolha um exemplo editável, conheça os controles e envie sua mensagem para um canal.
+sidebar:
+  order: 1
+---
+
+import messages from "../../../../generated/messages.json";
+
+Comece com uma mensagem pronta e adapte os textos, imagens e links ao que pretende publicar. **Abrir no editor**, na barra de cada exemplo, cria uma cópia editável, chamada Kit, sem alterar o exemplo nem suas mensagens salvas.
+
+## Escolha por onde começar
+
+**Um anúncio com embed** funciona bem para apresentar um evento, uma atualização ou instruções. O texto comum introduz o assunto, enquanto o embed reúne os detalhes. Abra o exemplo e experimente mudar o título ou um dos campos.
+
+<div class="message-example" set:html={messages["pt-br"].legacy} />
+
+**Components V2** permite organizar textos, imagens e botões em uma ordem mais livre. Neste exemplo, um Contêiner agrupa a apresentação e a divisória. No editor, selecione uma parte para editá-la ou a borda do Contêiner para trabalhar com o grupo.
+
+<div class="message-example" set:html={messages["pt-br"]["components-v2"]} />
+
+**Uma enquete** permite que as pessoas votem no Discord. Depois de abrir o exemplo, troque a pergunta e as respostas e use o relógio para escolher por quanto tempo a votação ficará aberta. A prévia mostra as alternativas sem registrar votos reais.
+
+<div class="message-example" set:html={messages["pt-br"].poll} />
+
+São os mesmos exemplos disponíveis na página inicial e na criação de mensagens. Se preferir começar do zero, abra [Mensagens](https://pokkan.net/pt-BR/kits), escolha Legacy ou Components V2 e crie um Kit. Deixe o nome em branco para usar a sugestão do campo.
+
+## Da edição ao envio
+
+Siga [Crie sua primeira mensagem](/pt-br/guide/first-message/) e depois [Conheça o editor](/pt-br/guide/editor/) para aprender a selecionar e inserir partes da mensagem. O [catálogo de elementos](/pt-br/discord/components/) ajuda quando você sabe o que quer acrescentar, mas ainda não conhece o nome usado pelo Discord.
+
+Para publicar em um canal, [crie um webhook](/pt-br/guide/create-webhook/) e acompanhe [Envie sua mensagem](/pt-br/guide/send/). É preciso ter permissão para gerenciar webhooks naquele servidor. Use um canal de testes para conferir o resultado antes de publicar um anúncio.
+
+Você pode editar sem entrar na conta. Guarde uma cópia pela [importação e exportação](/pt-br/using-pokkan/import-export/) ou entre para salvar [Kits pessoais e de servidor](/pt-br/using-pokkan/kits/) e continuar o trabalho depois.

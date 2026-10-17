@@ -1,0 +1,52 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Stargazing meetup",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "content": "Join us this Saturday for a night of astronomy and photography.",
+    "embeds": [
+      {
+        "title": "A night under the stars",
+        "url": "https://science.nasa.gov/resource/earthrise/",
+        "description": "Explore our neighboring planets, share a favorite space photo and learn how to recognize the night sky.\n\n**Saturday · 18:00 UTC**",
+        "color": 5793266,
+        "author": {
+          "name": "Astronomy club",
+          "url": "https://science.nasa.gov/",
+          "icon_url": "https://docs.pokkan.net/examples/earth.webp"
+        },
+        "thumbnail": {
+          "url": "https://docs.pokkan.net/examples/earth.webp"
+        },
+        "fields": [
+          {
+            "name": "Where",
+            "value": "The community voice channel",
+            "inline": true
+          },
+          {
+            "name": "What to bring",
+            "value": "A favorite space photo or a question",
+            "inline": true
+          },
+          {
+            "name": "Before joining",
+            "value": "Read the channel's pinned message. Beginners are welcome.",
+            "inline": false
+          }
+        ],
+        "image": {
+          "url": "https://docs.pokkan.net/examples/earthrise.webp"
+        },
+        "footer": {
+          "text": "Astronomy club · Everyone welcome",
+          "icon_url": "https://docs.pokkan.net/examples/earth.webp"
+        },
+        "timestamp": "2026-10-24T18:00:00Z"
+      }
+    ]
+  }
+}

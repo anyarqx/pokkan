@@ -1,0 +1,24 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "File Workshop",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 10,
+        "content": "## Workshop notes\nA File component refers to an attachment. The file must be supplied by the sender, not just named here."
+      },
+      {
+        "type": 13,
+        "file": {
+          "url": "attachment://workshop-notes.pdf"
+        },
+        "spoiler": false
+      }
+    ]
+  }
+}

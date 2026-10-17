@@ -1,0 +1,23 @@
+---
+title: Legacy message content
+description: Write, remove and restore the ordinary text above a Legacy message's other elements.
+---
+
+Message content is the ordinary text above an embed, poll or Action Row. A Legacy message has at most one content field. In Components V2, use a [Text Display](/en/discord/text-displays/) instead.
+
+Click the text to edit it directly, using Markdown markers or keyboard shortcuts for formatting. For a message containing only an embed, select the content and use **Remove message content** in its controls. This removes the payload field, rather than hiding an empty editor. Deleting all the words keeps the editable content item so you can type again.
+
+To restore a removed content item, open the root **Add element** menu and choose **Message content**. It returns above the other Legacy pieces, not at an arbitrary position between embeds. Undo restores the removed text and normal undo history.
+
+<img
+  src="/screenshots/pokkan-legacy-insert.webp"
+  alt="Legacy insertion menu offering Message content when that field is absent"
+  width="2560"
+  height="2682"
+  loading="lazy"
+  decoding="async"
+/>
+
+The content controls also offer Copy for its text. This differs from copying a whole Kit or downloading JSON. Content accepts up to 2,000 characters for the ordinary message payload used here. Formatting markers are part of the stored text and count toward its length.
+
+See [Formatting](/en/discord/formatting/) for headings, links, code and mentions. An empty message still needs another sendable element, such as an embed or poll, before it can be delivered.

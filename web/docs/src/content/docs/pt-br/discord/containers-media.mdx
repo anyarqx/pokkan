@@ -1,0 +1,26 @@
+---
+title: Escolha a disposição da mídia
+description: Escolha entre imagem de embed, miniatura de Seção, galeria V2 e arquivo anexado.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Escolha a apresentação da mídia conforme o espaço necessário e o formato da mensagem. Uma imagem pequena ao lado de um parágrafo e uma coleção maior abaixo dele usam estruturas diferentes, mesmo quando ambas recebem URLs.
+
+| O que você quer                   | Em Legacy                                                                  | Em Components V2                                                                    |
+| --------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Imagem pequena ao lado do texto   | O [campo de miniatura do embed](/pt-br/discord/embeds/#miniatura-e-imagem) | Uma [Miniatura](/pt-br/discord/thumbnails/) como acessório de Seção                 |
+| Imagem maior abaixo da explicação | O [campo de imagem do embed](/pt-br/discord/embeds/#miniatura-e-imagem)    | Uma [Galeria de mídia](/pt-br/discord/media-galleries/), que pode ter um só item    |
+| Várias mídias juntas              | Imagens em embeds separados, conforme o conteúdo                           | Uma galeria com [itens configurados individualmente](/pt-br/discord/gallery-items/) |
+| Documento anexado                 | Dados de anexo da mensagem                                                 | Um [Arquivo](/pt-br/discord/files/) que referencia o anexo fornecido no envio       |
+
+O exemplo de astronomia combina uma miniatura de Seção com uma galeria de dois itens. Abra-o para selecionar o acessório pequeno, uma imagem da galeria ou o Contêiner ao redor e comparar seus controles.
+
+<div
+  class="message-example"
+  set:html={messages["pt-br"]["component-workshop"]}
+/>
+
+O Contêiner agrupa as peças, mas não substitui suas configurações de mídia. Use os [controles do Contêiner](/pt-br/discord/containers/) para cor e spoiler do grupo e os controles da própria mídia para endereço e descrição.
+
+Os endereços de imagem precisam ser públicos. Uma página, um nome de arquivo do computador ou um link que exige login não fornece a imagem. A [verificação de endereços](/pt-br/discord/media-galleries/#endereços-de-mídia) explica as falhas comuns. Referências a anexos são outro caso: o envio atual não fornece os dados do arquivo apenas porque seu nome aparece na mensagem.
