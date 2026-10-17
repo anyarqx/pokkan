@@ -1,0 +1,14 @@
+---
+title: Anexos e referências de resposta
+description: Edite dados de anexos e referências a mensagens, considerando as limitações do envio por webhook.
+---
+
+Mensagens Legacy importadas podem conter registros de anexos. Eles aparecem com controles de mover, duplicar e excluir, mas a Pokkan ainda não oferece upload de arquivos. O registro guarda metadados, não uma cópia do arquivo original.
+
+Um [Arquivo](/pt-br/discord/files/) V2 ou um item de mídia pode referenciar um anexo fornecido pelo envio. Acrescentar esse componente ou importar uma resposta antiga do Discord não faz upload do arquivo. O envio direto por webhook não fornece os dados necessários para carregar esses anexos.
+
+Referências de resposta identificam outra mensagem do Discord. No menu de contexto da área vazia do editor, escolha **Responder a** para configurar o ID da mensagem e os campos da referência. Uma linha de resposta já existente pode ser clicada para reabrir a configuração. A opção de mencionar o autor controla sua inclusão nas menções permitidas.
+
+A Pokkan pode preservar a referência para interoperabilidade, mas o transporte por webhook não aceita todos os campos gerais de mensagem. Confira o aviso de compatibilidade em Enviar, pois a presença da referência na prévia não garante sua entrega.
+
+Use um [Botão de link](/pt-br/discord/buttons/) para abrir um site e a [exportação JSON](/pt-br/using-pokkan/import-export/) quando outro envio precisar desses dados.

@@ -1,0 +1,26 @@
+---
+title: Embed fields
+description: Fill, reorder and duplicate an embed's name/value pairs and adjust their layout.
+---
+
+Fields divide an embed into details that readers can scan. For an event, “When” and “Where” usually work better as two short fields than as a long paragraph. They belong to the embed and cannot be inserted outside it.
+
+1. Select an embed and use **Add field** inside its body.
+2. Click the name and value to fill both parts. The value accepts [Markdown](/en/discord/formatting/), including bold text, lists and code.
+3. Use **Make field inline** to place a short field alongside other inline fields, or **Make field full width** for a longer explanation.
+4. Reorder with the field's drag handle or its More actions menu. That menu also duplicates the complete name/value pair.
+
+<img
+  src="/screenshots/pokkan-embed-field-actions.webp"
+  alt="Selected embed field with inline, delete and More actions controls and the field action menu open"
+  width="2560"
+  height="2254"
+  loading="lazy"
+  decoding="async"
+/>
+
+Inline is a layout preference, not a promise of equal fixed widths. The available space, thumbnail and text affect wrapping. Toggling it changes the same field in place without moving it into a separate collection. Do not add spaces to force alignment.
+
+Each embed can contain up to 25 fields. A name accepts up to 256 characters and its value up to 1,024, also contributing to the combined embed text limit. An empty name or value is an error, so remove an unused field rather than leaving it blank.
+
+The [complete embed example](/en/discord/embeds/) contains two inline fields followed by a full-width one. Open it to compare their layout and use Undo after moving or removing a field.

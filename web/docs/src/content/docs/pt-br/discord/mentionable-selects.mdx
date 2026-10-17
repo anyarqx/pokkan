@@ -1,0 +1,16 @@
+---
+title: Select de menção
+description: Permita escolher usuários e cargos no mesmo menu e configure seus valores iniciais.
+---
+
+import messages from "../../../../generated/messages.json";
+
+O Select de menção reúne usuários e cargos em um único menu fornecido pelo Discord. Use-o quando a ação da aplicação puder receber qualquer um dos dois tipos.
+
+Adicione-o em uma Linha de ação vazia e edite a indicação. Configurar reúne ID personalizado, quantidades, desativação e valores iniciais opcionais. Em cada valor inicial, informe o ID e seu tipo, usuário ou cargo, para identificar o que deve começar selecionado.
+
+A quarta linha demonstra esse menu. Escolher uma pessoa ou cargo não envia menções nem concede acesso automaticamente.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Se a ação aceitar apenas cargos, [Select de cargo](/pt-br/discord/role-selects/) expressa melhor essa restrição. Para pessoas, use [Select de usuário](/pt-br/discord/user-selects/). Os três compartilham [as configurações comuns](/pt-br/discord/select-menus/) e precisam de uma aplicação para responder à interação, fora do envio direto por webhook.

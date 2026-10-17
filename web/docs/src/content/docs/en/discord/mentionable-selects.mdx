@@ -1,0 +1,16 @@
+---
+title: Mentionable Select
+description: Offer users and roles in the same menu and configure initial selections.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Mentionable Select combines users and roles in one Discord-supplied chooser. Use it when the eventual application action accepts either kind, rather than asking the reader to choose between two separate menus.
+
+Add it inside an empty Action Row and edit its prompt. Configure holds the custom ID, selection counts, disabled state and optional default values. Every default needs an ID and its correct type, user or role. The type matters because an ID alone does not explain which kind of entity is selected.
+
+The fourth row demonstrates this menu. It does not send mentions or grant access simply because a person or role is selected.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+If your action accepts only roles, [Role Select](/en/discord/role-selects/) expresses that restriction more clearly. For only people, choose [User Select](/en/discord/user-selects/). All three share [the same common settings](/en/discord/select-menus/) and require an application interaction handler outside Pokkan's direct webhook delivery.

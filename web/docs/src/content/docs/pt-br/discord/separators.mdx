@@ -1,0 +1,25 @@
+---
+title: Separadores
+description: Separe elementos V2 com espaço pequeno ou grande e uma divisória opcional.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Separador acrescenta espaço vertical entre elementos V2, com uma linha horizontal opcional. Insira-o na raiz da mensagem ou em um Contêiner, não na lista de textos de uma Seção nem em uma Linha de ação.
+
+Selecione-o e abra Configurar. **Exibir linha divisória** determina se a linha aparece. **Pequeno** e **Grande** escolhem o espaçamento, independentemente da linha. Desativar a divisória mantém o espaço sem excluir o componente.
+
+<img
+  src="/screenshots/pokkan-separator-settings.webp"
+  alt="Configuração do separador com divisória e opções de espaço pequeno ou grande"
+  width="1216"
+  height="766"
+  loading="lazy"
+  decoding="async"
+/>
+
+O exemplo abaixo coloca um Separador entre dois Blocos de texto. Abra-o para comparar a linha visível com apenas o espaço.
+
+<div class="message-example" set:html={messages["pt-br"]["components-v2"]} />
+
+O Separador continua contando como componente quando sua linha está oculta. Remova-o se não precisar do intervalo. Use arrastar ou Mais ações para movê-lo entre elementos compatíveis.

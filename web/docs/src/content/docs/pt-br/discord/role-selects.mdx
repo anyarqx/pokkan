@@ -1,0 +1,16 @@
+---
+title: Select de cargo
+description: Prepare um menu de escolha de cargos com valores iniciais e limites de seleção.
+---
+
+import messages from "../../../../generated/messages.json";
+
+O Select de cargo oferece uma escolha entre cargos do servidor em que a mensagem for usada. Atribuir o cargo ou mudar permissões depende da aplicação que recebe a escolha, não do menu sozinho.
+
+Adicione-o em uma Linha de ação vazia. Edite a indicação e abra Configurar para ID personalizado, mínimo, máximo e desativação. Para deixar cargos selecionados inicialmente, informe seus IDs reais e o tipo cargo em **Valores padrão**. Um cargo excluído no Discord pode invalidar esse valor, então revise as seleções iniciais ao adaptar o Kit para outro servidor.
+
+O terceiro menu abaixo é Select de cargo. Suas opções são fornecidas pelo Discord no uso do controle, não copiadas do catálogo da Pokkan para dentro do componente.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Para inserir uma menção fixa a um cargo no texto, use a busca de referências do servidor. Uma menção e um menu interativo resolvem necessidades diferentes. Consulte [Referências do servidor](/pt-br/using-pokkan/servers/) e [Configurações de seleção](/pt-br/discord/select-menus/).

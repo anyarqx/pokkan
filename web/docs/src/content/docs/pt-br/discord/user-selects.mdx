@@ -1,0 +1,16 @@
+---
+title: Select de usuário
+description: Configure um menu de escolha de usuários com limites e seleções iniciais por ID.
+---
+
+import messages from "../../../../generated/messages.json";
+
+O Select de usuário permite escolher pessoas em uma lista fornecida pelo Discord. Diferentemente do Select de texto, você não precisa preencher as opções manualmente.
+
+Adicione-o em uma Linha de ação vazia, edite a indicação e abra Configurar para ID personalizado, quantidades e desativação. **Valores padrão** permite selecionar usuários iniciais por seus IDs do Discord. Mantenha o tipo usuário e use os IDs numéricos, não nomes de exibição nem menções como `@Alex`.
+
+O segundo menu do exemplo é Select de usuário. A prévia local mostra a indicação, não um catálogo autenticado de membros disponíveis.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Escolher uma pessoa não define o valor de um Placeholder de usuário nem cria uma menção automaticamente. A aplicação que recebe a interação determina o resultado, e a Pokkan não a executa. Veja [Configurações de seleção](/pt-br/discord/select-menus/) para quantidades e valores iniciais.

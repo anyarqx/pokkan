@@ -1,0 +1,16 @@
+---
+title: Channel Select
+description: Filter channel types and configure which channels start selected.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Channel Select asks the reader to choose Discord channels. It belongs in an Action Row by itself. Discord supplies the choices in the message's actual context, rather than Pokkan storing a complete channel list in the component.
+
+Edit its prompt and open Configure. Besides the [common select settings](/en/discord/select-menus/), **Channel types** filters what kinds of channel can appear. The current editor accepts a JSON array of numeric Discord channel types. For example, `[0, 2]` requests ordinary text and voice channels. An empty filter does not impose those two types. Enter a valid list rather than a quoted string.
+
+Optional defaults use real channel IDs with type channel. The last menu in this example uses the text/voice filter.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+Choosing a channel does not make it the webhook destination, fetch its messages or grant the reader visibility. Sending still uses the webhook URL selected in Send. For a fixed clickable channel reference in message text, insert `<#channel_id>` through [server reference search](/en/using-pokkan/servers/) instead.

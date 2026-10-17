@@ -1,0 +1,52 @@
+---
+title: Buttons
+description: Choose a style, edit text and emoji, and configure a Button's destination or action identifier.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Buttons can sit in an [Action Row](/en/discord/action-rows/) or serve as the single accessory beside [Section](/en/discord/sections/) text. The style determines both appearance and which destination fields are valid.
+
+<div class="message-example" set:html={messages.en["button-styles"]} />
+
+## Change the style directly
+
+Select the Button and open the style swatch in its node controls. Choose one of the six styles below. With a keyboard, Enter opens the picker, arrow keys move between styles, Enter chooses and Escape closes it. You can also tap a style on a phone.
+
+<img
+  src="/screenshots/pokkan-button-style-picker.webp"
+  alt="Selected Button with all six styles in its compact style picker"
+  width="2560"
+  height="1090"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Style     | Intended visual role                          | Required setting |
+| --------- | --------------------------------------------- | ---------------- |
+| Primary   | Main action, blue                             | Custom ID        |
+| Secondary | Supporting action, neutral                    | Custom ID        |
+| Success   | Positive action, green                        | Custom ID        |
+| Danger    | Destructive or negative action, red           | Custom ID        |
+| Link      | Opens a website, with an external-link symbol | URL              |
+| Premium   | Discord purchase button                       | SKU ID           |
+
+The colors do not implement an action: a green Button does not grant a role or confirm a task by itself. Styles 1–4 require an application to handle their interaction and are not supported by Pokkan's direct webhook send.
+
+## Label, emoji and disabled state
+
+Click a normal Button's text to write its label, up to 80 characters. Use the emoji control beside the style swatch to choose Unicode emoji, search the picker or enter custom Discord emoji syntax/ID. Clearing emoji does not clear the label.
+
+The disabled control makes the Button unavailable to click in the resulting message. It is useful for showing a closed action, but does not provide a schedule or automatically become enabled later. Configure holds the remaining destination fields and optional numeric component ID.
+
+## Link and Premium fields
+
+For a website, choose **Link**, then open Configure and enter a complete URL, up to 512 characters. The label describes the destination, such as “Read the schedule”. Pasting a URL into the label alone does not set that destination.
+
+For styles 1–4, **Custom ID** identifies the action sent to an application. It is not a link or executable code. Use a non-empty identifier up to 100 characters, unique among the message's interactive custom IDs.
+
+**Premium** requires a real purchasable SKU ID associated with the application. It does not accept an ordinary label, emoji, URL or custom ID. Discord supplies the purchase presentation, and the local example does not verify that its demonstration SKU exists. Premium and Link Buttons do not generate an interaction.
+
+Changing styles removes incompatible fields from the message. Undo restores the previous style and its fields, so you can recover a label after testing Premium. Replacing a Section's Button with a Thumbnail creates a different accessory, also recoverable with Undo.
+
+The [Discord Button reference](https://docs.discord.com/developers/components/reference#button) describes style-specific fields.

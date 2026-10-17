@@ -1,0 +1,713 @@
+docs:
+  editableMessage: "Editable message"
+  openEditor: "Open in editor"
+apiErrors:
+  sharing_restricted: "Sharing for this Kit has been restricted. Contact support to request a review."
+  payload_too_large: "This request is too large. Reduce the Kit size before trying again."
+  reports_unavailable: "Reports are temporarily unavailable. Please use support."
+  report_invalid: "Check the report details and optional email address."
+  report_rate_limited: "Too many requests. Please wait or use support."
+  share_rate_limited: Too many sharing requests. Please wait before trying again.
+  share_limit: Revoke an existing link before creating another.
+  share_invalid: The link settings could not be saved.
+  share_capacity: Temporary sharing is at capacity. Try again later.
+  request_failed: "Request failed ({{status}})."
+  authentication_required: Sign in to continue.
+  csrf_invalid: Your secure session expired. Reload and try again.
+  csrf_unavailable: A secure session could not be established.
+  network_timeout: The API took too long to respond.
+  network_unavailable: The API could not be reached.
+  not_found: The requested resource was not found.
+  oauth_denied: Discord authorization was not completed.
+  oauth_failed: Discord authorization could not be completed.
+  oauth_rate_limited: Too many authorization attempts. Try again shortly.
+  oauth_unavailable: Discord login is not configured.
+  parameter_missing: The request is incomplete.
+  persistence_unavailable: Storage is temporarily unavailable.
+  webhook_rejected: "Discord rejected the webhook ({{status}})."
+  webhook_thread_invalid: The Discord webhook thread ID is invalid.
+  webhook_timeout: Discord took too long to respond.
+  webhook_unavailable: Discord could not be reached from this browser.
+  webhook_url_invalid: A Discord webhook URL is required.
+  kit_invalid: The Kit could not be saved.
+  kit_limit: This collection already has 15 saved Kits. Remove a Kit before saving another.
+  kit_conflict: This Kit changed elsewhere. Reload the latest version before changing it.
+  context_forbidden: This server is not available for your account.
+  discord_unavailable: Discord server information is temporarily unavailable.
+  discord_rate_limited: Discord asked us to wait before checking server access.
+  guild_not_eligible: You cannot install Pokkan in this server.
+  refresh_cooldown: Please wait before refreshing again.
+  authorization_required: Authorize Discord server access again.
+contexts:
+  notInstalled: Not installed
+  choose: Choose account or server
+  personal: Personal account
+  personalShort: Personal
+  installed: Pokkan installed
+  authorize: Allow server access
+  authorizeDetail: Allow Pokkan to see your servers to choose where to work.
+  loading: Loading servers…
+  unavailable: Server information is unavailable.
+  add: Add Pokkan
+  accountPage: Account
+  accountDescription: Manage your Discord identity and available servers in Pokkan.
+  signInToManage: Sign in with Discord to manage your account and servers.
+  servers: Servers
+  switchPersonal: Switch to personal
+  current: Selected
+  select: Select
+  refresh: Refresh servers
+  refreshMetadata: Refresh server data
+  metadata_current: Server data is current.
+  metadata_stale: Server data is out of date.
+  metadata_updating: Updating server data…
+  metadata_unavailable: Server data is temporarily unavailable.
+  metadata_rate_limited: Discord asked us to wait before refreshing server data.
+  metadata_installation_required: "Install Pokkan to look up channels, roles and emoji."
+  metadata_bot_removed: Pokkan is no longer installed in this server.
+  metadata_bot_forbidden: Pokkan cannot read this server's data.
+  none: No servers are available for this account.
+  installation:
+    installed: Pokkan is installed and this server is selected.
+    unverified: Installation has not been confirmed. Refresh the server list to check again.
+    cancelled: Server installation was cancelled.
+  authorization:
+    denied: Server access was not granted. Your account and Kits are unchanged.
+    failed: Discord authorization could not be completed. Try again shortly.
+app:
+  cancel: "Cancel"
+  notifications: "Notifications"
+  notificationOverflow: "{{count}} further notifications. Latest: {{message}}"
+  skipContent: "Skip to content"
+  kitNavigation: "Saved messages"
+  prepareSend: "Prepare to send"
+  discardChanges: "Discard changes"
+  discardDescription: "Restore the saved version and discard your unsaved changes?"
+  deleteSavedDescription: "This removes the Kit and disables its sharing links for everyone. This cannot be undone."
+  deleteLocalDescription: "This removes the Kit stored in this browser. This cannot be undone."
+  recoveredName: "{{name}} — recovered"
+  workRecovered: "Your unsaved changes were kept as a separate local Kit."
+  openRecovered: "Open recovered Kit"
+  localDraft: "Kept in this browser"
+  unsavedJson: "The JSON has changes that have not been applied to the message. Discard them?"
+  jsonDifferentMessage: "These pending JSON edits belong to another message. Copy or download them before closing."
+  continueEditing: "Continue editing"
+  hideWebhook: "Hide webhook address"
+  showWebhook: "Show webhook address"
+  openSentMessage: "Open in Discord"
+  addToDiscord: "Add"
+  report: "Contact / Report"
+  renameKit: Rename Kit
+  kitNameRequired: Enter a Kit name.
+  copyFailed: Could not copy the text.
+  legacyChoice: Text, embeds and polls
+  v2Choice: Arrange text, media and buttons
+  yourKits: Your Kits
+  serverKits: Server Kits
+  startExample: Start from an example
+  sendMessage: "Send message"
+  home: Home
+  kits: Messages
+  newKit: New message
+  importKit: Import message
+  about: About
+  privacy: "Privacy and terms"
+  resources: Resources
+  support: Support
+  youtube: YouTube
+  github: GitHub
+  footer: "{{creator}}"
+  editor: Editor
+  create: Create
+  save: Save
+  discord: Discord
+  legacy: Legacy
+  componentsV2: Components V2
+  kitName: Kit name
+  suggestedKitName:
+    legacy: "Legacy message {{number}}"
+    componentsV2: "Components V2 message {{number}}"
+    import: "Imported Kit {{number}}"
+  createKit: Create message
+  defaultLegacyContent: "New **Legacy** message."
+  defaultV2Content: "# New message
+
+    Built with Components V2."
+  defaultButtonLabel: Continue
+  importJsonPlaceholder: '{ "content": "Hello" }'
+  importJson: Paste JSON
+  noKits: No messages yet. Create one or open an example.
+  message: Message
+  kit: Kit
+  messagePreview: Message preview
+  send: "Send"
+  sendNeedsKit: Create a Kit before sending.
+  selectKit: Choose a Kit
+  webhookUrl: Webhook URL
+  sendNow: Send now
+  sending: Sending
+  messageSent: Message sent.
+  messageSendFailed: Could not send the message.
+  signOutFailed: Could not sign out. Try again.
+  signIn: Sign in with Discord
+  signOut: Sign out
+  account: Discord account
+  delete: Delete
+  duplicate: Duplicate
+  confirmDelete: Confirm deletion
+  menu: Menu
+  primaryNavigation: Primary navigation
+  language: Language
+  footerLinks: Footer links
+  edit: Edit
+  view: View
+  readOnlyKit: Read only
+  kitAccessChanged: Access to this Kit changed. Your local edits are still here, but saving is unavailable.
+  loading: Loading…
+  variables: "Placeholders"
+  json: JSON
+  payloadErrors: "{{count}} payload errors"
+  undo: Undo
+  redo: Redo
+  undoShortcut: "Undo (Ctrl / ⌘ Z)"
+  redoShortcut: "Redo (Ctrl / ⌘ Shift Z)"
+  deleteKit: Delete kit
+  confirmDeleteKit: "Delete {{name}}"
+  discard: Discard
+  saving: Saving
+  close: Close
+  dismiss: Dismiss
+  download: Download
+  copy: Copy
+  copied: Copied
+  applyJson: Apply
+  messageJson: Message JSON
+  discordRequest: Discord payload
+  keyboardShortcuts: Keyboard shortcuts
+  shortcutHint: Component shortcuts apply to the selected component and do not run while typing.
+  attachmentMedia: Attachment media
+  addMediaUrl: Add media URL
+  loadingMedia: Loading media
+  imageUnavailable: Image unavailable
+  openSidebar: Open sidebar
+  closeSidebar: Close sidebar
+  kitFormat: Format
+  invalidJson: Invalid JSON.
+  importErrors:
+    invalidJson: Invalid JSON syntax.
+    discordObjectRequired: Discord JSON must be an object.
+    kitInvalid: The Kit data is invalid.
+    kitVersionUnsupported: This Kit format version is not supported.
+  webhookErrors:
+    unsupportedFields: "Webhook delivery does not support: {{fields}}."
+    multipartRequired: Attachments require multipart upload and cannot be sent from this kit yet.
+    interactiveUnsupported: Send directly to Discord with a webhook. Interactive controls, replies and attachment uploads are unavailable in this transport.
+  discordExportUnavailable: "Discord export is available after fixing {{count}} payload issues."
+  jsonApplied: JSON applied.
+  jsonImportFailed: Unable to import this JSON.
+  shortcutUndo: Undo
+  shortcutRedo: Redo
+  shortcutCopy: Copy selected component
+  shortcutCut: Cut selected component
+  shortcutPaste: Paste after selected component
+  shortcutDuplicate: Duplicate selected component
+  shortcutDelete: Delete selected component
+  shortcutConfigure: Configure selected component
+  shortcutMove: Move selected component
+  shortcutEscape: Select parent or close temporary UI
+  kitSaveFailed: Could not save the Kit.
+  kitDeleteFailed: Could not delete the Kit.
+  kitSaved: Kit saved.
+  kitConflict: A newer version of this Kit was saved. Your draft is still here to review before loading the latest version.
+  recoverAndReload: Keep a copy and load latest
+  kitJson: Pokkan Kit
+  fixMessageBeforeSend: Fix message validation errors before sending.
+  kitLoadFailed: Could not load Kits.
+  guide: "Guide"
+  kitActions: "Actions for {{name}}"
+  webhookHelp: "Create a Discord webhook →"
+landing:
+  legacyDescription: "This invitation brings a time and place together in an embed. Open the example to adjust its text and fields directly in the message."
+  v2Description: "An information panel can combine text, separators and links in one group. In the editor, you choose the order and emphasis of each part."
+  pollDescription: "Let your community choose a time by preparing the options and duration of a poll. Voting happens in Discord after you send it."
+  startGuide: "Follow the beginner guide"
+  stepSend: "Preview, then send your message."
+  stepWebhook: "Create a webhook for your Discord channel."
+  stepBuild: "Build a message or open an example."
+  startTitle: "From a draft to Discord"
+  title: "More than customizable"
+  description: "See your Discord message take shape as you arrange Components V2, embeds and polls, then send it with a webhook."
+  openKits: "Start building"
+  samples: Message examples
+  legacy: Legacy
+  componentsV2: Discord Components V2
+  polls: Polls
+  sampleLinkLabel: Open example
+  sampleLegacyContent: "**Game night this Friday**"
+  sampleEmbedTitle: Join the game night
+  sampleEmbedText: Bring a friend and pick a game in chat.
+  sampleFieldWhen: When
+  sampleFieldTime: Friday · 7pm
+  sampleFieldWhere: Where
+  sampleFieldPlace: "#game-night"
+  sampleV2Content: "## Support hours"
+  sampleV2Detail: Monday to Friday · 9am–6pm
+  samplePollQuestion: Which time works best?
+  samplePollFirst: Morning
+  samplePollSecond: Evening
+  samplePollThird: No preference
+meta:
+  homeTitle: Discord Components V2 visual editor
+  homeDescription: Build Discord webhook messages visually with Components V2, embeds and polls.
+  aboutDescription: A visual editor for Discord messages and Components V2.
+  privacyDescription: How Pokkan handles your data, your privacy choices, and the conditions for using and sharing messages.
+  kitsDescription: Create, import and send Discord message Kits with Pokkan.
+  editorDescription: Edit a Discord message with Pokkan.
+errors:
+  backHome: Back to home
+  retry: Try again
+  404:
+    title: Page not found
+    description: This address does not match an available Pokkan page.
+  500:
+    title: Pokkan could not load
+    description: Reload to try again.
+about:
+  title: Compose the message itself
+  previewAlt: "Editor with an astronomy meetup announcement"
+  text: "Pokkan is a visual Discord message editor. Write and arrange the message itself, watching it take shape as you prepare an announcement, introduce your community or invite people to an event."
+  direct: "Start with what you want to say. Select words to format them, then use an insertion point where you want an image or a button to appear. Controls follow the part you select, so you can adjust a color, change an emoji and return to writing without leaving the message."
+  context: "Choose your server in the topbar to keep its messages together. The collection is available to the server owner and people with Administrator or Manage Server permission. With Pokkan installed, you can also search channels, roles and emoji available to your account."
+  editingTitle: "From the first sentence to a complete message"
+  editing: "An announcement can stay simple, with text and an embed for the details, or use Components V2 to arrange groups, images and links. To ask your community a question, add a poll and edit its choices in the preview. Pokkan's editable examples give you a starting point and show how the pieces fit together."
+  kitsTitle: "Build on the work you have already done"
+  kits: "Keep a weekly announcement as a Kit so you can reopen it and update the date or details next time, without rebuilding it. Drafts stay in this browser, and signing in with Discord lets you save to your account to continue on another device."
+  outputTitle: "Bring the message to Discord"
+  output: "To post in a Discord channel, choose your Kit in Messages and enter that channel's webhook URL. The guide beside the field walks through creating the webhook, and Pokkan flags anything in the message that this sending method cannot handle."
+  delivery: "If you already have a message in another tool, import its JSON and continue in the editor. You can also copy the result for use elsewhere or download the complete Kit to keep a backup."
+  examplesTitle: "Try an editable message"
+editor:
+  serverEmoji: "Server emoji"
+  pokkanEmoji: "Pokkan emoji"
+  removeContent: Remove message content
+  emojiUnavailable: "Emoji unavailable"
+  clearColor: "Remove color"
+  colorHex: "Hex color"
+  clearEmoji: "Remove emoji"
+  emojiEntry: "Unicode or <:name:id>"
+  chooseEmoji: "Choose emoji"
+  searchEmoji: "Search emoji"
+  emojiCategories: "Emoji categories"
+  emojiLoading: "Loading emoji…"
+  emojiNoResults: "No emoji found"
+  emojiGroups:
+    0: Smileys
+    1: People
+    2: Components
+    3: Animals
+    4: Food
+    5: Travel
+    6: Activities
+    7: Objects
+    8: Symbols
+    9: Flags
+  canvas: Message editor
+  appBadge: APP
+  now: now
+  repliesTo: Replies to
+  invalidComponent: Invalid component
+  textStyle: "Text style"
+  heading1: "Heading 1"
+  heading2: "Heading 2"
+  heading3: "Heading 3"
+  subtext: "Subtext"
+  formatting: Formatting
+  bold: Bold
+  italic: Italic
+  underline: Underline
+  strike: Strikethrough
+  inlineCode: Inline code
+  codeBlock: Code block
+  quote: Quote
+  bulletedList: Bulleted list
+  numberedList: Numbered list
+  spoiler: Spoiler
+  link: Link
+  applyLink: Apply link
+  removeLink: Remove link
+  invalidLinkUrl: Enter a complete HTTP or HTTPS address.
+  linkLimit: "This link would exceed the field's {{limit}}-character limit."
+  revealSpoiler: Reveal spoiler
+  hideSpoiler: Hide spoiler
+  placeholderToken: "Placeholder: {{key}}"
+  invalidTimestamp: Invalid timestamp
+  addAccessory: Add accessory
+  replaceAccessory: "Replace with {{component}}"
+  addMedia: Add media
+  premium: Premium
+  placeholderSuggestions: Placeholder suggestions
+  insertChannel: Insert channel reference
+  insertRole: Insert role reference
+  addElement: Add element
+  embed: Embed
+  replyTo: Reply to
+  messageSettings: Message settings
+  configure: Configure
+  addBefore: Add before
+  addAfter: Add after
+  paste: Paste
+  moveUp: Move up
+  moveDown: Move down
+  capacityV2: 40 / 40 components
+  capacityLegacy: 5 / 5 action rows
+  componentId: Component ID
+  textToSpeech: Text to speech
+  suppressEmbeds: Suppress embeds
+  suppressNotifications: Suppress notifications
+  nonce: Nonce
+  enforceNonce: Enforce nonce
+  sharedClientTheme: Shared client theme
+  reply: Reply
+  mentionRepliedUser: Mention the replied user
+  embedSettings: Embed settings
+  author: Author
+  footer: Footer
+  name: Name
+  url: URL
+  iconUrl: Icon URL
+  text: Text
+  thumbnailUrl: Thumbnail URL
+  imageUrl: Image URL
+  embedUrl: Embed URL
+  timestamp: Timestamp
+  color: Color
+  attachment: Attachment
+  title: Title
+  description: Description
+  close: Close
+  moreActions: More actions
+  add: Add
+  remove: Remove
+  poll: Poll
+  pollQuestion: Poll question
+  pollAnswer: Poll answer
+  answer: Answer
+  addAnswer: Add answer
+  deleteAnswer: Delete answer
+  deleteEmbed: Delete embed
+  dragEmbed: Drag embed
+  addField: Add field
+  field: Field
+  fieldName: Field name
+  fieldValue: Field value
+  deleteField: Delete field
+  dragField: Drag field
+  makeInline: Make field inline
+  makeBlock: Make field full width
+  toggleInline: Toggle inline
+  deleteAttachment: Delete attachment
+  dragAttachment: Drag attachment
+  embedImage: Embed image
+  embedThumbnail: Embed thumbnail
+  placeholders: "Placeholders"
+  previewPlaceholderValues: Preview values in the message
+  showPlaceholderSource: "Show Placeholder tokens"
+  showPlaceholderExamples: "Show Placeholder examples"
+  searchPlaceholders: "Search Placeholders"
+  search: Search
+  custom: Custom
+  addVariable: "Add Placeholder"
+  noMatchingPlaceholders: "No matching Placeholders."
+  deletePlaceholder: "Delete Placeholder"
+  placeholderKey: "Placeholder key"
+  placeholderLabel: "Placeholder label"
+  placeholderDescription: "Placeholder description"
+  placeholderType: "Placeholder type"
+  placeholderExample: "Placeholder example"
+  variable: "Placeholder"
+  customTemplateValue: "Custom Placeholder value."
+  example: Example
+  dragComponent: Drag component
+  dragAnswer: Drag answer
+  deleteComponent: Delete component
+  unknownPreserved: "Kept in Kit JSON; omitted from Discord JSON."
+  revealSpoilerFile: Reveal spoiler file
+  writeHere: Write here
+  componentText: Component text
+  messageContent: Message content
+  selectOption: Select an option
+  selectUser: Select a user
+  selectRole: Select a role
+  selectMentionable: Select a user or role
+  selectChannel: Select a channel
+  attachmentUrl: Attachment URL
+  showDivider: Show divider line
+  spacing: Spacing
+  small: Small
+  large: Large
+  style: Style
+  primary: Primary
+  secondary: Secondary
+  success: Success
+  danger: Danger
+  customId: Custom ID
+  skuId: SKU ID
+  disabled: Disabled
+  minimumSelections: Minimum selections
+  maximumSelections: Maximum selections
+  channelTypes: Channel types
+  durationHours: Duration in hours
+  allowMultipleAnswers: Allow multiple answers
+  pollSelectOne: Select one answer
+  pollSelectMany: Select one or more answers
+  pollVotes_one: "{{count}} vote"
+  pollVotes_other: "{{count}} votes"
+  pollTimeRemaining: "{{hours}}h left"
+  pollDaysRemaining_one: "{{count}} day left"
+  pollDaysRemaining_other: "{{count}} days left"
+  pollEnded: Poll ended
+  showResults: Show results
+  vote: Vote
+  allowedMentions: Allowed mentions
+  allUsers: All users
+  allRoles: All roles
+  everyoneAndHere: "@everyone and @here"
+  specificUserIds: Specific user IDs
+  specificRoleIds: Specific role IDs
+  discordIdsPlaceholder: One or more Discord IDs
+  idsHint: Up to 100 IDs, separated by commas or spaces.
+  messageReference: Message reference
+  addReplyOrForward: Add reply or forward
+  kind: Kind
+  forward: Forward
+  messageId: Message ID
+  channelId: Channel ID
+  guildId: Server ID
+  failIfMissing: Fail if the message does not exist
+  optionalDiscordId: Optional Discord ID
+  discordId: Discord ID
+  stickers: Stickers
+  addSticker: Add sticker
+  stickerId: Sticker ID
+  stickerIdAt: "Sticker {{index}} ID"
+  removeStickerAt: "Remove sticker {{index}}"
+  stickerHint: Up to 3 sticker IDs. Discord resolves their media when the message is sent.
+  discordDefaultHint: Leave empty to use Discord's default.
+  emoji: Emoji
+  attachmentReferenceHint: File components only accept an attachment:// reference.
+  galleryItems: Gallery items
+  galleryItem: Gallery item
+  addItem: Add item
+  itemAt: "Item {{index}}"
+  dragGalleryItem: Drag gallery item
+  moveItemUp: Move item up
+  moveItemDown: Move item down
+  deleteItem: Delete item
+  mediaUrl: Media URL
+  galleryHint: Up to 10 media items.
+  options: Options
+  option: Option
+  addOption: Add option
+  optionAt: "Option {{index}}"
+  dragOption: Drag option
+  moveOptionUp: Move option up
+  moveOptionDown: Move option down
+  deleteOption: Delete option
+  label: Label
+  value: Value
+  selectedByDefault: Selected by default
+  optionsHint: Between 1 and 25 options.
+  defaultValues: Default values
+  addValue: Add value
+  defaultValueIdAt: "Default value {{index}} ID"
+  defaultValueTypeAt: "Default value {{index}} type"
+  removeDefaultValueAt: "Remove default value {{index}}"
+  defaultValuesHint: Each default must match the selected entity type and configured selection range.
+  invalidJsonHint: Invalid JSON — it will not be applied until fixed.
+  validJsonHint: JSON is applied once it is valid.
+  rawJson: Raw JSON
+  payloadValidation: Payload validation
+  payloadIssueCount: "{{count}} payload issue(s)"
+  components:
+    actionRow: Action Row
+    button: Button
+    stringSelect: String Select
+    userSelect: User Select
+    roleSelect: Role Select
+    mentionableSelect: Mentionable Select
+    channelSelect: Channel Select
+    section: Section
+    textDisplay: Text Display
+    thumbnail: Thumbnail
+    mediaGallery: Media Gallery
+    file: File
+    separator: Separator
+    container: Container
+  parents:
+    root: message root
+    sectionAccessory: section accessory
+  entityTypes:
+    user: User
+    role: Role
+    channel: Channel
+  placeholderTypes:
+    string: Text
+    number: Number
+    boolean: Boolean
+    url: URL
+    color: Color
+    snowflake: Discord ID
+  placeholderCategories:
+    bot: App
+    guild: Server
+  placeholderBuiltIns:
+    guildName:
+      {
+        label: "Server name",
+        description: "The Kit's server name, when available.",
+      }
+    guildId: { label: "Server ID", description: "The Kit's server identifier." }
+    botName: { label: "App name", description: "Pokkan's name." }
+  unsupportedComponent: Unsupported component
+  validation:
+    componentBoolean: "{{field}} must be true or false."
+    buttonUrlLimit: "Button URLs are limited to 512 characters."
+    invalidEmoji: "Use a Unicode emoji or a valid custom emoji ID."
+    interactiveButtonFields: "An interaction button cannot have url or sku_id."
+    embedColor: "Color must be a 24-bit integer."
+    v2FieldForbidden: "{{field}} is not valid in Components V2 messages."
+    v2ComponentLimit: Components V2 allows at most 40 components.
+    v2CompletionReserve: This message no longer has room to complete its required component structure.
+    legacyRowLimit: Legacy messages allow at most 5 action rows.
+    unsupportedComponent: "Unsupported component kept in the Kit and omitted from Discord JSON."
+    invalidComponentParent: "{{component}} is not valid inside {{parent}}."
+    actionRowChildrenMin: An Action Row needs at least one valid child.
+    actionRowChildrenMax: An Action Row allows at most 5 children.
+    actionRowComposition: An Action Row can contain one select or up to five buttons.
+    sectionChildrenMin: A Section needs at least one Text Display.
+    sectionChildrenMax: A Section allows at most 3 Text Displays.
+    textDisplayEmpty: Text Display cannot be empty.
+    sectionAccessory: A Section needs an accessory.
+    separatorSpacing: Separator spacing must be 1 or 2.
+    customIdLimit: custom_id is limited to 100 characters.
+    customIdUnique: custom_id must be unique within a message.
+    componentIdInteger: Component ID must be a 32-bit integer.
+    componentIdUnique: Component ID must be unique within a message.
+    buttonStyle: Button style must be 1–6.
+    buttonLabelLimit: Button labels are limited to 80 characters.
+    linkButtonUrl: A link button needs a URL.
+    linkButtonCustomId: A link button cannot have custom_id.
+    linkButtonSku: A link button cannot have sku_id.
+    premiumButtonSku: A premium button needs sku_id.
+    premiumButtonField: "A premium button cannot have {{field}}."
+    interactiveButtonCustomId: An interactive button needs custom_id.
+    selectCustomId: A select needs custom_id.
+    selectPlaceholderLimit: Select placeholder is limited to 150 characters.
+    stringSelectOptionsMin: String Select needs at least one option.
+    stringSelectOptionsMax: String Select allows at most 25 options.
+    optionLabelLength: Option labels need 1–100 characters.
+    optionValueLength: Option values need 1–100 characters.
+    selectMin: Message selects require 1–25 minimum selections.
+    selectMax: Maximum selections must be 1–25.
+    selectRange: Minimum selections cannot exceed maximum selections.
+    stringSelectDefaults: String Select uses option.default instead of default_values.
+    defaultValuesRange: Default values must fit the selection range.
+    defaultValueInvalid: "Default value must contain a valid {{types}} ID."
+    accentColor: Accent color must be a 24-bit integer.
+    mediaUrl: "{{label}} needs a media URL."
+    fileAttachmentUrl: File components only accept attachment:// URLs.
+    galleryItemsMin: Media Gallery needs at least one item.
+    galleryItemsMax: Media Gallery allows at most 10 items.
+    contentLimit: Message content is limited to 2000 characters.
+    embedCount: A message allows up to 10 embeds.
+    embedPropertyLimit: "Embed {{field}} is limited to {{limit}} characters."
+    embedAuthorLimit: Embed author name is limited to 256 characters.
+    embedFooterLimit: Embed footer text is limited to 2048 characters.
+    embedFieldsCount: An embed allows up to 25 fields.
+    embedFieldName: Embed field names are limited to 256 characters.
+    embedFieldRequired: An embed field needs both a name and a value.
+    embedFieldValue: Embed field values are limited to 1024 characters.
+    embedTextLimit: Combined embed text is limited to 6000 characters.
+    stickerLimit: A message allows up to 3 stickers.
+    attachmentDescriptionLimit: Attachment descriptions are limited to 1024 characters.
+    settableFlags: Only message flags supported by Pokkan can be exported.
+    nonceType: nonce must be a string or integer.
+    nonceLimit: nonce is limited to 25 characters.
+    mentionUsersLimit: Allowed mentions supports up to 100 users.
+    mentionRolesLimit: Allowed mentions supports up to 100 roles.
+    mentionUsersConflict: allowed_mentions.parse users cannot be combined with explicit users.
+    mentionRolesConflict: allowed_mentions.parse roles cannot be combined with explicit roles.
+    pollObject: Poll must be an object.
+    pollQuestion: Poll questions need 1–300 characters.
+    pollAnswersMin: Polls need at least 2 answers.
+    pollAnswersMax: Polls allow at most 10 answers.
+    pollAnswerText: Poll answers need 1–55 characters.
+    pollDuration: Poll duration must be between 1 hour and 32 days.
+    pollLayout: Poll layout_type must be 1.
+    referenceObject: Message reference must be an object.
+    referenceType: Message reference type must be Reply (0) or Forward (1).
+    referenceMessageId: A message reference requires message_id.
+    forwardChannelId: A forward reference requires channel_id.
+  mutations:
+    destinationMissing: The destination no longer exists.
+    v2ComponentLimit: Components V2 messages allow at most 40 components.
+    componentNotAllowed: "A {{component}} is not allowed here."
+    legacyRowsOnly: Interactive rows are only available in Legacy messages.
+    legacyRowKind: Only message buttons and selects can start a Legacy row.
+    componentsMissing: The components collection no longer exists.
+    legacyRowLimit: Legacy messages allow at most 5 Action Rows.
+    clipboardInvalid: Clipboard does not contain a component.
+    pasteUnsupported: Unsupported components are preserved but cannot be pasted into an editable tree.
+    pasteV2Limit: Pasting this component would exceed the 40-component Components V2 limit.
+    duplicateUnavailable: This component cannot be duplicated.
+    parentMissing: The component parent no longer exists.
+    duplicateUnsupported: Unsupported components cannot be duplicated.
+    duplicateCapacity: "Duplicating this {{component}} would exceed its parent capacity."
+    duplicateV2Limit: Duplicating this component would exceed the 40-component Components V2 limit.
+    sourceMissing: The source component no longer exists.
+    moveRejected: This destination does not accept the component or is at capacity.
+    moveMissing: The source or destination no longer exists.
+    collectionMissing: The destination collection no longer exists.
+sharing:
+  viewAccess: Shared · can view
+  editAccess: Shared · can edit
+  temporaryCopy: Temporary copy
+  title: Share
+  directLink: Direct Kit URL
+  directHint: This address keeps the Kit's existing account and server permissions.
+  accessLink: Access link
+  copyLink: Copy link
+  copied: Link copied.
+  permission: Permission
+  view: "Viewer"
+  edit: "Editor"
+  audience: Access
+  members: "Members"
+  anyone: "Anyone with the link"
+  expires: Expires
+  hour: 1 hour
+  day: 24 hours
+  week: 7 days
+  month: 30 days
+  never: Never
+  keepExpiry: Keep
+  copyExpiry: Copy expiry
+  expiresAt: "Expires {{date}}"
+  createLink: Create access link
+  revoke: Revoke access
+  regenerate: Regenerate link
+  confirmRegenerate: Replace the old link
+  regenerateHint: The secret is unavailable in this tab. Regenerate the link to copy a new address, which stops the old one working.
+  publicEdit: Anyone with this link can change the saved message.
+  saveFirst: Save this Kit before creating access links. Its ownership stays with the account or server where it was created.
+  savedVersion: Links open the saved message. Save your pending changes if you want recipients to see them.
+  temporaryHint: Share a temporary copy of this message while keeping your local draft unchanged.
+  createTemporary: Create temporary copy
+  managementLink: Private management link
+  managementHint: Keep this address for yourself to edit the temporary copy, manage its links or delete it. Access links do not grant these permissions.
+  openCopy: Open hosted copy
+  deleteCopy: Delete temporary copy and revoke its links
+  importCopy: Copy to my messages
+  revoked: Temporary copy deleted.
+  failed: Sharing could not be updated. Try again.
+  unavailable: This link is unavailable. It may have expired or been revoked.

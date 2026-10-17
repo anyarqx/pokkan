@@ -1,0 +1,57 @@
+---
+title: All message elements
+description: Find the elements supported in Legacy and V2 and where each can be inserted.
+---
+
+Choose the message format before adding its structure. **Legacy** combines ordinary text, embeds, a poll and rows of controls. **Components V2** builds the message from ordered text, media and layout pieces. Pokkan offers only the elements allowed at the insertion point you opened.
+
+## Legacy
+
+| Element                                                              | Where it belongs               | What to learn                                                     |
+| -------------------------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------- |
+| [Message content](/en/discord/message-content/)                      | Once at message level          | Write the text above embeds or remove it entirely.                |
+| [Embed](/en/discord/embeds/)                                         | Message level                  | Group a title, description, links, media and footer.              |
+| [Embed field](/en/discord/embed-fields/)                             | Inside an embed                | Name/value pairs, inline or full width.                           |
+| [Poll](/en/discord/polls/)                                           | Once at message level          | Question, answers, emoji, voting duration and multiple selection. |
+| [Poll answer](/en/discord/poll-answers/)                             | Inside a poll                  | A plain-text choice with optional emoji.                          |
+| [Action Row](/en/discord/action-rows/)                               | Message level                  | A group of Buttons or one select menu.                            |
+| [Attachments and reply references](/en/discord/attachments-replies/) | Imported or message-level data | Current editing and direct-send restrictions.                     |
+
+<img
+  src="/screenshots/pokkan-legacy-insert.webp"
+  alt="The Legacy insertion menu with content, embed, poll and available row controls"
+  width="2560"
+  height="2682"
+  loading="lazy"
+  decoding="async"
+/>
+
+## Components V2
+
+| Element                                       | Allowed parent                | Purpose                                           |
+| --------------------------------------------- | ----------------------------- | ------------------------------------------------- |
+| [Container](/en/discord/containers/)          | Message                       | Group content with an optional accent or spoiler. |
+| [Section](/en/discord/sections/)              | Message or Container          | One to three text pieces beside an accessory.     |
+| [Text Display](/en/discord/text-displays/)    | Message, Container or Section | Formatted message text.                           |
+| [Thumbnail](/en/discord/thumbnails/)          | Section accessory only        | A small image beside Section text.                |
+| [Media Gallery](/en/discord/media-galleries/) | Message or Container          | One or more media items.                          |
+| [Gallery item](/en/discord/gallery-items/)    | Inside a Media Gallery        | One address, description and spoiler setting.     |
+| [File](/en/discord/files/)                    | Message or Container          | A reference to an attached file.                  |
+| [Separator](/en/discord/separators/)          | Message or Container          | Space with an optional visible divider.           |
+| [Action Row](/en/discord/action-rows/)        | Message or Container          | Buttons or one select menu.                       |
+
+<img
+  src="/screenshots/pokkan-v2-insert.webp"
+  alt="Root V2 insertion menu offering Container, Section, Text Display, Gallery, File, Separator and Action Row"
+  loading="lazy"
+  width="2560"
+  height="2138"
+/>
+
+## Controls nested in a row or Section
+
+A [Button](/en/discord/buttons/) belongs to an Action Row or the single Section accessory slot. A row can instead hold one [String Select](/en/discord/string-selects/), [User Select](/en/discord/user-selects/), [Role Select](/en/discord/role-selects/), [Mentionable Select](/en/discord/mentionable-selects/) or [Channel Select](/en/discord/channel-selects/).
+
+Containers do not nest inside Containers. Sections do not accept galleries or rows in their text list. Buttons and Thumbnails are not arbitrary top-level pieces. These are the reasons an option may be absent from one plus but available in another.
+
+Use [the control reference](/en/using-pokkan/controls/) to identify an icon on a selected element. The [validation guide](/en/using-pokkan/validation/) explains missing structure and capacity. Unsupported imported component types stay in Pokkan Payload but are omitted from Discord Payload, rather than becoming new addable elements.

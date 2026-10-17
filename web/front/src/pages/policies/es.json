@@ -1,0 +1,118 @@
+{
+  "updated": "Actualizado el",
+  "contactTitle": "Contacto",
+  "operator": "Pokkan está mantenido por {creator}. El formulario permite contactar con el equipo sobre privacidad, denunciar abusos o pedir la revisión de una restricción. Requiere iniciar sesión para limitar el spam. Si no puedes hacerlo, utiliza el soporte existente de Discord sin publicar credenciales ni mensajes privados en canales públicos.",
+  "contactAction": "Contacto y solicitudes",
+  "related": "Políticas relacionadas",
+  "discordRules": "Directivas de la Comunidad de Discord",
+  "discordPrivacy": "Privacidad de Discord",
+  "privacy": {
+    "title": "Privacidad",
+    "intro": "Esta página explica qué información recibe Pokkan, para qué la necesita y qué permanece en tu navegador. Abarca el editor, los Kits guardados y compartidos, la autorización de Discord y las solicitudes dirigidas al equipo.",
+    "sections": [
+      {
+        "title": "Finalidades y bases del tratamiento",
+        "paragraphs": [
+          "La identidad de la cuenta, los mensajes guardados y los permisos de uso permiten ofrecer las funciones que solicitas. Tomando los estándares europeos como referencia, el tratamiento necesario para esas funciones se basa en la prestación del servicio solicitado. Los registros de seguridad, las comprobaciones de acceso y las medidas proporcionadas contra abusos responden al interés legítimo de proteger el servicio y a sus usuarios. Las solicitudes relativas a derechos legales se tramitan para cumplir las obligaciones aplicables.",
+          "Autorizar Discord permite conectar tu cuenta, pero no supone un consentimiento general para otros usos de tus datos. Pokkan no vende datos personales, no utiliza mensajes para entrenar modelos de IA ni clasifica contenido mediante moderación automática. Las restricciones de contenido las revisa un operador."
+        ]
+      },
+      {
+        "title": "Cuentas y servidores de Discord",
+        "paragraphs": [
+          "Al iniciar sesión, Pokkan recibe tu ID de Discord, nombre de usuario, nombre visible, avatar y banner cuando estén disponibles. Los permisos identify y guilds permiten autenticarte y descubrir servidores. Los tokens de acceso y renovación se cifran en el servidor y no se envían al editor. Una credencial privada del bot permite comprobar instalaciones y obtener información autorizada de los servidores.",
+          "Pokkan conserva versiones de nombres, IDs, iconos, banners, características, canales, roles, emojis, permisos y sobrescrituras relevantes de los servidores. Para mostrar canales y emojis del servidor, consulta tus roles de miembro y filtra la información según tus permisos. La colección de Pokkan incluye solo emojis disponibles sin restricciones por rol. Un enlace público de Kit no da acceso a ese catálogo ni a otros recursos del servidor. Esta función no crea directorios de miembros, historiales de mensajes ni registros de presencia."
+        ]
+      },
+      {
+        "title": "Mensajes guardados y compartidos",
+        "paragraphs": [
+          "Guardar envía el nombre del Kit, el mensaje, los argumentos y las definiciones de placeholders, junto con su propietario, atribución de autor y revisión. Los Kits personales requieren acceso de su propietario. Los de servidor están disponibles para miembros verificados, con cambios sujetos a los permisos del creador y los administradores.",
+          "Un enlace de acceso concede lectura o edición sin cambiar la propiedad. Pokkan guarda una versión protegida del secreto, quién puede usar el enlace y su caducidad. Los enlaces para cualquier persona pueden abrirse fuera del servidor, por lo que solo debes compartir contenido que quieras mostrar a esos destinatarios. Sin iniciar sesión, se aloja una copia independiente durante 24 horas de forma predeterminada, con opciones de una hora o siete días. Un secreto distinto permite administrarla.",
+          "Revocar o restringir el acceso impide nuevas lecturas y cambios mediante el permiso afectado, pero no borra descargas, capturas ni copias importadas. El secreto forma parte del enlace y puede quedar en el historial del navegador o en manos de sus destinatarios. Trata el enlace privado de administración como una credencial."
+        ]
+      },
+      {
+        "title": "Almacenamiento del navegador y envío",
+        "paragraphs": [
+          "Los borradores locales, preferencias y datos de recuperación utilizan el almacenamiento del navegador. Los borradores habituales se separan por cuenta o visitante, mientras que los cambios pendientes de enlaces compartidos usan almacenamiento de pestaña identificado por cuenta. Los secretos y credenciales de gestión no forman parte de las exportaciones de Kits. Borrar estos datos puede eliminar definitivamente trabajo que no se haya guardado en otro lugar.",
+          "La sesión de acceso utiliza una cookie cifrada y HttpOnly, marcada Secure en producción, con una duración de 14 días. Las cookies y contadores necesarios permiten autenticarte y prevenir abusos. Una URL de webhook utilizada correctamente puede recordarse localmente durante 30 días, por separado para cada cuenta o visitante. Vaciar el campo elimina esa URL, que no se incluye en Kits, solicitudes para compartir ni datos enviados a los servidores de Pokkan.",
+          "El envío entrega el contenido directamente desde el navegador a Discord. La URL del webhook es una credencial de Discord y quien la obtenga podría enviar mensajes a su canal. Los ejemplos de placeholders de la vista previa no se sustituyen silenciosamente en el contenido enviado."
+        ]
+      },
+      {
+        "title": "Proveedores, contenido externo y transferencias",
+        "paragraphs": [
+          "Cloudflare aloja la interfaz y la documentación pública. Square Cloud aloja el servicio de cuentas, mensajes guardados y la base de datos, mientras que Discord proporciona autorización, información de servidores y entrega de mensajes. Estos proveedores pueden procesar direcciones de red e información operativa de las solicitudes. Las imágenes externas y los emojis personalizados se cargan desde sus respectivos hosts, que reciben tu dirección de red aunque Pokkan omita el referente de la página.",
+          "La infraestructura puede tratar datos fuera de tu país o del Espacio Económico Europeo. Puedes solicitar al soporte la información disponible sobre ubicaciones y mecanismos de transferencia aplicables. Este aviso no afirma que todo el tratamiento tenga lugar en la UE ni que todas las transferencias internacionales se hayan certificado de forma independiente."
+        ]
+      },
+      {
+        "title": "Conservación de la información",
+        "paragraphs": [
+          "Los Kits guardados y los registros de cuenta permanecen hasta su eliminación o hasta que se atienda una solicitud verificada. Quitar Pokkan de un servidor o cerrar sesión no elimina automáticamente los Kits ni las instantáneas. Cerrar sesión termina solo la sesión actual, sin revocar la autorización compartida por la cuenta. Las autorizaciones invalidadas o desconectadas expresamente se eliminan, y un nuevo inicio de sesión puede generar otra autorización.",
+          "Los enlaces y copias temporales dejan de funcionar al caducar y se eliminan durante el mantenimiento. Los eventos de auditoría tienen una política de conservación de 180 días y excluyen el contenido de los mensajes y los secretos. Las solicitudes entran en limpieza tras 180 días o 90 días después de su cierre, lo que ocurra antes. Los registros de infraestructura siguen la conservación operativa de los proveedores, distinta de la auditoría.",
+          "El flujo de copias de seguridad configurado conserva archivos cifrados durante 30 días. Los datos borrados de la base activa pueden permanecer en esas copias hasta su caducidad. Restaurar una copia exige comprobar y volver a aplicar las decisiones de eliminación y restricción pertinentes. Una obligación legal de conservación o una solicitud de derechos pendiente puede exigir guardar la información concreta necesaria para atenderla."
+        ]
+      },
+      {
+        "title": "Opciones y derechos",
+        "paragraphs": [
+          "Según la legislación aplicable, puedes solicitar acceso, corrección, eliminación, limitación, portabilidad u oponerte al tratamiento basado en intereses legítimos. También puedes reclamar ante la autoridad de protección de datos competente, incluida una autoridad supervisora de la UE o la ANPD brasileña cuando corresponda. Estos derechos tienen condiciones y deben respetar los derechos de otras personas.",
+          "Explica tu solicitud en el formulario o en soporte e identifica la cuenta o el recurso afectado. Puede ser necesaria una verificación proporcionada antes de facilitar o modificar datos. No envíes contraseñas, tokens de Discord ni credenciales de webhooks. No existe un botón de borrado automático de cuenta, y retirar datos personales de trabajo perteneciente a un servidor exige revisar su propiedad y los derechos de otros miembros.",
+          "Puedes borrar datos locales desde el navegador, eliminar un webhook recordado vaciando su campo, administrar enlaces en Compartir y revocar Pokkan en las Aplicaciones autorizadas de Discord. Revocar la autorización no elimina por sí mismo el contenido ya guardado."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos y uso aceptable",
+    "intro": "Pokkan sirve para crear, editar, guardar, compartir y enviar mensajes compatibles con Discord. Utilízalo con responsabilidad y con permiso para el contenido y los destinos implicados, respetando las condiciones y reglas aplicables de Discord.",
+    "sections": [
+      {
+        "title": "Contenido y acceso",
+        "paragraphs": [
+          "Debes disponer de los derechos necesarios para usar y compartir textos, imágenes y otros materiales. No incluyas información privada que no estés autorizado a divulgar. Para utilizar Discord debes cumplir su edad mínima y la exigida en tu jurisdicción.",
+          "Un Kit es un recurso de mensaje, no permiso para controlar cuentas o servidores ajenos. Compartir no transfiere su propiedad, y poder editar no autoriza a borrar el original, administrar sus enlaces ni realizar operaciones privilegiadas. Los enlaces públicos pueden reenviarse y su contenido puede copiarse."
+        ]
+      },
+      {
+        "title": "Usos no permitidos",
+        "paragraphs": [
+          "No uses Pokkan para spam, envíos masivos no solicitados, acoso, amenazas o ataques dirigidos. Se prohíben el fraude, phishing, suplantación de identidad, obtención engañosa de credenciales y enlaces maliciosos, así como exploits e intentos de comprometer a otras personas o servicios.",
+          "No subas contenido ilegal ni distribuyas ilícitamente material protegido. Respeta la Política para Desarrolladores y las Directivas de la Comunidad de Discord, incluidas sus medidas contra la explotación y el contenido dañino. No eludas controles o suspensiones, adivines credenciales, agotes la API ni conviertas las copias temporales en almacenamiento permanente masivo."
+        ]
+      },
+      {
+        "title": "Denuncias y restricciones proporcionadas",
+        "paragraphs": [
+          "Denuncia un mensaje mediante el icono de bandera debajo del contenido compartido, o utiliza la página de solicitudes o el soporte para otros problemas. Identifica la dirección, explica el motivo e incluye solo información necesaria. Los informes no se publican y una denuncia no restringe automáticamente un Kit.",
+          "Un operador puede desactivar el uso compartido del Kit afectado sin borrar mensajes ajenos al caso. La revocación, la caducidad y los límites técnicos también pueden limitar el acceso. Regenerar un enlace no elimina una restricción del recurso. Su propietario o el responsable de la copia temporal puede consultar la restricción y su explicación y solicitar una revisión por los mismos canales.",
+          "Pokkan no promete clasificación automática ni plazos garantizados de revisión. Los abusos graves o reiterados pueden justificar otras medidas proporcionadas disponibles para el operador o el proveedor de alojamiento. Ante peligro inmediato o sospecha de delito, acude también a las autoridades y a Discord cuando proceda."
+        ]
+      },
+      {
+        "title": "Protege tu trabajo y tus credenciales",
+        "paragraphs": [
+          "Conserva una copia del trabajo importante y el enlace de administración de una copia temporal si necesitas revocarla antes de su caducidad. Perder ese secreto puede impedirte administrarla. Las interrupciones y restricciones no autorizan a eludir controles de seguridad.",
+          "Discord decide si acepta un mensaje enviado. Guardar o compartir un Kit no publica ni sincroniza un mensaje de Discord, y Pokkan no puede retirar copias que otra persona ya haya hecho. El aviso de Privacidad explica el tratamiento y conservación de los datos."
+        ]
+      }
+    ]
+  },
+  "report": {
+    "title": "Contacto y solicitudes",
+    "intro": "Utiliza este formulario para informar de usos indebidos, solicitar asistencia de privacidad o pedir la revisión de una restricción. Iniciar sesión ayuda a limitar el spam e identifica la cuenta que realiza la solicitud.",
+    "supportHint": "Si no puedes iniciar sesión o necesitas hacer seguimiento, utiliza el soporte existente y guarda tu referencia.",
+    "kind": "Motivo",
+    "abuse": "Denunciar un abuso",
+    "privacy": "Solicitud de privacidad",
+    "appeal": "Revisar una restricción",
+    "details": "¿Qué debe revisar el equipo?",
+    "contact": "Correo de respuesta (opcional)",
+    "safety": "Identifica el mensaje o problema y explica qué ocurrió. No incluyas contraseñas, URLs de webhook, secretos de enlaces ni datos personales innecesarios.",
+    "submit": "Enviar solicitud",
+    "received": "La solicitud se ha registrado. Guarda esta referencia para el seguimiento:",
+    "failed": "No se pudo enviar. Utiliza el soporte o inténtalo de nuevo."
+  }
+}

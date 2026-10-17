@@ -1,0 +1,34 @@
+---
+title: Empieza aquí
+description: Elige un ejemplo editable y aprende a enviarlo a un canal de Discord.
+sidebar:
+  order: 1
+---
+
+import messages from "../../../../generated/messages.json";
+
+Empieza con una estructura preparada y cambia sus textos, imágenes y enlaces. **Abrir en el editor**, en la barra de cada ejemplo, crea una copia nueva en Pokkan, sin modificar el ejemplo ni tus mensajes guardados.
+
+## Elige un ejemplo
+
+**Un anuncio con embed** reúne los detalles de un evento o una novedad. Abre el ejemplo y cambia el título o uno de sus campos.
+
+<div class="message-example" set:html={messages.es.legacy} />
+
+**Components V2** permite ordenar textos, imágenes y botones. En este ejemplo, un Container agrupa la presentación y el separador. Selecciona una pieza para editarla o el borde del Container para trabajar con el grupo.
+
+<div class="message-example" set:html={messages.es["components-v2"]} />
+
+**Una encuesta** sirve para recoger votos en Discord. Cambia la pregunta y las respuestas, y usa el reloj para elegir su duración. La vista previa no registra votos reales.
+
+<div class="message-example" set:html={messages.es.poll} />
+
+Son los mismos ejemplos de la página principal y de la creación de mensajes. También puedes empezar desde cero en [Mensajes](https://pokkan.net/es/kits): elige Legacy o Components V2 y deja el nombre vacío para usar la sugerencia.
+
+## Continúa hasta el envío
+
+Sigue [Tu primer mensaje](/es/guide/first-message/) y [Conoce el editor](/es/guide/editor/) para aprender a seleccionar y añadir elementos. El [catálogo de elementos](/es/discord/components/) permite consultar cada estructura. Las referencias aún no traducidas se muestran en inglés y se identifican como tales.
+
+Para publicar, [crea un webhook](/es/guide/create-webhook/) y sigue [Envía tu mensaje](/es/guide/send/). Necesitarás permiso para gestionar webhooks en el servidor. Prueba primero en un canal de pruebas para comprobar el resultado.
+
+Puedes editar sin iniciar sesión y descargar una copia desde JSON. Al iniciar sesión, también puedes guardar Kits para retomarlos desde tu cuenta.

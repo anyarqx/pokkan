@@ -1,0 +1,39 @@
+---
+title: Legacy vs Components V2
+description: Compare two complete ticket-panel templates and choose the right Discord message format.
+sidebar:
+  order: 3
+---
+
+import messages from "../../../../generated/messages.json";
+
+Legacy and Components V2 can express a similar announcement, but organize it differently. Legacy starts with ordinary message content and embeds. V2 builds an ordered layout from text, media and groups, allowing a Button beside a Section's explanation.
+
+| Use Legacy when you need                                                | Use Components V2 when you need                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [Ordinary message content](/en/discord/message-content/) above the body | Several [Text Displays](/en/discord/text-displays/) among other elements    |
+| [Embeds](/en/discord/embeds/) with author, fields and footer            | [Containers](/en/discord/containers/) and [Sections](/en/discord/sections/) |
+| A [poll](/en/discord/polls/)                                            | A more flexible order for text, galleries and controls                      |
+| Familiar announcement blocks                                            | A Button or Thumbnail beside a short text group                             |
+
+## The same support panel in both formats
+
+These English ticket templates demonstrate the difference with complete, editable messages. The Legacy panel puts its instructions and banner in an embed, then places the ticket Button in an Action Row. The V2 panel puts its banner, instructions and Section accessory Button in a Container.
+
+### Legacy ticket template
+
+<div class="message-example" set:html={messages.en["ticket-legacy"]} />
+
+### Components V2 ticket template
+
+<div class="message-example" set:html={messages.en["ticket-v2"]} />
+
+These are templates, not a ticket service inside Pokkan. The ticket Button uses the example custom ID `ticket:create`, which an external application would need to handle. **Open in editor**, above the example, creates an independent Kit in Pokkan without activating the ticket Button. Direct webhook sending rejects the interactive ticket Button, but you can edit and export either template.
+
+## Keep formats separate
+
+Both formats accept Buttons in compatible locations, but V2 cannot also contain Legacy content, embeds, polls or stickers. Adding an embed inside a Container is not a supported conversion: replace it with suitable V2 text and media instead.
+
+Once Discord accepts a message as V2, its V2 flag cannot be removed from that posted message. Pokkan currently sends new messages rather than updating existing Discord posts. Save a copy before adapting a design to the other format, and use the [element catalogue](/en/discord/components/) to find its equivalent pieces.
+
+For a first announcement, follow [the Legacy guide](/en/guide/first-message/). For layout practice, [try Components V2](/en/guide/components-v2/).

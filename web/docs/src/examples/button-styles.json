@@ -1,0 +1,62 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Workshop registration",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 10,
+        "content": "## Saturday workshop\nChoose how you would like to take part."
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 2,
+            "style": 1,
+            "label": "Join workshop",
+            "custom_id": "primary"
+          },
+          {
+            "type": 2,
+            "style": 2,
+            "label": "Maybe later",
+            "custom_id": "secondary"
+          },
+          {
+            "type": 2,
+            "style": 3,
+            "label": "Confirm spot",
+            "custom_id": "success"
+          },
+          {
+            "type": 2,
+            "style": 4,
+            "label": "Cancel booking",
+            "custom_id": "danger"
+          },
+          {
+            "type": 2,
+            "style": 5,
+            "label": "Event details",
+            "url": "https://science.nasa.gov/resource/earthrise/"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "components": [
+          {
+            "type": 2,
+            "style": 6,
+            "sku_id": "123456789012345678"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+@import "../generated/messages.css";
+
+:root {
+  --sl-color-accent-low: #e4eaf8;
+  --sl-color-accent: #3c528f;
+  --sl-color-accent-high: #263965;
+  --sl-font: "Segoe UI", system-ui, sans-serif;
+}
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #283448;
+  --sl-color-accent: #a8bbfb;
+  --sl-color-accent-high: #dfe6ff;
+}
+html,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-4) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--sl-color-gray-4);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sl-markdown-content img {
+  height: auto;
+  border: 1px solid var(--sl-color-hairline);
+}
+.site-title img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Keep documentation controls as restrained as the product chrome. */
+.pagination-links a,
+starlight-menu-button button {
+  box-shadow: none;
+}
+
+.message-example {
+  --muted: #afb6c2;
+  --faint: #9aa3b0;
+  --text: #d9dde4;
+  --surface: #242528;
+  --raised: #2c2d31;
+  --line: #43444b;
+  --accent: #b9b3db;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 6px;
+  margin-block: 24px;
+  background: #1b1d22;
+  color: #dbdee1;
+  font:
+    400 16px/1.5 system-ui,
+    sans-serif;
+}
+.message-example * {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+.message-example-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  color: var(--sl-color-text);
+  background: var(--sl-color-bg-inline-code);
+  border-bottom: 1px solid var(--sl-color-hairline);
+  font: 500 0.8rem/1.5 var(--sl-font);
+}
+.message-example-toolbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sl-color-text-accent);
+  text-decoration: none;
+}
+.message-example-toolbar a:hover {
+  text-decoration: underline;
+}
+.message-example-preview {
+  padding: 20px;
+}
+.message-example .editor-canvas {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.message-example .message-canvas {
+  width: 100%;
+  margin: 0;
+}
+.message-example img {
+  border: 0;
+}
+.message-example .discord-button {
+  text-decoration: none;
+}
+
+/* Static examples use native image loading, without React's client status updates. */
+.message-example .editor-canvas img.media-loading {
+  opacity: 1;
+}
+.message-example .editor-canvas .remote-media-state.is-loading {
+  display: none;
+}
+@media (max-width: 450px) {
+  .message-example-preview {
+    padding: 12px 8px;
+  }
+  .message-example .message-canvas {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .message-example .message-canvas > img {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,28 @@
+---
+title: Contêineres
+description: Agrupe conteúdo V2, ajuste a cor e o spoiler e mova ou duplique o conjunto.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Um Contêiner reúne partes de uma mensagem V2 em um grupo. Em um aviso de evento, você pode colocar o título, uma Seção com miniatura, uma galeria e uma linha de links dentro dele para movê-los ou duplicá-los juntos.
+
+<div
+  class="message-example"
+  set:html={messages["pt-br"]["component-workshop"]}
+/>
+
+Adicione **Contêiner** no sinal de mais da raiz V2 e use os pontos internos para inserir Blocos de texto, Seções, galerias, Arquivos, Separadores ou Linhas de ação. Não é permitido inserir outro Contêiner dentro dele. Para selecionar o grupo sem selecionar um filho, clique na borda externa.
+
+Nos controles do Contêiner, escolha ou limpe a cor de destaque e ative o spoiler para ocultar o conteúdo até que seja revelado. **Configurar** contém o ID opcional do componente. Excluir o Contêiner também remove os elementos internos, e **Desfazer** recupera o grupo.
+
+<img
+  src="/screenshots/pokkan-components-complete.webp"
+  alt="Editor V2 com um Contêiner reunindo texto, Seção, galeria e linha de link"
+  width="2560"
+  height="1752"
+  loading="lazy"
+  decoding="async"
+/>
+
+Use [Seções](/pt-br/discord/sections/) para texto ao lado de um acessório e [Separadores](/pt-br/discord/separators/) para separar os filhos. Tanto o Contêiner quanto seus componentes internos entram na contagem de capacidade.

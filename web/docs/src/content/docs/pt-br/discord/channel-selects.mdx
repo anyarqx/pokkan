@@ -1,0 +1,16 @@
+---
+title: Select de canal
+description: Filtre tipos de canal e configure os canais selecionados inicialmente em um menu.
+---
+
+import messages from "../../../../generated/messages.json";
+
+O Select de canal permite escolher canais do Discord e ocupa uma Linha de ação sozinho. As opções são fornecidas pelo Discord no contexto em que a mensagem for usada, em vez de ficarem guardadas como uma lista no componente.
+
+Edite a indicação e abra Configurar. Além das [configurações comuns](/pt-br/discord/select-menus/), **Tipos de canal** filtra os tipos disponíveis. O editor atual aceita uma lista JSON de tipos numéricos do Discord. Por exemplo, `[0, 2]` solicita canais comuns de texto e voz. Deixar o filtro vazio não limita as opções a texto e voz. Informe uma lista JSON, sem colocá-la inteira entre aspas.
+
+Para deixar canais selecionados inicialmente, informe IDs reais e escolha o tipo canal nos valores padrão. O último menu do exemplo usa o filtro de texto e voz.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Escolher um canal não muda o destino do webhook, busca suas mensagens nem concede visibilidade. O envio continua usando a URL definida em Enviar. Para colocar uma referência fixa no texto, insira `<#channel_id>` pela [busca de referências do servidor](/pt-br/using-pokkan/servers/).

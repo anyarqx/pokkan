@@ -1,0 +1,31 @@
+---
+title: Enquetes
+description: Edite as respostas, emojis, duração e múltiplas escolhas da enquete.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Uma enquete faz uma pergunta e oferece alternativas para votar no Discord. Ela pertence a Legacy, não a Components V2. Comece pelo exemplo abaixo ou escolha **Enquete** no menu de inserção Legacy.
+
+<div class="message-example" set:html={messages["pt-br"]["poll-workshop"]} />
+
+Clique na pergunta e nas respostas para escrever. A pergunta aceita até 300 caracteres e cada alternativa, até 55. Esses campos são texto simples, então marcadores Markdown não viram títulos nem links. O sinal de mais abaixo das respostas acrescenta outra opção. A Pokkan mantém entre duas e dez alternativas.
+
+## Duração, emoji e múltiplas escolhas
+
+Selecione a borda da enquete para mostrar seus controles. O **relógio** abre um campo para um número inteiro de horas entre 1 e 768. Enter aplica e fecha, enquanto Escape fecha a seleção. A duração começa quando a enquete é criada no Discord, não ao abrir o Kit.
+
+<img
+  src="/screenshots/pokkan-poll-controls.webp"
+  alt="Enquete selecionada com a duração aberta e o controle de múltiplas respostas"
+  width="2560"
+  height="1518"
+  loading="lazy"
+  decoding="async"
+/>
+
+O controle de múltiplas respostas permite votar em várias alternativas sem mudar as opções armazenadas. Cada [resposta](/pt-br/discord/poll-answers/) tem emoji e ações de lista próprios. Busque Unicode ou informe um ID de emoji do Discord, depois use o menu da alternativa ou o controle de mover para reorganizar.
+
+Você pode excluir alternativas enquanto houver mais de duas e duplicá-las até chegar a dez. Para remover a enquete inteira, selecione a borda e use sua lixeira. Desfazer recupera a enquete removida.
+
+A prévia não registra votos nem mostra resultados reais. Depois do envio, confira a pergunta, as alternativas e a duração em um canal de testes. Editar o Kit não atualiza uma enquete já publicada, e enviar novamente cria outra mensagem. Continue em [Enviar](/pt-br/guide/send/) ou consulte [a referência de controles](/pt-br/using-pokkan/controls/).

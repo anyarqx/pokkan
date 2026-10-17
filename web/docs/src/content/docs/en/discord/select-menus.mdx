@@ -1,0 +1,34 @@
+---
+title: Select menu settings
+description: Configure the settings shared by all five select menus and learn where their options come from.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A select menu offers a list of choices and fills one [Action Row](/en/discord/action-rows/). Unlike a Link Button, it sends a selection to an application. Pokkan lets you build its data but does not implement the action behind the selection, so direct webhook delivery does not support these controls.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+Select a menu in the editor, edit its visible placeholder, then open **Configure** for these settings:
+
+| Setting            | How it affects the menu                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Component ID       | Optional numeric identifier for this component. It is distinct from the custom ID. Usually it can stay blank.                         |
+| Custom ID          | Identifies the menu to the application, up to 100 characters. It must not conflict with another interactive custom ID in the message. |
+| Placeholder        | Prompt shown before a selection, such as “Choose a workshop topic”. It describes the choice rather than defining an option.           |
+| Minimum selections | How many choices a reader must select. The current editor's number control starts at one.                                             |
+| Maximum selections | How many choices are allowed, up to 25, without going below the minimum. For a String Select it must fit the available options.       |
+| Disabled           | Prevents the menu from being used. It does not remove its data.                                                                       |
+
+<img
+  src="/screenshots/pokkan-string-select-settings.webp"
+  alt="String Select settings with selection counts and editable option fields"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+[String Select](/en/discord/string-selects/) owns a list of options you write. [User](/en/discord/user-selects/), [Role](/en/discord/role-selects/), [Mentionable](/en/discord/mentionable-selects/) and [Channel](/en/discord/channel-selects/) menus obtain their choices from Discord instead. Their default entries refer to real Discord IDs rather than labels invented in the editor.
+
+A default is the initially selected choice, not permission to access a person, role or channel. Choosing a role does not assign it. If an ID no longer exists or is unavailable in the target context, correct or remove the default rather than relying on the preview to validate membership.

@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+if [[ "$1" == "bin/rails" && "$2" == "server" ]] || [[ "$1" == "bundle" && "$2" == "exec" && "$3" == "puma" ]]; then
+  SKIP_TEST_DATABASE=1 bin/rails db:prepare
+  bin/rails kits:prune_shares
+  bin/rails reports:prune
+fi
+
+exec "$@"

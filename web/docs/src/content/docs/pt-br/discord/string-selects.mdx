@@ -1,0 +1,36 @@
+---
+title: Select de texto
+description: Crie alternativas com rótulo, valor, descrição e emoji e defina quais começam selecionadas.
+---
+
+import messages from "../../../../generated/messages.json";
+
+O Select de texto contém as opções escritas por você, como “Design” e “Programação”. Adicione-o em uma Linha de ação vazia ou escolha Select de texto na raiz Legacy para criar a linha automaticamente.
+
+Selecione o menu, escreva a indicação visível e abra Configurar. **Adicionar opção** cria outra alternativa. Cada opção tem um **Rótulo**, mostrado ao leitor, e um **Valor**, enviado à aplicação. Você também pode acrescentar descrição e emoji e marcá-la como **Selecionada por padrão**. Rótulo, valor e descrição aceitam até 100 caracteres cada. O valor não é um link a menos que uma aplicação o interprete dessa forma.
+
+Use arrastar ou os controles de mover para ordenar as alternativas e remova as que não precisar. O menu aceita até 25 opções. Mantenha as quantidades mínima e máxima e as seleções iniciais compatíveis com as alternativas disponíveis. Para permitir uma única escolha, defina o mínimo e o máximo como 1.
+
+<img
+  src="/screenshots/pokkan-string-select-settings.webp"
+  alt="Configurações do Select de texto com as quantidades e o início das opções"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+<img
+  src="/screenshots/pokkan-string-select-options.webp"
+  alt="Área de opções rolada para mostrar nome, valor, descrição, emoji e seleção inicial"
+  width="1216"
+  height="1648"
+  loading="lazy"
+  decoding="async"
+/>
+
+No exemplo abaixo, a primeira linha é Select de texto. Abra-o para trocar os nomes das opções sem alterar seus valores armazenados.
+
+<div class="message-example" set:html={messages["pt-br"]["select-menus"]} />
+
+Veja [Configurações de seleção](/pt-br/discord/select-menus/) para IDs e desativação. Escolher uma opção não executa uma ação na Pokkan.

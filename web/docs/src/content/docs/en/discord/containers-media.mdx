@@ -1,0 +1,23 @@
+---
+title: Choosing media layouts
+description: Choose an embed image, a Section thumbnail, a V2 gallery or an attached file.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Choose the media presentation according to the space it needs and the message format. A small image beside a paragraph and a large collection below it are different structures, even when both use image URLs.
+
+| What you want                    | In Legacy                                                              | In Components V2                                                               |
+| -------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Small image beside text          | The [embed's thumbnail field](/en/discord/embeds/#thumbnail-and-image) | A [Thumbnail](/en/discord/thumbnails/) in a Section accessory slot             |
+| Large image below an explanation | The [embed's image field](/en/discord/embeds/#thumbnail-and-image)     | A [Media Gallery](/en/discord/media-galleries/), which can contain one item    |
+| Several media items together     | Separate embed images as appropriate                                   | A gallery with [individually configured items](/en/discord/gallery-items/)     |
+| An attached document             | Message attachment data                                                | A [File](/en/discord/files/) referring to an attachment supplied by the sender |
+
+The astronomy example combines a Section thumbnail with a two-item gallery. Open it to select the small accessory, an individual gallery image or the surrounding Container and see how their controls differ.
+
+<div class="message-example" set:html={messages.en["component-workshop"]} />
+
+A Container groups the pieces but does not replace their media settings. Use [Container controls](/en/discord/containers/) for the group's accent and spoiler, and the media item's own controls for its address and description.
+
+Image addresses must be publicly reachable. A webpage, local filename or sign-in-only link does not supply an image. [Checking a media address](/en/discord/media-galleries/#media-addresses) explains the common failures. Attachment references are different again: the current Send flow cannot upload the file bytes merely because the message contains its name.

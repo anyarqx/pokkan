@@ -1,0 +1,29 @@
+---
+title: Media Galleries
+description: Group V2 media, arrange items and fix image addresses that do not load.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Media Gallery displays one to ten media items as a collection in Components V2. Add it at the message level or inside a Container, then click the initial image area to enter its address.
+
+Select the gallery's outer edge and open Configure to add, remove and reorder items. Each entry has its own description and address, and each image has an individual spoiler control in the canvas. Selecting one image for its address is different from selecting the whole gallery for deletion or duplication.
+
+<div class="message-example" set:html={messages.en["component-workshop"]} />
+
+<img
+  src="/screenshots/pokkan-gallery-controls.webp"
+  alt="Selected gallery with collection controls and individual spoiler icons"
+  width="2560"
+  height="1752"
+  loading="lazy"
+  decoding="async"
+/>
+
+## Media addresses
+
+Use a URL that returns the media itself, not a local path or an image host's webpage. Try opening it in a private browser window: if it needs your account or shows a sharing page, Discord may not be able to fetch it. A URL ending in an image extension can still be blocked by the host.
+
+Click an existing or unavailable image to correct its address. Pokkan keeps an invalid value so you can repair it, rather than replacing it with unrelated content. The preview loads remote media from its host, and that host can see the request. It is not an upload to Pokkan.
+
+A gallery needs at least one item and every item needs usable media data. Removing the last item makes it incomplete. For item descriptions, spoilers and ordering, see [Gallery items](/en/discord/gallery-items/).

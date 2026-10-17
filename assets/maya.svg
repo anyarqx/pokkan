@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1122"
+   height="1402"
+   viewBox="0 0 1122 1402"
+   role="img"
+   aria-labelledby="mascot-title mascot-description"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="mascote.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.34165478"
+     inkscape:cx="859.05428"
+     inkscape:cy="741.97704"
+     inkscape:window-width="1368"
+     inkscape:window-height="690"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="mascot" />
+  <title
+     id="mascot-title">Mascote chibi de cabelos brancos</title>
+  <desc
+     id="mascot-description">Personagem chibi de frente: cabelos brancos longos, uma flor branca amarela no lado esquerdo, olhos castanhos e vestido preto. Vetores separados para animação.</desc>
+  <!--
+    Pure SVG / no embedded raster or fonts / transparent background.
+    Elements have stable IDs. Each animated anatomical part has complete
+    geometry extending into the layers that obscure it in this rest pose.
+    Layer order is deliberate; keep it when adding animation.
+    Canvas/pivot reference: body (548,850), face (547,683), flower (307,369).
+  -->
+  <style
+     id="style1">
+    .outline { stroke: #30180f; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+    .detail { fill: none; stroke: #30180f; stroke-width: 6.5; stroke-linecap: round; stroke-linejoin: round; }
+    .skin { fill: #fee8d2; }
+    .hair { fill: #fdfbf8; }
+    .cloth { fill: #302728; }
+    .eye-color { fill: #503024; }
+    .pivot { transform-box: view-box; }
+  </style>
+  <g
+     id="mascot"
+     class="pivot">
+    <!-- 01 | Entire rear hairstyle, including the normally concealed central region.
+         Keep as one silhouette: it can sway without exposing an empty hole. -->
+    <g
+       id="hair-back"
+       class="pivot"
+       data-pivot="548 325">
+      <path
+         id="hair-back-shape"
+         class="hair outline"
+         d="m 221,305 c 19,-76 107,-163 182,-187 44,-18 68,2 102,41 24,-8 49,-7 74,7 37,-35 79,-45 119,-36 89,18 155.95025,125.06965 194.95025,266.06965 C 880.95025,386.06965 866,371 859,367 c 50,72 95,133 100,187 5,52 -12,92 -55,118 l -8,-34 c 9,72 52,103 91,145 37,39 55,107 20,156 -12,-36 -34,-58 -62,-76 25,67 8,139 -64,189 l -25,8 c 10,-12 17,-29 19,-42 -38,52 -80,66 -128,56 -63,26 -123,40 -196,38 -58,0 -136,-20 -190,-43 -61,17 -111,-18 -142,-84 0,22 9,40 21,53 -70,4 -118,-44 -115,-110 0,-38 12,-73 32,-108 -45,14 -77,6 -102,-30 38,6 95.45733,-58.28053 126.45733,-119.28053 L 196,633 c -6,16 -11.06965,26.48259 -14.06965,36.48259 C 142.93035,646.48259 126,604 132,551 c 5,-52 34,-109 78,-162 -40,-17 -34,-68 11,-84 z"
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccc" />
+    </g>
+    <!-- 02 | Both legs include their complete upper attachment behind the dress. -->
+    <g
+       id="character-front"
+       transform="translate(0 12)"
+       data-description="Anatomy shifted as a single rest-position unit; subgroups keep local joints.">
+      <g
+         id="legs"
+         class="pivot">
+        <g
+           id="leg-left"
+           class="pivot"
+           data-pivot="473 1065">
+          <path
+             class="skin outline"
+             d="M 429 1018 C 464 999 502 1001 534 1016           L 530 1128 C 529 1167 519 1208 492 1226           C 466 1242 447 1221 435 1194 C 415 1145 417 1080 429 1018 Z"
+             id="path1" />
+        </g>
+        <g
+           id="leg-right"
+           class="pivot"
+           data-pivot="618 1065">
+          <path
+             class="skin outline"
+             d="M 564 1016 C 600 1002 642 1002 670 1020           C 676 1089 676 1155 663 1195 C 656 1222 637 1235 616 1232           C 589 1229 577 1205 569 1164 C 561 1127 563 1072 564 1016 Z"
+             id="path2" />
+        </g>
+      </g>
+      <g
+         id="limbs"
+         class="pivot"
+         data-pivot="548 850">
+        <g
+           id="limb-left"
+           class="pivot"
+           data-pivot="435 850">
+          <g
+             id="hand-left"
+             class="pivot"
+             data-pivot="364 932">
+            <path
+               class="skin outline"
+               d="M 371 921 C 345 921 324 941 314 959           C 301 984 321 1016 348 1018 C 373 1020 394 1001 402 982           C 407 959 399 930 371 921 Z"
+               id="path3" />
+          </g>
+          <g
+             id="arm-left"
+             class="pivot"
+             data-pivot="435 858">
+            <path
+               class="cloth outline"
+               d="M 453 829 C 423 839 365 886 325 935           C 340 956 365 985 400 1007 C 433 984 467 944 480 913           C 489 879 480 845 453 829 Z"
+               id="path4" />
+          </g>
+        </g>
+        <g
+           id="limb-right"
+           class="pivot"
+           data-pivot="657 850">
+          <g
+             id="hand-right"
+             class="pivot"
+             data-pivot="732 932">
+            <path
+               class="skin outline"
+               d="M 722 920 C 752 922 772 944 779 960           C 791 985 774 1013 749 1017 C 723 1022 705 1005 696 985           C 686 958 695 928 722 920 Z"
+               id="path5" />
+          </g>
+          <g
+             id="arm-right"
+             class="pivot"
+             data-pivot="654 858">
+            <path
+               class="cloth outline"
+               d="M 637 831 C 673 839 730 892 769 938           C 748 961 730 986 699 1008 C 658 980 638 951 618 913           C 609 882 615 846 637 831 Z"
+               id="path6" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="outfit"
+         class="pivot"
+         data-pivot="548 848">
+        <path
+           id="dress"
+           class="cloth"
+           d="M 440 829&#10;        C 487 819 610 813 654 829&#10;        C 687 874 704 932 701 969&#10;        C 719 1013 726 1044 736 1075&#10;        C 659 1118 439 1120 360 1074&#10;        C 378 1024 405 972 429 931&#10;        C 411 890 417 852 440 829 Z" />
+        <path
+           id="hem"
+           class="detail"
+           d="M 418.21394,924.86564 C 401.21394,962.86564 371,1050 360,1074 c 77,45 301,44 376,1 -13,-31 -39.69772,-121.1975 -52.69772,-149.1975"
+           sodipodi:nodetypes="cccc" />
+        <g
+           id="seams" />
+      </g>
+      <g
+         id="collar"
+         class="pivot"
+         data-pivot="546 819">
+        <path
+           class="cloth outline"
+           d="M 451 772         C 493 761 601 762 640 774         C 672 782 679 809 663 834         C 646 863 602 870 543 869         C 476 867 439 852 428 829         C 420 805 431 780 451 772 Z"
+           id="path9" />
+      </g>
+      <g
+         id="head"
+         class="pivot"
+         data-pivot="549 773">
+        <g
+           id="face">
+          <path
+             id="face-shape"
+             class="skin"
+             d="m 540,378 c 129,-10 234,62 242,192 9,102 -13,167 -85,203 -36.5771,18.58208 -203.58455,38.26827 -305,-4 -72,-29 -89,-92 -83,-199 6,-116 96,-189 231,-192 z"
+             sodipodi:nodetypes="cccccc"
+             style="stroke:#30180f;stroke-opacity:1;stroke-width:6.691;stroke-dasharray:none" />
+          <!-- Only the exposed outline of the jaw is inked; the upper edge is hidden by hair. -->
+        </g>
+        <g
+           id="eyes"
+           class="pivot"
+           transform="translate(0,-4)"
+           style="opacity:1">
+          <g
+             id="eye-left"
+             class="pivot"
+             data-pivot="410 626">
+            <path
+               id="sclera-left"
+               d="m 325,620 c 14,-46 47,-59 90,-60 40,3 64,30 60,72 -3,48 -29,68 -65,69 -36,1 -72,-23 -85,-53 z"
+               fill="#ffffff" />
+            <ellipse
+               id="iris-left"
+               cx="415"
+               cy="636"
+               rx="56"
+               ry="63"
+               class="eye-color" />
+            <circle
+               id="glint-left"
+               cx="395"
+               cy="615"
+               r="13"
+               fill="#ffffff" />
+            <path
+               id="lid-left"
+               fill="#30180f"
+               d="m 269,589 c 15,9 33,15 55,1 21,-28 53,-43 84,-43 40,1 63,22 67,45 -19,-18 -36,-25 -58,-24 -42,-4 -70,16 -84,47 -7,16 -3,31 -4,34 -19,0 -22,-30 -13,-45 -26,6 -41,-6 -47,-15 z" />
+          </g>
+          <g
+             id="eye-right"
+             class="pivot"
+             data-pivot="683 626">
+            <path
+               id="sclera-right"
+               d="m 616,621 c 6,-45 41,-63 78,-60 39,1 66,27 74,62 l -3,25 c -12,40 -44,54 -84,52 -36,-3 -61,-19 -65,-62 z"
+               fill="#ffffff" />
+            <ellipse
+               id="iris-right"
+               cx="680"
+               cy="635"
+               rx="55"
+               ry="63"
+               class="eye-color" />
+            <circle
+               id="glint-right"
+               cx="651"
+               cy="615"
+               r="13"
+               fill="#ffffff" />
+            <path
+               id="lid-right"
+               fill="#30180f"
+               d="m 619,592 c 14,-27 43,-44 78,-44 31,0 61,16 79,44 14,8 29,6 46,-2 -3,15 -18,23 -44,14 5,14 -1,40 -15,45 -3,-26 -12,-52 -31,-65 -33,-25 -69,-20 -92,-5 -9,7 -16,12 -21,13 z"
+               style="display:inline" />
+          </g>
+        </g>
+        <g
+           id="cheeks"
+           class="pivot">
+          <path
+             id="cheek-left"
+             d="M 379 709           C 368 718 368 735 378 740           C 387 747 401 743 407 735           C 418 717 400 708 395 718           C 390 731 406 744 424 740"
+             fill="none"
+             stroke="#a8734c"
+             stroke-width="6.5"
+             stroke-linecap="round" />
+          <path
+             id="cheek-right"
+             d="M 713 708           C 724 719 725 734 714 740           C 706 746 692 743 687 735           C 676 718 691 708 699 718           C 706 731 692 743 670 741"
+             fill="none"
+             stroke="#a8734c"
+             stroke-width="6.5"
+             stroke-linecap="round" />
+        </g>
+        <g
+           id="mouth"
+           class="pivot"
+           data-pivot="547 700">
+          <path
+             id="smile"
+             fill="#e68cad"
+             stroke="#30180f"
+             stroke-width="7"
+             stroke-linejoin="round"
+             d="m 519,699 c 11,8 20,-3 27,-4 10,8 19,9 30,4 -1,35 -9,53 -28,53 -18,2 -28,-18 -29,-53 z"
+             style="display:inline" />
+        </g>
+      </g>
+      <g
+         id="hair-fringe"
+         class="pivot"
+         data-pivot="548 435">
+        <path
+           class="hair"
+           d="M 267 319         C 335 237 420 203 526 201         C 641 204 737 226 818 315         L 828 549         C 751 548 701 487 666 409         C 654 489 620 550 572 586         C 543 607 516 617 504 613         C 515 594 524 571 516 553         C 470 529 451 472 451 403         C 416 465 356 549 282 549         Z"
+           id="path10" />
+        <path
+           class="detail"
+           stroke-width="8.3"
+           d="M 282 548         C 348 553 416 470 451 403         C 447 476 468 533 519 561         C 526 585 514 608 502 613         C 543 623 612 549 642 493         C 653 470 662 439 667 410         C 690 478 743 543 807 549"
+           id="path11" />
+      </g>
+    </g>
+    <!-- 03 | Independent hands, extending under their sleeves. -->
+    <!-- 04 | Sleeves are full separate pieces: animate around each shoulder. -->
+    <!-- 05 | Complete tunic behind the collar, arms and face. -->
+    <!-- 06 | Collar is separate and complete behind the chin. -->
+    <!-- 07 | Full head oval exists under the bangs; mouth/eyes stay nested on the head. -->
+    <!-- 08 | The fringe is a closed standalone piece, with a separately authored ink edge.
+         Top closure lives within the solid rear hairstyle and stays invisible. -->
+    <!-- 09 | The flower and its central disc are independently editable. -->
+    <g
+       id="flower"
+       class="pivot"
+       data-pivot="305 368"
+       transform="translate(-1.4634656,-13.707724)">
+      <path
+         id="petals"
+         class="hair outline"
+         d="m 259,327 c -10,-36 12,-68 38,-68 28,0 47,21 50,48 28,-12 50,-6 62,16 15,26 -6,46 -30,55 20,21 18,42 1,59 -17,16 -42,3 -61,-10 -11,32 -38,46 -59,37 -26,-9 -27,-33 -13,-66 -28,6 -46,-15 -43,-39 5,-21 27,-39 55,-32 z" />
+      <circle
+         id="flower-center"
+         cx="308"
+         cy="369"
+         fill="#ffca40"
+         r="29" />
+    </g>
+  </g>
+</svg>

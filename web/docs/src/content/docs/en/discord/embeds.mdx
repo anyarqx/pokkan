@@ -1,0 +1,69 @@
+---
+title: Embeds
+description: Configure titles, descriptions, fields, author, images, footer and date in an embed.
+---
+
+import messages from "../../../../generated/messages.json";
+
+An embed keeps an announcement's details together beneath the ordinary message text. In this example the author identifies the event series, the title links to its page, and short fields separate the meeting place from what to bring.
+
+<div class="message-example" set:html={messages.en["embed-workshop"]} />
+
+## Add and fill an embed
+
+In a Legacy message, open **Add element** below the message and choose **Embed**. Click the title or description to write directly. Select its edge for the embed controls. The color control changes the left accent, while **Configure Embed settings** opens the author, footer, title URL and timestamp.
+
+<img
+  src="/screenshots/pokkan-embed-complete.webp"
+  alt="Announcement with author, title, description, fields, thumbnail, image and footer visible in the editor"
+  width="2560"
+  height="2254"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Field       | Where to edit                  | Use and limit                                                                                                                                           |
+| ----------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title       | Directly in the message        | A heading of up to 256 characters. Its destination is a separate URL in Configure.                                                                      |
+| Description | Below the title                | The main explanation, up to 4,096 characters, with the formatting tools offered for this field.                                                         |
+| Color       | Selected embed's color control | Choose a color or enter a six-digit hex value. Clear removes the explicit accent, while black is a real color.                                          |
+| Fields      | Plus inside the embed          | Name/value pairs for dates, places or requirements. Both parts need text. See [Embed fields](/en/discord/embed-fields/) for ordering and inline layout. |
+
+## Author, title link, footer and date
+
+Open the selected embed's configuration sheet. These settings belong to the embed, not the sender: an author name does not change the webhook identity above the message.
+
+<img
+  src="/screenshots/pokkan-embed-settings.webp"
+  alt="Embed settings showing all author, footer, title URL and timestamp inputs"
+  width="1216"
+  height="1494"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Setting         | Result                                                                                                                              |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Author name     | Plain text above the title, up to 256 characters, such as “Community events”.                                                       |
+| Author URL      | Makes the author name a link. Use a complete HTTPS address.                                                                         |
+| Author icon URL | A small image beside the name, supplied as a public image address.                                                                  |
+| Footer text     | Plain text below the body, up to 2,048 characters, for a source or closing detail.                                                  |
+| Footer icon URL | A small image beside the footer.                                                                                                    |
+| Embed URL       | The title's destination. It does not make the whole embed clickable.                                                                |
+| Timestamp       | An ISO date and time, such as `2026-10-24T18:00:00Z`. The preview formats it for the viewer's environment. Clear it if unnecessary. |
+
+A URL does not replace its associated name or title. If a title link seems absent, check that the title contains text. Author and footer text do not use the description's Markdown tools.
+
+## Thumbnail and image
+
+The thumbnail sits beside the text, while the larger image appears below it. If either is absent, select the embed and use the corresponding media control. Once present, click the image itself to edit its address. Clearing that address removes the media.
+
+Use a direct public image URL rather than a local filename or an image host's sharing page. The image remains at its original host, which can later expire or block the link. [Media addresses](/en/discord/media-galleries/#media-addresses) explains how to check a failed image.
+
+## Limits and repairs
+
+A Legacy message supports up to 10 embeds, with up to 25 fields per embed. Field names allow 256 characters and values allow 1,024. Across all embeds, titles, descriptions, field names and values, author names and footer text share a 6,000-character total. Another embed does not reset that total.
+
+Fill or remove empty fields when validation points to them. If the combined total is exceeded, shorten repeated information across the message. Embeds cannot be inserted into Components V2: use [Containers](/en/discord/containers/) for grouped V2 content.
+
+Field definitions are also available in the [Discord embed reference](https://docs.discord.com/developers/resources/message#embed-object).

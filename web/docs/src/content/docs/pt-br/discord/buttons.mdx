@@ -1,0 +1,52 @@
+---
+title: Botões
+description: Escolha o estilo, edite texto e emoji e configure o destino ou identificador de cada Botão.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Botões podem ficar em uma [Linha de ação](/pt-br/discord/action-rows/) ou como acessório único de uma [Seção](/pt-br/discord/sections/). O estilo determina a aparência e os campos de destino permitidos.
+
+<div class="message-example" set:html={messages["pt-br"]["button-styles"]} />
+
+## Troque o estilo diretamente
+
+Selecione o Botão e abra a amostra de estilo nos controles. Escolha uma das seis opções abaixo. Pelo teclado, abra com Enter e percorra os estilos com as setas. Enter confirma a escolha e Escape fecha o seletor. No celular, toque no estilo desejado.
+
+<img
+  src="/screenshots/pokkan-button-style-picker.webp"
+  alt="Botão selecionado com os seis estilos disponíveis no seletor compacto"
+  width="2560"
+  height="1090"
+  loading="lazy"
+  decoding="async"
+/>
+
+| Estilo     | Apresentação                              | Campo necessário |
+| ---------- | ----------------------------------------- | ---------------- |
+| Primário   | Ação principal, azul                      | ID personalizado |
+| Secundário | Ação de apoio, neutra                     | ID personalizado |
+| Sucesso    | Ação positiva, verde                      | ID personalizado |
+| Perigo     | Ação destrutiva ou negativa, vermelha     | ID personalizado |
+| Link       | Abre um site, com símbolo de link externo | URL              |
+| Premium    | Compra do Discord                         | ID de SKU        |
+
+Os estilos 1–4 mudam a apresentação, mas precisam de uma aplicação que responda ao clique para executar uma tarefa, como atribuir um cargo ou confirmar uma inscrição. O envio direto da Pokkan por webhook não aceita esses estilos de ação.
+
+## Texto, emoji e desativação
+
+Clique no texto do Botão para escrever um rótulo de até 80 caracteres. O controle de emoji permite buscar Unicode, navegar por categorias ou informar sintaxe e ID de emoji do Discord. Limpar o emoji mantém o texto.
+
+Use **Desabilitado** para impedir cliques sem remover o Botão da mensagem. Os campos de destino e o ID numérico opcional ficam em **Configurar**.
+
+## Link e Premium
+
+Para abrir um site, escolha **Link** e informe a URL completa em Configurar, com até 512 caracteres. Use um texto que descreva o destino, como “Ver programação”. Colar um endereço no texto do Botão não define seu destino.
+
+Nos estilos 1–4, o **ID personalizado** identifica a ação enviada à aplicação. Ele não é link nem código executável. Use até 100 caracteres, sem repetir o ID de outro controle interativo da mensagem.
+
+**Premium** exige o ID de um produto do Discord associado à aplicação, chamado SKU, e não aceita texto comum, emoji, URL ou ID personalizado. O Discord apresenta os dados da compra, e o SKU ilustrativo do exemplo não representa um produto verificado. Premium e Link não geram uma interação.
+
+Ao trocar de estilo, os campos incompatíveis são removidos. **Desfazer** recupera o estilo e os dados anteriores, inclusive um texto removido ao experimentar Premium. Se o Botão for acessório de uma Seção, substituí-lo por Miniatura troca o acessório inteiro, uma alteração que também pode ser desfeita.
+
+A [referência de Botões do Discord](https://docs.discord.com/developers/components/reference#button) detalha os campos de cada estilo.

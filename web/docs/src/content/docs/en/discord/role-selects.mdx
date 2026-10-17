@@ -1,0 +1,16 @@
+---
+title: Role Select
+description: Prepare a role chooser with optional defaults and selection limits.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Role Select asks the reader to choose roles from the Discord server where the message is used. It does not assign those roles or change permissions on its own.
+
+Add it inside an empty Action Row. Edit the prompt, then open Configure for custom ID, minimum/maximum choices and disabled state. Optional default entries use a real role ID and the role type. Removing a role from Discord can invalidate a stored default, so review defaults when adapting a Kit to another server.
+
+The third menu below is the Role Select. Its choices are supplied by Discord when the control is used, not copied from Pokkan's metadata snapshot into the component.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+To insert a fixed role mention in text, use the editor's server reference search instead. A role mention and an interactive role-selection menu solve different tasks. See [server references](/en/using-pokkan/servers/) and [shared select settings](/en/discord/select-menus/).

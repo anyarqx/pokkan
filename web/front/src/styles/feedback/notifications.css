@@ -1,0 +1,75 @@
+.notifications {
+  position: fixed;
+  z-index: 100;
+  bottom: var(--bottom-inset);
+  right: 16px;
+  display: grid;
+  gap: 7px;
+  max-height: min(50dvh, 440px);
+  overflow-y: auto;
+  max-width: calc(100vw - 32px);
+  pointer-events: none;
+}
+
+.notification {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 42px;
+  width: fit-content;
+  max-width: min(300px, calc(100vw - 32px));
+  padding: 8px 8px 8px 11px;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  background: var(--raised);
+  box-shadow: var(--shadow);
+  font-size: 0.82rem;
+  pointer-events: auto;
+}
+
+.notification > svg {
+  color: var(--accent);
+}
+
+.notification.is-success > svg {
+  color: var(--ok);
+}
+
+.notification.is-error {
+  border-color: color-mix(in srgb, var(--danger) 48%, var(--line));
+}
+
+.notification.is-error > svg {
+  color: var(--danger);
+}
+
+.notification span {
+  overflow-wrap: anywhere;
+}
+
+.notification button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  color: var(--faint);
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.notification button:hover {
+  color: var(--text);
+  background: var(--raised-hover);
+}
+
+@media (max-width: 620px) {
+  .notifications {
+    right: 16px;
+  }
+}

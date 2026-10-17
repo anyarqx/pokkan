@@ -1,0 +1,72 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Astronomy club",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 17,
+        "accent_color": 5793266,
+        "components": [
+          {
+            "type": 10,
+            "content": "# Astronomy club\nExplore the planets with the community this Saturday."
+          },
+          {
+            "type": 9,
+            "components": [
+              {
+                "type": 10,
+                "content": "## A closer look at Jupiter\nCompare the clouds, colors and storms in this week's images. Beginners are welcome."
+              }
+            ],
+            "accessory": {
+              "type": 11,
+              "media": {
+                "url": "https://docs.pokkan.net/examples/jupiter.webp"
+              },
+              "description": "Jupiter's Great Red Spot. NASA/JPL-Caltech/SwRI/MSSS."
+            }
+          },
+          {
+            "type": 14,
+            "spacing": 1,
+            "divider": true
+          },
+          {
+            "type": 12,
+            "items": [
+              {
+                "media": {
+                  "url": "https://docs.pokkan.net/examples/mars.webp"
+                },
+                "description": "Lookout Panorama from the Spirit rover on Mars. NASA/JPL-Caltech/Cornell."
+              },
+              {
+                "media": {
+                  "url": "https://docs.pokkan.net/examples/jupiter.webp"
+                },
+                "description": "Jupiter's Great Red Spot. NASA/JPL-Caltech/SwRI/MSSS."
+              }
+            ]
+          },
+          {
+            "type": 1,
+            "components": [
+              {
+                "type": 2,
+                "style": 5,
+                "label": "Explore Jupiter",
+                "url": "https://science.nasa.gov/jupiter/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

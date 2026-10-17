@@ -1,0 +1,285 @@
+/* Shared form surfaces: native controls keep their semantics, not their browser chrome. */
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.choice-row button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 0.85rem;
+}
+.choice-row button:hover {
+  color: var(--text);
+  background: var(--raised-hover);
+}
+.choice-row button[aria-pressed="true"] {
+  color: var(--selected-text);
+  background: var(--selected);
+}
+
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch,
+input[type="color"]::-moz-color-swatch {
+  border: 0;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field > span,
+.form-field label,
+.mode-picker legend {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-field small {
+  color: var(--faint);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+textarea,
+select {
+  width: 100%;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background-color: var(--surface);
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+select {
+  height: 38px;
+  padding: 0 10px;
+}
+
+textarea {
+  min-height: 144px;
+  padding: 10px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+select {
+  padding-right: 34px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23929ba9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--faint);
+  opacity: 1;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):hover,
+textarea:hover,
+select:hover {
+  border-color: color-mix(in srgb, var(--accent) 58%, var(--line-strong));
+  background-color: var(--raised);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 13%, transparent);
+  outline: 0;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: var(--faint);
+  border-color: var(--line);
+  background-color: var(--surface);
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+input[type="datetime-local"] {
+  color-scheme: dark;
+}
+
+.mode-picker {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.mode-picker legend {
+  margin-bottom: 4px;
+}
+
+.mode-picker label {
+  position: relative;
+  display: block;
+}
+
+.mode-picker input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-picker span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 0 10px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgb(255 255 255 / 1%);
+  font-size: 0.87rem;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease,
+    color 140ms ease;
+}
+
+.mode-picker label:hover span {
+  border-color: var(--line-strong);
+  background: var(--raised-hover);
+}
+
+.mode-picker input:checked + span {
+  color: var(--selected-text);
+  border-color: var(--selected-line);
+  background: var(--selected);
+}
+
+.mode-picker input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.mode-picker:disabled {
+  opacity: 0.45;
+}
+
+.mode-picker:disabled span {
+  cursor: not-allowed;
+}
+
+.format-switch {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.format-switch span {
+  justify-content: center;
+  min-height: 40px;
+}
+
+.switch-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 34px;
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.switch-field > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.switch-field input {
+  position: relative;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  appearance: none;
+  background: var(--surface);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease;
+}
+
+.switch-field input::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--faint);
+  content: "";
+  transition:
+    transform 140ms ease,
+    background 140ms ease;
+}
+
+.switch-field input:hover {
+  border-color: var(--accent);
+}
+
+.switch-field input:checked {
+  border-color: var(--selected-line);
+  background: var(--selected);
+}
+
+.switch-field input:checked::after {
+  background: var(--selected-text);
+  transform: translateX(18px);
+}
+
+.switch-field input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.switch-field input:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.form-error {
+  margin: -8px 0 0;
+  color: var(--danger);
+  font-size: 0.84rem;
+}

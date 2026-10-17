@@ -1,0 +1,42 @@
+---
+title: Linhas de ação
+description: Agrupe Botões ou um menu de seleção e entenda quais controles cabem em cada Linha de ação.
+---
+
+import messages from "../../../../generated/messages.json";
+
+Uma Linha de ação reúne controles relacionados. Ela aceita **de um a cinco Botões** ou **um menu de seleção**. O menu ocupa a linha sozinho, então não é possível colocar um Botão ao lado dele nem dois menus na mesma linha.
+
+Em Legacy, o menu de inserção da raiz oferece Botões e os cinco tipos de seleção diretamente, criando a linha necessária em torno da escolha. Em Components V2, adicione **Linha de ação** na mensagem ou em um Contêiner e use o sinal de mais interno para escolher o controle. Uma linha vazia continua sendo um rascunho incompleto.
+
+<div class="message-example" set:html={messages["pt-br"]["button-styles"]} />
+
+## Escolha o conteúdo da linha
+
+| Filho                                                   | O que a pessoa escolhe   | Configuração                                                   |
+| ------------------------------------------------------- | ------------------------ | -------------------------------------------------------------- |
+| [Botão](/pt-br/discord/buttons/)                        | Uma ação ou um link      | Texto, estilo, emoji, desativação e destino ou identificador.  |
+| [Select de texto](/pt-br/discord/string-selects/)       | Opções escritas por você | Nome, valor, descrição, emoji e seleção inicial de cada opção. |
+| [Select de usuário](/pt-br/discord/user-selects/)       | Usuários do Discord      | Quantidade de escolhas e usuários iniciais opcionais.          |
+| [Select de cargo](/pt-br/discord/role-selects/)         | Cargos do servidor       | Quantidade de escolhas e cargos iniciais opcionais.            |
+| [Select de menção](/pt-br/discord/mentionable-selects/) | Usuários e cargos juntos | Entradas iniciais identificam se o ID é de usuário ou cargo.   |
+| [Select de canal](/pt-br/discord/channel-selects/)      | Canais do servidor       | Filtro de tipos e canais iniciais opcionais.                   |
+
+<img
+  src="/screenshots/pokkan-select-menus.webp"
+  alt="Os cinco tipos de seleção configurados no editor"
+  width="2560"
+  height="1520"
+  loading="lazy"
+  decoding="async"
+/>
+
+Selecione a borda da linha para mover, duplicar ou remover o grupo, ou selecione um Botão ou menu para acessar seus próprios controles. Arrastar um controle para outra linha compatível muda o grupo a que ele pertence, enquanto mover a linha mantém todos juntos. As opções de inserção dependem do que a linha já contém e do espaço restante na mensagem.
+
+## O que funciona no envio
+
+Botões de link abrem o endereço sem depender de uma ação de aplicação. Os estilos comuns de Botão e os menus de seleção enviam interações para uma aplicação do Discord. A Pokkan permite montar seus dados, mas não executa ações, atribui cargos nem roda comandos. O envio direto por webhook rejeita os controles que precisam dessas interações.
+
+Legacy aceita até cinco linhas. Em V2, a linha e cada filho contam para o total de 40 componentes. A Pokkan reserva capacidade para o filho obrigatório de uma linha vazia, impedindo que outra inserção use o espaço necessário para completá-la.
+
+Veja [Configurações de seleção](/pt-br/discord/select-menus/) para IDs, valores iniciais e quantidade de escolhas. A [referência do Discord](https://docs.discord.com/developers/components/reference#action-row) descreve o formato da linha.

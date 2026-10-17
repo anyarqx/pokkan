@@ -1,0 +1,25 @@
+---
+title: Separators
+description: Separate V2 elements with small or large spacing and an optional dividing line.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A Separator adds vertical breathing room between V2 elements, with an optional horizontal divider. Insert it at message level or inside a Container, not inside a Section's text list or an Action Row.
+
+Select it and open Configure. **Show divider** controls whether the line is visible. **Small** and **Large** choose the spacing, independently of whether there is a line. Turning the divider off keeps a spacing element rather than deleting the component.
+
+<img
+  src="/screenshots/pokkan-separator-settings.webp"
+  alt="Separator configuration with divider visibility and small or large spacing"
+  width="1216"
+  height="766"
+  loading="lazy"
+  decoding="async"
+/>
+
+The Container example below places a Separator between two Text Displays. Open it to compare a visible line with spacing alone.
+
+<div class="message-example" set:html={messages.en["components-v2"]} />
+
+A Separator still counts as a component when its line is hidden. Delete it when you do not need the gap. Use the normal drag or More actions controls to move it between compatible siblings.

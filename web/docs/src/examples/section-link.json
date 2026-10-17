@@ -1,0 +1,38 @@
+{
+  "schema": "pokkan-kit",
+  "version": 1,
+  "id": "45454545-4545-4545-8545-454545454545",
+  "name": "Friday game night",
+  "arguments": [],
+  "placeholders": [],
+  "message": {
+    "flags": 32768,
+    "components": [
+      {
+        "type": 17,
+        "accent_color": 5793266,
+        "components": [
+          {
+            "type": 10,
+            "content": "# Friday game night\nBring a game, meet the community and find your next favorite."
+          },
+          {
+            "type": 9,
+            "components": [
+              {
+                "type": 10,
+                "content": "## Choose something to play\nCooperative games, short rounds and room for newcomers."
+              }
+            ],
+            "accessory": {
+              "type": 2,
+              "style": 5,
+              "label": "Find a game",
+              "url": "https://boardgamegeek.com"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

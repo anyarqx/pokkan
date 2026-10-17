@@ -1,0 +1,34 @@
+---
+title: Start here
+description: Choose an editable message, learn the controls and send it to your channel.
+sidebar:
+  order: 1
+---
+
+import messages from "../../../../generated/messages.json";
+
+Start with a message that already has a useful shape, then replace its text, images and links. **Open in editor**, above each example, creates a new Kit in Pokkan, so you can experiment without changing the example or your saved messages.
+
+## Choose a starting point
+
+**An announcement with an embed** suits an event, release or set of instructions. Ordinary message text introduces the subject, while the embed groups the details. Open it and try changing the title or one of its fields.
+
+<div class="message-example" set:html={messages.en.legacy} />
+
+**Components V2** gives you more control over the order of text, images and buttons. This example uses a Container to keep its introduction and divider together. Select a piece to edit it, or the Container's edge to work with the group.
+
+<div class="message-example" set:html={messages.en["components-v2"]} />
+
+**A poll** lets people vote in Discord. Replace the question and answers, then use the clock to choose how long voting stays open. The preview illustrates the choices without collecting real votes.
+
+<div class="message-example" set:html={messages.en.poll} />
+
+These are the same examples offered on the homepage and when creating a message. To start from scratch, open [Messages](https://pokkan.net/en/kits), choose Legacy or Components V2 and create a Kit. Leave the name blank to use the suggestion.
+
+## From editing to a real message
+
+Follow [Your first message](/en/guide/first-message/) for the first edit, then [Understand the editor](/en/guide/editor/) for selection and insertion. The [element catalogue](/en/discord/components/) helps when you know what you want to add but not which Discord name to look for.
+
+To publish in a channel, [create a webhook](/en/guide/create-webhook/) and follow [Send your message](/en/guide/send/). You need permission to manage webhooks in that server. A test channel is a good place to check the result before posting an announcement.
+
+You can edit without signing in. Keep a backup through [import and export](/en/using-pokkan/import-export/), or sign in to save [personal and server Kits](/en/using-pokkan/kits/) that you can reopen later.

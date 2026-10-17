@@ -1,0 +1,34 @@
+---
+title: はじめに
+description: 編集できる作例を選び、メッセージを作ってDiscordのチャンネルに送信します。
+sidebar:
+  order: 1
+---
+
+import messages from "../../../../generated/messages.json";
+
+まずは作例を開き、文章や画像、リンクを自分の内容に置き換えてみましょう。作例の上にある**エディターで開く**を押すと、新しいKitとして開きます。元の作例や保存済みのメッセージは変更されません。
+
+## 作りたいメッセージから選ぶ
+
+**埋め込み付きのお知らせ**では、通常の文章で用件を伝え、埋め込みに日時や場所をまとめられます。作例を開いて、タイトルや項目を書き換えてみてください。
+
+<div class="message-example" set:html={messages.ja.legacy} />
+
+**Components V2**では、文章や画像、ボタンの順序を柔軟に組み立てられます。この作例はContainerで紹介文と区切りをまとめています。中の要素を選ぶとその要素を、外枠を選ぶとグループ全体を編集できます。
+
+<div class="message-example" set:html={messages.ja["components-v2"]} />
+
+**投票**では、Discordで参加者の意見を集められます。質問と選択肢を書き換え、時計から受付時間を選んでください。プレビュー上の操作は実際の投票にはなりません。
+
+<div class="message-example" set:html={messages.ja.poll} />
+
+これらはトップページとメッセージ作成画面にもある共通の作例です。白紙から始める場合は[メッセージ](https://pokkan.net/ja/kits)でLegacyかComponents V2を選びます。名前を空欄にすると、入力欄に表示された候補が使われます。
+
+## 編集から送信まで
+
+[最初のメッセージ](/ja/guide/first-message/)で文章を変更し、[エディターの使い方](/ja/guide/editor/)で選択や追加の操作を確かめてください。[要素一覧](/ja/discord/components/)から個別の構成要素も調べられます。一部の詳細ページは英語で提供され、未翻訳であることが表示されます。
+
+チャンネルに投稿するときは、[Webhookの作成](/ja/guide/create-webhook/)から[メッセージの送信](/ja/guide/send/)へ進みます。サーバーでWebhookを管理する権限が必要です。まずテスト用チャンネルで投稿結果を確かめてください。
+
+ログインせずに編集し、JSONからバックアップをダウンロードすることもできます。ログインするとKitをアカウントに保存して後から開けます。

@@ -1,0 +1,16 @@
+---
+title: User Select
+description: Configure a user chooser with selection limits and optional default user IDs.
+---
+
+import messages from "../../../../generated/messages.json";
+
+A User Select asks the reader to choose Discord users. Discord supplies the available entries, so you do not build a manual list of labels as you would for a String Select.
+
+Add it in an empty Action Row, edit its prompt and open Configure for the custom ID, selection counts and disabled state. **Default values** optionally preselect users by their Discord IDs. Keep the entry type as user and use stable numeric IDs, not display names or mention text such as `@Alex`.
+
+The second menu in this example is the User Select. The local preview shows the prompt, not an authenticated live directory of selectable members.
+
+<div class="message-example" set:html={messages.en["select-menus"]} />
+
+A chosen user is not a triggering user for placeholders and is not automatically mentioned in the message. The application receiving the interaction decides what to do with the selection. Pokkan does not execute that interaction. See [shared settings](/en/discord/select-menus/) for count/default rules.
