@@ -21,7 +21,7 @@ jobs:
       SQUARE_API_TOKEN: ${{ secrets.SQUARE_API_TOKEN }}
       SQUARE_APP_ID: ${{ vars.SQUARE_APP_ID }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 22
