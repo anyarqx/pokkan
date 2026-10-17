@@ -47,7 +47,7 @@ jobs:
           if-no-files-found: error
       - name: Remove the pre-upload copy
         run: rm -f .backup/pokkan-snapshot.tar.gz.enc
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: pokkan-production-snapshot-${{ github.run_id }}
           path: .backup/retrieved
