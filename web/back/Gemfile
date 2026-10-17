@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.1.3"
+gem "rails", "~> 8.1.4"
 # MySQL remains supported locally; Square Cloud production uses SQLite.
 gem "mysql2", "~> 0.5"
 # SQLite is a production dependency because Square Cloud does not use MySQL
