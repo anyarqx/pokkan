@@ -1,0 +1,76 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-pokkan_the_bot_development}
+      MYSQL_USER: ${DB_USER:-pokkan}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-pokkan-local-only}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-pokkan-local-only}
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    ports:
+      - "${MYSQL_PORT:-3308}:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  back:
+    build:
+      context: ./web/back
+      target: development
+    command: bin/rails server -b 0.0.0.0 -p 3000
+    env_file:
+      - ./env/dev.env
+    environment:
+      RAILS_ENV: development
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_ADAPTER: mysql2
+      DB_NAME: ${DB_NAME:-pokkan_the_bot_development}
+      DB_USER: ${DB_USER:-pokkan}
+      DB_PASSWORD: ${DB_PASSWORD:-pokkan-local-only}
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3000/api/v1/ready"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web/back:/rails
+
+  front:
+    image: node:22-bookworm-slim
+    command:
+      - sh
+      - -c
+      - |
+        checksum="$$(sha256sum package-lock.json | cut -d ' ' -f 1)"
+        if [ ! -f node_modules/.pokkan-lock ] || [ "$$(cat node_modules/.pokkan-lock)" != "$$checksum" ]; then
+          npm ci --include=dev
+          printf '%s' "$$checksum" > node_modules/.pokkan-lock
+        fi
+        exec npm run dev -- --host 0.0.0.0
+    working_dir: /app
+    environment:
+      API_PROXY_TARGET: http://back:3000
+    depends_on:
+      back:
+        condition: service_healthy
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./web/front:/app
+      # Vite resolves these repository-level directories from /app.
+      - ./assets:/assets:ro
+      - ./locales:/locales:ro
+      - front-node-modules:/app/node_modules
+
+volumes:
+  front-node-modules:
+  mysql-data:

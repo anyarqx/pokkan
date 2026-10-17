@@ -1,0 +1,692 @@
+apiErrors:
+  sharing_restricted: "このKitの共有は制限されています。再確認はサポートに申請してください。"
+  payload_too_large: "リクエストが大きすぎます。Kitのサイズを減らして再試行してください。"
+  reports_unavailable: "申請は現在利用できません。サポートをご利用ください。"
+  report_invalid: "申請内容と任意のメールアドレスを確認してください。"
+  report_rate_limited: "リクエストが多すぎます。しばらく待つかサポートをご利用ください。"
+  share_rate_limited: 共有のリクエストが多すぎます。しばらく待ってから再試行してください。
+  share_limit: 新しいリンクを作成する前に、既存のリンクを取り消してください。
+  share_invalid: リンクの設定を保存できませんでした。
+  share_capacity: 一時共有の保存容量が上限に達しています。後でもう一度お試しください。
+  request_failed: "リクエストに失敗しました（{{status}}）。"
+  authentication_required: 続行するにはログインしてください。
+  csrf_invalid: セキュアセッションの有効期限が切れました。再読み込みして、もう一度お試しください。
+  csrf_unavailable: セキュアセッションを確立できませんでした。
+  network_timeout: API の応答に時間がかかりすぎました。
+  network_unavailable: API に接続できませんでした。
+  not_found: 指定されたリソースが見つかりませんでした。
+  oauth_denied: Discord の認証が完了しませんでした。
+  oauth_failed: Discord の認証を完了できませんでした。
+  oauth_rate_limited: 認証の試行回数が多すぎます。しばらくしてから、もう一度お試しください。
+  oauth_unavailable: Discord ログインが設定されていません。
+  parameter_missing: リクエストに必要な情報がありません。
+  persistence_unavailable: ストレージは一時的に利用できません。
+  webhook_rejected: "Discord が Webhook を拒否しました（{{status}}）。"
+  webhook_thread_invalid: Discord Webhook のスレッド ID が無効です。
+  webhook_timeout: Discord の応答に時間がかかりすぎました。
+  webhook_unavailable: このブラウザーから Discord に接続できませんでした。
+  webhook_url_invalid: Discord Webhook の URL が必要です。
+  kit_invalid: Kitを保存できませんでした。
+  kit_conflict: このKitは別の場所で変更されました。変更する前に最新版を読み込んでください。
+  context_forbidden: このサーバーはアカウントで利用できません。
+  discord_unavailable: Discordのサーバー情報を一時的に取得できません。
+  discord_rate_limited: Discordからサーバーへのアクセス確認を一時停止するよう求められました。
+  guild_not_eligible: このサーバーにPokkanを追加する権限がありません。
+  refresh_cooldown: 少し待ってから再度更新してください。
+  authorization_required: Discord サーバーへのアクセスを再認証してください。
+contexts:
+  choose: アカウントまたはサーバーを選択
+  personal: 個人アカウント
+  personalShort: 個人
+  installed: Pokkanが追加済み
+  notEligible: Pokkanを追加する権限がありません
+  authorize: サーバーへのアクセスを許可
+  authorizeDetail: 作業するサーバーを選ぶため、Pokkanにサーバー一覧の閲覧を許可してください。
+  loading: サーバーを読み込み中…
+  unavailable: サーバー情報を取得できません。
+  add: Pokkanを追加
+  accountPage: アカウント
+  accountDescription: PokkanでDiscordのプロフィールとサーバーを管理します。
+  signInToManage: アカウントとサーバーを管理するにはDiscordでログインしてください。
+  servers: サーバー
+  otherServers: その他のサーバー（{{count}}）
+  switchPersonal: 個人アカウントに戻る
+  current: 選択中
+  select: 選択
+  refresh: サーバーを更新
+  refreshMetadata: サーバーデータを更新
+  metadata_current: サーバーデータは最新です。
+  metadata_stale: サーバーデータが古くなっています。
+  metadata_updating: サーバーデータを更新中…
+  metadata_unavailable: サーバーデータを一時的に利用できません。
+  metadata_rate_limited: Discord の制限により、更新までしばらくお待ちください。
+  metadata_bot_removed: Pokkan はこのサーバーにインストールされていません。
+  metadata_bot_forbidden: Pokkan はこのサーバーのデータを読み取れません。
+  none: 利用できるサーバーがありません。
+  installation:
+    installed: Pokkanを追加し、このサーバーを選択しました。
+    unverified: 追加を確認できませんでした。サーバー一覧を更新して再確認してください。
+    cancelled: サーバーへの追加をキャンセルしました。
+  authorization:
+    denied: サーバーへのアクセスは許可されませんでした。アカウントとキットは変更されていません。
+    failed: Discordの認可を完了できませんでした。しばらくしてから再試行してください。
+app:
+  addToDiscord: "追加"
+  report: "お問い合わせ・報告"
+  renameKit: Kitの名前を変更
+  kitNameRequired: Kitの名前を入力してください。
+  copyFailed: テキストをコピーできませんでした。
+  legacyChoice: テキスト・埋め込み・投票
+  v2Choice: テキスト・メディア・ボタンを配置
+  yourKits: 自分のキット
+  serverKits: サーバーのキット
+  startExample: サンプルから始める
+  sendMessage: "メッセージを送信"
+  home: ホーム
+  kits: メッセージ
+  newKit: 新しいメッセージ
+  importKit: メッセージを読み込む
+  about: Pokkan について
+  privacy: "プライバシーと利用条件"
+  resources: リソース
+  support: サポート
+  youtube: YouTube
+  github: GitHub
+  footer: "{{creator}}"
+  editor: エディター
+  create: 作成
+  save: 保存
+  discord: Discord
+  legacy: Legacy
+  componentsV2: Components V2
+  kitName: キット名
+  suggestedKitName:
+    legacy: "Legacy メッセージ {{number}}"
+    componentsV2: "Components V2 メッセージ {{number}}"
+    import: "インポートしたキット {{number}}"
+  createKit: メッセージを作成
+  defaultLegacyContent: "新しい **Legacy** メッセージ。"
+  defaultV2Content: "# 新しいメッセージ\nComponents V2 で作成。"
+  defaultButtonLabel: 続行
+  importJsonPlaceholder: '{ "content": "こんにちは" }'
+  importJson: JSON を貼り付け
+  noKits: まだメッセージがありません。新しく作成するか、サンプルを開いてください。
+  message: メッセージ
+  kit: キット
+  messagePreview: メッセージプレビュー
+  send: "送信"
+  sendNeedsKit: 送信するには、先にキットを作成してください。
+  selectKit: Kit を選択
+  webhookUrl: Webhook URL
+  sendNow: 今すぐ送信
+  sending: 送信中
+  messageSent: メッセージを送信しました。
+  messageSendFailed: メッセージを送信できませんでした。
+  signOutFailed: ログアウトできませんでした。もう一度お試しください。
+  signIn: Discord でログイン
+  signOut: ログアウト
+  account: Discord アカウント
+  delete: 削除
+  duplicate: 複製
+  confirmDelete: 削除を確認
+  menu: メニュー
+  primaryNavigation: メインナビゲーション
+  language: 言語
+  footerLinks: フッターリンク
+  edit: 編集
+  view: 表示
+  readOnlyKit: 閲覧のみ
+  kitAccessChanged: このKitへのアクセスが変わりました。ローカルの編集内容は残っていますが、保存できません。
+  loading: 読み込み中…
+  variables: "Placeholder"
+  json: JSON
+  payloadErrors: "ペイロードに {{count}} 件のエラー"
+  undo: 元に戻す
+  redo: やり直す
+  undoShortcut: "元に戻す（Ctrl / ⌘ Z）"
+  redoShortcut: "やり直す（Ctrl / ⌘ Shift Z）"
+  deleteKit: キットを削除
+  confirmDeleteKit: "{{name}} を削除"
+  discard: 破棄
+  saving: 保存中
+  close: 閉じる
+  dismiss: 閉じる
+  download: ダウンロード
+  copy: コピー
+  copied: コピーしました
+  applyJson: JSON を適用
+  messageJson: メッセージ JSON
+  discordRequest: Discord ペイロード
+  keyboardShortcuts: キーボードショートカット
+  shortcutHint: コンポーネントのショートカットは選択中のコンポーネントに適用され、入力中は実行されません。
+  attachmentMedia: 添付メディア
+  addMediaUrl: メディア URL を追加
+  loadingMedia: メディアを読み込み中
+  imageUnavailable: 画像を表示できません
+  openSidebar: サイドバーを開く
+  closeSidebar: サイドバーを閉じる
+  kitFormat: 形式
+  invalidJson: JSON が無効です。
+  importErrors:
+    invalidJson: JSON の構文が無効です。
+    discordObjectRequired: Discord JSON はオブジェクトである必要があります。
+    kitInvalid: Kit のデータが無効です。
+    kitVersionUnsupported: この Kit 形式のバージョンには対応していません。
+  webhookErrors:
+    unsupportedFields: "Webhook 送信では次の項目を使用できません：{{fields}}。"
+    multipartRequired: 添付ファイルには multipart アップロードが必要なため、このキットからはまだ送信できません。
+    interactiveUnsupported: Webhook を使って Discord に直接送信します。この送信ではインタラクティブなコントロール、返信、添付ファイルのアップロードは利用できません。
+  payloadIssuesBeforeCopy: "Discord JSON をコピーする前に、ペイロードの問題 {{count}} 件を修正してください。"
+  payloadIssuesBeforeDownload: "Discord JSON をダウンロードする前に、ペイロードの問題 {{count}} 件を修正してください。"
+  discordExportUnavailable: "ペイロードの問題 {{count}} 件を修正すると Discord エクスポートを利用できます。"
+  jsonApplied: JSON を適用しました。
+  jsonImportFailed: この JSON をインポートできませんでした。
+  shortcutUndo: 元に戻す
+  shortcutRedo: やり直す
+  shortcutCopy: 選択したコンポーネントをコピー
+  shortcutCut: 選択したコンポーネントを切り取り
+  shortcutPaste: 選択したコンポーネントの後に貼り付け
+  shortcutDuplicate: 選択したコンポーネントを複製
+  shortcutDelete: 選択したコンポーネントを削除
+  shortcutConfigure: 選択したコンポーネントを設定
+  shortcutMove: 選択したコンポーネントを移動
+  shortcutEscape: 親を選択するか一時 UI を閉じる
+  kitSaveFailed: Kitを保存できませんでした。
+  kitDeleteFailed: Kitを削除できませんでした。
+  kitSaved: Kitを保存しました。
+  kitConflict: このKitは別の場所で変更されました。編集中の内容は残っています。準備ができたら最新版を読み込んでください。
+  reloadLatest: 最新版を読み込む
+  kitJson: Pokkan Kit
+  fixMessageBeforeSend: 送信前にメッセージの検証エラーを修正してください。
+  kitLoadFailed: Kit を読み込めませんでした。
+  guide: "ガイド"
+  kitActions: "{{name}}の操作"
+  webhookHelp: "DiscordのWebhookを作成 →"
+landing:
+  startGuide: "はじめてのガイドを読む"
+  stepSend: "プレビューを確認して送信します。"
+  stepWebhook: "DiscordのチャンネルにWebhookを作成します。"
+  stepBuild: "メッセージを作るか、サンプルを開きます。"
+  startTitle: "下書きからDiscordへ"
+  editorAlt: "テキスト、画像、リンクボタンを組み合わせたComponents V2メッセージの編集画面"
+  title: カスタマイズの先へ
+  description: Components V2、埋め込み、投票を配置しながらDiscordメッセージを確認し、Webhookで送信できます。
+  openKits: "作成を始める"
+  samples: メッセージ例
+  legacy: Legacy
+  componentsV2: Discord Components V2
+  polls: 投票
+  sampleLinkLabel: 試す
+  sampleLegacyContent: "**金曜日はゲームナイト**"
+  sampleEmbedTitle: ゲームナイト
+  sampleEmbedText: 友達を誘って、チャットで遊ぶゲームを決めましょう。
+  sampleFieldWhen: 日時
+  sampleFieldTime: 金曜 · 19:00
+  sampleFieldWhere: 場所
+  sampleFieldPlace: "#ゲーム"
+  sampleV2Content: "## サポート時間"
+  sampleV2Detail: 月曜日〜金曜日 · 9:00〜18:00
+  samplePollQuestion: どの時間帯が最適ですか？
+  samplePollFirst: 朝
+  samplePollSecond: 夜
+  samplePollThird: どちらでもよい
+meta:
+  homeTitle: Discord Components V2 ビジュアルエディター
+  homeDescription: Discord の Webhook メッセージを、Components V2、埋め込み、投票とともに視覚的に作成できます。
+  aboutDescription: Discord メッセージと Components V2 のビジュアルエディターです。
+  privacyDescription: Pokkanのデータの取り扱い、プライバシーに関する権利、メッセージの利用・共有に関する条件。
+  kitsDescription: Pokkan で Discord メッセージのキットを作成・インポート・送信します。
+  editorDescription: Pokkan で Discord メッセージを編集します。
+errors:
+  backHome: ホームに戻る
+  retry: もう一度試す
+  404:
+    title: ページが見つかりません
+    description: このアドレスに対応する Pokkan のページはありません。
+  500:
+    title: Pokkan を読み込めませんでした
+    description: 再読み込みしてもう一度お試しください。
+about:
+  title: メッセージそのものを編集
+  previewAlt: Sectionとリンクを組み合わせた歓迎メッセージの編集画面
+  text: "PokkanはDiscordメッセージのビジュアルエディターです。お知らせやコミュニティの紹介、イベントへの招待を、表示されるメッセージを見ながら書いて組み立てられます。"
+  direct: "まずは伝えたいことを書いてみましょう。強調したい言葉を選んで書式を変え、画像やボタンを置きたい場所に追加します。選択したパーツのそばに操作ボタンが現れるので、色や絵文字を調整したあとも、そのまま文章の続きを書けます。"
+  context: "コミュニティのメッセージをまとめるときは、Pokkanをインストールしたサーバーを選びます。メンバーはKitを探したり新しく作ったりでき、作成者とサーバー管理者が内容を更新できます。文章にチャンネルやロールを入れるときも、名前で検索して選べます。"
+  editingTitle: "最初の一文から、伝わるメッセージへ"
+  editing: "文章とembedで要点をまとめるシンプルなお知らせも、Components V2で画像やリンクをグループに分けた構成も作れます。コミュニティに意見を聞きたいときは、投票を追加してプレビューで選択肢を編集しましょう。編集可能なサンプルを開くと、パーツの組み合わせ方を試しながら覚えられます。"
+  kitsTitle: "作ったメッセージを、次にも生かす"
+  kits: "毎週のお知らせを毎回作り直す必要はありません。Kitとして分かりやすい名前で残しておけば、次回は開いて日付や内容を変えるところから始められます。下書きはブラウザーに残り、Discordでログインすればアカウントに保存して別の端末から続きを編集できます。"
+  outputTitle: "できあがったメッセージをDiscordへ"
+  output: "Discordのチャンネルに投稿するには、メッセージ画面でKitを選び、そのチャンネルのWebhook URLを入力します。入力欄のそばにあるガイドでWebhookの作成手順を確認でき、この送信方法に対応していない内容があればPokkanが修正箇所を知らせます。"
+  delivery: "他のツールで作ったメッセージは、JSONを読み込んで編集を続けられます。完成したデータをコピーして別の場所で使ったり、Kit全体をダウンロードして手元に残したりすることもできます。"
+  examplesTitle: "サンプルを開いて試す"
+editor:
+  removeContent: メッセージ本文を削除
+  emojiUnavailable: "絵文字を表示できません"
+  textStyle: "テキストスタイル"
+  heading1: "見出し1"
+  heading2: "見出し2"
+  heading3: "見出し3"
+  subtext: "サブテキスト"
+  clearColor: "色を解除"
+  colorHex: "16進数の色"
+  clearEmoji: "絵文字を削除"
+  emojiEntry: "Unicode または <:名前:id>"
+  chooseEmoji: "絵文字を選択"
+  searchEmoji: "絵文字を検索"
+  emojiCategories: "絵文字のカテゴリ"
+  emojiLoading: "絵文字を読み込み中…"
+  emojiNoResults: "絵文字が見つかりません"
+  emojiGroups:
+    0: 顔文字
+    1: 人物
+    2: 構成要素
+    3: 動物
+    4: 食べ物
+    5: 旅行
+    6: アクティビティ
+    7: 物
+    8: 記号
+    9: 旗
+  canvas: メッセージエディター
+  appBadge: APP
+  now: 今
+  repliesTo: 返信先
+  invalidComponent: 無効なコンポーネント
+  spoiler: スポイラー
+  revealSpoiler: スポイラーを表示
+  hideSpoiler: スポイラーを隠す
+  placeholderToken: "Placeholder: {{key}}"
+  invalidTimestamp: 無効な日時
+  addAccessory: アクセサリーを追加
+  replaceAccessory: "{{component}}に置き換え"
+  addMedia: メディアを追加
+  premium: プレミアム
+  placeholderSuggestions: 変数の候補
+  insertChannel: チャンネル参照を挿入
+  insertRole: ロール参照を挿入
+  addElement: 要素を追加
+  embed: Embed
+  replyTo: 返信先
+  messageSettings: メッセージ設定
+  configure: 設定
+  addBefore: 前に追加
+  addAfter: 後に追加
+  paste: 貼り付け
+  moveUp: 上へ移動
+  moveDown: 下へ移動
+  capacityV2: 40 / 40 コンポーネント
+  capacityLegacy: 5 / 5 アクション行
+  componentId: コンポーネント ID
+  textToSpeech: テキスト読み上げ
+  suppressEmbeds: Embed を抑制
+  suppressNotifications: 通知を抑制
+  nonce: Nonce
+  enforceNonce: Nonce を強制
+  sharedClientTheme: 共有クライアントテーマ
+  reply: 返信
+  mentionRepliedUser: 返信先ユーザーにメンション
+  embedSettings: Embed 設定
+  author: 作成者
+  footer: フッター
+  name: 名前
+  url: URL
+  iconUrl: アイコン URL
+  text: テキスト
+  thumbnailUrl: サムネイル URL
+  imageUrl: 画像 URL
+  embedUrl: Embed URL
+  timestamp: 日時
+  color: 色
+  attachment: 添付ファイル
+  title: タイトル
+  description: 説明
+  close: 閉じる
+  moreActions: その他の操作
+  add: 追加
+  remove: 削除
+  poll: 投票
+  pollQuestion: 投票の質問
+  pollAnswer: 投票の回答
+  answer: 回答
+  addAnswer: 回答を追加
+  deleteAnswer: 回答を削除
+  deleteEmbed: Embed を削除
+  dragEmbed: Embed をドラッグ
+  addField: フィールドを追加
+  field: フィールド
+  fieldName: フィールド名
+  fieldValue: フィールド値
+  deleteField: フィールドを削除
+  dragField: フィールドをドラッグ
+  makeInline: フィールドをインラインにする
+  makeBlock: フィールドを全幅にする
+  toggleInline: インライン表示を切り替え
+  deleteAttachment: 添付ファイルを削除
+  dragAttachment: 添付ファイルをドラッグ
+  embedImage: Embed 画像
+  embedThumbnail: Embed サムネイル
+  placeholders: "Placeholder"
+  previewPlaceholderValues: メッセージ内で値をプレビュー
+  showPlaceholderSource: "Placeholderのトークンを表示"
+  showPlaceholderExamples: "Placeholderの例を表示"
+  searchPlaceholders: "Placeholderを検索"
+  search: 検索
+  custom: カスタム
+  addVariable: "Placeholderを追加"
+  noMatchingPlaceholders: "一致するPlaceholderがありません。"
+  deletePlaceholder: "Placeholderを削除"
+  placeholderKey: "Placeholderのキー"
+  placeholderLabel: "Placeholderのラベル"
+  placeholderDescription: "Placeholderの説明"
+  placeholderType: "Placeholderの種類"
+  placeholderExample: "Placeholderの例"
+  variable: "Placeholder"
+  customTemplateValue: "カスタムPlaceholderの値。"
+  example: 例
+  dragComponent: コンポーネントをドラッグ
+  deleteComponent: コンポーネントを削除
+  unknownPreserved: "Kit JSON に保持され、Discord JSON からは除外されます。"
+  revealSpoilerFile: スポイラーファイルを表示
+  writeHere: ここに入力
+  componentText: コンポーネントのテキスト
+  messageContent: メッセージ内容
+  selectOption: オプションを選択
+  selectUser: ユーザーを選択
+  selectRole: ロールを選択
+  selectMentionable: ユーザーまたはロールを選択
+  selectChannel: チャンネルを選択
+  formatting: 書式
+  bold: 太字
+  italic: 斜体
+  underline: 下線
+  strike: 取り消し線
+  inlineCode: インラインコード
+  codeBlock: コードブロック
+  quote: 引用
+  bulletedList: 箇条書き
+  numberedList: 番号付きリスト
+  link: リンク
+  attachmentUrl: 添付ファイル URL
+  showDivider: 区切り線を表示
+  spacing: 間隔
+  small: 小
+  large: 大
+  style: スタイル
+  primary: プライマリ
+  secondary: セカンダリ
+  success: 成功
+  danger: 危険
+  customId: カスタム ID
+  skuId: SKU ID
+  disabled: 無効
+  minimumSelections: 最小選択数
+  maximumSelections: 最大選択数
+  channelTypes: チャンネルの種類
+  durationHours: 期間（時間）
+  allowMultipleAnswers: 複数回答を許可
+  pollSelectOne: 回答を 1 つ選択
+  pollSelectMany: 回答を 1 つ以上選択
+  pollVotes_one: "{{count}}票"
+  pollVotes_other: "{{count}}票"
+  pollTimeRemaining: "残り {{hours}} 時間"
+  pollDaysRemaining_one: "残り {{count}} 日"
+  pollDaysRemaining_other: "残り {{count}} 日"
+  pollEnded: 投票終了
+  showResults: 結果を表示
+  vote: 投票
+  allowedMentions: 許可するメンション
+  allUsers: すべてのユーザー
+  allRoles: すべてのロール
+  everyoneAndHere: "@everyone と @here"
+  specificUserIds: 指定したユーザー ID
+  specificRoleIds: 指定したロール ID
+  discordIdsPlaceholder: 1 つ以上の Discord ID
+  idsHint: 最大 100 件。カンマまたは空白で区切ってください。
+  messageReference: メッセージ参照
+  addReplyOrForward: 返信または転送を追加
+  kind: 種類
+  forward: 転送
+  messageId: メッセージ ID
+  channelId: チャンネル ID
+  guildId: サーバー ID
+  failIfMissing: メッセージが存在しない場合は失敗
+  optionalDiscordId: 任意の Discord ID
+  discordId: Discord ID
+  stickers: スタンプ
+  addSticker: スタンプを追加
+  stickerId: スタンプ ID
+  stickerIdAt: "スタンプ {{index}} の ID"
+  removeStickerAt: "スタンプ {{index}} を削除"
+  stickerHint: 最大 3 件のスタンプ ID。メッセージ送信時に Discord がメディアを解決します。
+  discordDefaultHint: Discord の既定値を使う場合は空欄にしてください。
+  emoji: 絵文字
+  attachmentReferenceHint: ファイルコンポーネントでは attachment:// 参照のみ使用できます。
+  galleryItems: ギャラリー項目
+  galleryItem: ギャラリー項目
+  addItem: 項目を追加
+  itemAt: "項目 {{index}}"
+  dragGalleryItem: ギャラリー項目をドラッグ
+  moveItemUp: 項目を上へ移動
+  moveItemDown: 項目を下へ移動
+  deleteItem: 項目を削除
+  mediaUrl: メディア URL
+  galleryHint: メディアは10件まで追加できます。
+  options: オプション
+  option: オプション
+  addOption: オプションを追加
+  optionAt: "オプション {{index}}"
+  dragOption: オプションをドラッグ
+  moveOptionUp: オプションを上へ移動
+  moveOptionDown: オプションを下へ移動
+  deleteOption: オプションを削除
+  label: ラベル
+  value: 値
+  selectedByDefault: 既定で選択
+  optionsHint: 選択肢は1〜25件です。
+  defaultValues: 既定値
+  addValue: 値を追加
+  defaultValueIdAt: "既定値 {{index}} の ID"
+  defaultValueTypeAt: "既定値 {{index}} の種類"
+  removeDefaultValueAt: "既定値 {{index}} を削除"
+  defaultValuesHint: 各既定値は、選択したエンティティの種類と設定した選択範囲に一致する必要があります。
+  invalidJsonHint: JSON が無効です。修正されるまで適用されません。
+  validJsonHint: JSON が有効になると適用されます。
+  rawJson: 生の JSON
+  payloadValidation: ペイロード検証
+  payloadIssueCount: "ペイロードに {{count}} 件の問題"
+  components:
+    actionRow: アクション行
+    button: ボタン
+    stringSelect: 文字列選択
+    userSelect: ユーザー選択
+    roleSelect: ロール選択
+    mentionableSelect: メンション対象選択
+    channelSelect: チャンネル選択
+    section: セクション
+    textDisplay: テキスト表示
+    thumbnail: サムネイル
+    mediaGallery: メディアギャラリー
+    file: ファイル
+    separator: セパレーター
+    container: コンテナ
+  parents:
+    root: メッセージのルート
+    sectionAccessory: セクションのアクセサリー
+  entityTypes:
+    user: ユーザー
+    role: ロール
+    channel: チャンネル
+  placeholderTypes:
+    string: テキスト
+    number: 数値
+    boolean: 真偽値
+    url: URL
+    color: 色
+    snowflake: Discord ID
+  placeholderCategories:
+    bot: Bot
+    channel: チャンネル
+    guild: サーバー
+    message: メッセージ
+    user: ユーザー
+  placeholderBuiltIns:
+    userName: { label: ユーザー名, description: ユーザーの表示名。 }
+    userId: { label: ユーザー ID, description: ユーザーの Discord Snowflake。 }
+    userMention:
+      {
+        label: ユーザーメンション,
+        description: 書式設定されたユーザーメンション。,
+      }
+    userAvatar:
+      { label: ユーザーアバター, description: ユーザーのアバター URL。 }
+    guildName: { label: サーバー名, description: 現在のサーバー名。 }
+    guildId: { label: サーバー ID, description: サーバーの Discord Snowflake。 }
+    channelName: { label: チャンネル名, description: 現在のチャンネル名。 }
+    channelId:
+      { label: チャンネル ID, description: チャンネルの Discord Snowflake。 }
+    messageId: { label: メッセージ ID, description: 処理中のメッセージ ID。 }
+    botName: { label: Bot 名, description: Bot 名の例。 }
+  unsupportedComponent: 未対応のコンポーネント
+  validation:
+    embedFieldRequired: 埋め込みフィールドには名前と値が必要です。
+    componentBoolean: "{{field}} は true または false で指定してください。"
+    buttonUrlLimit: "ボタンのURLは512文字以内で指定してください。"
+    invalidEmoji: "Unicode 絵文字または有効なカスタム絵文字IDを入力してください。"
+    interactiveButtonFields: "インタラクションボタンに url や sku_id は指定できません。"
+    embedColor: "色は24ビットの整数で指定してください。"
+    v2FieldForbidden: "{{field}} は Components V2 メッセージでは使用できません。"
+    v2ComponentLimit: Components V2 で使用できるコンポーネントは最大 40 件です。
+    v2CompletionReserve: このメッセージには、必要なコンポーネント構造を完成させるための空きがありません。
+    legacyRowLimit: Legacy メッセージで使用できるアクション行は最大 5 件です。
+    unsupportedComponent: "未対応のコンポーネントは Kit に保持され、Discord JSON からは除外されます。"
+    invalidComponentParent: "{{component}} は {{parent}} 内では使用できません。"
+    actionRowChildrenMin: アクション行には 1 つ以上の有効な子要素が必要です。
+    actionRowChildrenMax: アクション行の子要素は最大 5 件です。
+    actionRowComposition: アクション行には 1 つの選択メニュー、または最大 5 つのボタンを配置できます。
+    sectionChildrenMin: セクションには 1 つ以上のテキスト表示が必要です。
+    sectionChildrenMax: セクションで使用できるテキスト表示は最大 3 件です。
+    textDisplayEmpty: テキスト表示を空にすることはできません。
+    sectionAccessory: セクションにはアクセサリーが必要です。
+    separatorSpacing: セパレーターの間隔は 1 または 2 である必要があります。
+    customIdLimit: custom_id は最大 100 文字です。
+    customIdUnique: custom_id はメッセージ内で一意である必要があります。
+    componentIdInteger: コンポーネント ID は 32 ビット整数である必要があります。
+    componentIdUnique: コンポーネント ID はメッセージ内で一意である必要があります。
+    buttonStyle: ボタンのスタイルは 1〜6 である必要があります。
+    buttonLabelLimit: ボタンのラベルは最大 80 文字です。
+    linkButtonUrl: リンクボタンには URL が必要です。
+    linkButtonCustomId: リンクボタンに custom_id は指定できません。
+    linkButtonSku: リンクボタンに sku_id は指定できません。
+    premiumButtonSku: プレミアムボタンには sku_id が必要です。
+    premiumButtonField: "プレミアムボタンに {{field}} は指定できません。"
+    interactiveButtonCustomId: インタラクティブボタンには custom_id が必要です。
+    selectCustomId: 選択メニューには custom_id が必要です。
+    selectPlaceholderLimit: 選択メニューのプレースホルダーは最大 150 文字です。
+    stringSelectOptionsMin: 文字列選択には 1 つ以上のオプションが必要です。
+    stringSelectOptionsMax: 文字列選択で使用できるオプションは最大 25 件です。
+    optionLabelLength: オプションのラベルは 1〜100 文字である必要があります。
+    optionValueLength: オプションの値は 1〜100 文字である必要があります。
+    selectMin: メッセージの選択メニューの最小選択数は 1〜25 である必要があります。
+    selectMax: 最大選択数は 1〜25 である必要があります。
+    selectRange: 最小選択数を最大選択数より大きくすることはできません。
+    stringSelectDefaults: 文字列選択では default_values ではなく option.default を使用します。
+    defaultValuesRange: 既定値は選択範囲内である必要があります。
+    defaultValueInvalid: "既定値には有効な {{types}} ID が必要です。"
+    accentColor: アクセントカラーは 24 ビット整数である必要があります。
+    mediaUrl: "{{label}} にはメディア URL が必要です。"
+    fileAttachmentUrl: ファイルコンポーネントでは attachment:// URL のみ使用できます。
+    galleryItemsMin: メディアギャラリーには 1 つ以上の項目が必要です。
+    galleryItemsMax: メディアギャラリーの項目は最大 10 件です。
+    contentLimit: メッセージ内容は最大 2000 文字です。
+    embedCount: メッセージで使用できる Embed は最大 10 件です。
+    embedPropertyLimit: "Embed の {{field}} は最大 {{limit}} 文字です。"
+    embedAuthorLimit: Embed の作成者名は最大 256 文字です。
+    embedFooterLimit: Embed のフッターテキストは最大 2048 文字です。
+    embedFieldsCount: Embed で使用できるフィールドは最大 25 件です。
+    embedFieldName: Embed のフィールド名は最大 256 文字です。
+    embedFieldValue: Embed のフィールド値は最大 1024 文字です。
+    embedTextLimit: Embed の合計テキストは最大 6000 文字です。
+    stickerLimit: メッセージで使用できるスタンプは最大 3 件です。
+    attachmentDescriptionLimit: 添付ファイルの説明は最大 1024 文字です。
+    settableFlags: Pokkan が対応するメッセージフラグのみエクスポートできます。
+    nonceType: nonce は文字列または整数である必要があります。
+    nonceLimit: nonce は最大 25 文字です。
+    mentionUsersLimit: 許可するメンションには最大 100 ユーザーを指定できます。
+    mentionRolesLimit: 許可するメンションには最大 100 ロールを指定できます。
+    mentionUsersConflict: allowed_mentions.parse の users と明示的な users は同時に指定できません。
+    mentionRolesConflict: allowed_mentions.parse の roles と明示的な roles は同時に指定できません。
+    pollObject: 投票はオブジェクトである必要があります。
+    pollQuestion: 投票の質問は 1〜300 文字である必要があります。
+    pollAnswersMin: 投票には 2 つ以上の回答が必要です。
+    pollAnswersMax: 投票の回答は最大 10 件です。
+    pollAnswerText: 投票の回答は 1〜55 文字である必要があります。
+    pollDuration: 投票期間は 1 時間〜32 日である必要があります。
+    pollLayout: poll.layout_type は 1 である必要があります。
+    referenceObject: メッセージ参照はオブジェクトである必要があります。
+    referenceType: メッセージ参照の種類は返信（0）または転送（1）である必要があります。
+    referenceMessageId: メッセージ参照には message_id が必要です。
+    forwardChannelId: 転送参照には channel_id が必要です。
+  mutations:
+    destinationMissing: 移動先が存在しません。
+    v2ComponentLimit: Components V2 メッセージで使用できるコンポーネントは最大 40 件です。
+    componentNotAllowed: "ここに {{component}} は配置できません。"
+    legacyRowsOnly: インタラクティブ行は Legacy メッセージでのみ使用できます。
+    legacyRowKind: Legacy 行を開始できるのはメッセージ用のボタンと選択メニューだけです。
+    componentsMissing: コンポーネントのコレクションが存在しません。
+    legacyRowLimit: Legacy メッセージで使用できるアクション行は最大 5 件です。
+    clipboardInvalid: クリップボードにコンポーネントがありません。
+    pasteUnsupported: 未対応のコンポーネントは保持されますが、編集可能なツリーには貼り付けできません。
+    pasteV2Limit: このコンポーネントを貼り付けると Components V2 の 40 コンポーネント制限を超えます。
+    duplicateUnavailable: このコンポーネントは複製できません。
+    parentMissing: コンポーネントの親が存在しません。
+    duplicateUnsupported: 未対応のコンポーネントは複製できません。
+    duplicateCapacity: "{{component}} を複製すると親の容量を超えます。"
+    duplicateV2Limit: このコンポーネントを複製すると Components V2 の 40 コンポーネント制限を超えます。
+    sourceMissing: 移動元のコンポーネントが存在しません。
+    moveRejected: この移動先はコンポーネントを受け入れないか、容量の上限に達しています。
+    moveMissing: 移動元または移動先が存在しません。
+    collectionMissing: 移動先のコレクションが存在しません。
+sharing:
+  viewAccess: 共有・閲覧可能
+  editAccess: 共有・編集可能
+  temporaryCopy: 一時コピー
+  title: 共有
+  directLink: Kitの直接URL
+  directHint: このアドレスでは、Kitの既存のアカウント・サーバー権限が適用されます。
+  accessLink: アクセスリンク
+  copyLink: リンクをコピー
+  copied: リンクをコピーしました。
+  permission: 権限
+  view: 閲覧可能
+  edit: 編集可能
+  audience: アクセスできる人
+  members: ログイン済みのサーバーメンバー
+  anyone: リンクを知っている全員
+  expires: 有効期限
+  hour: 1時間後
+  day: 24時間後
+  week: 7日後
+  month: 30日後
+  never: 有効期限なし
+  keepExpiry: 現在の有効期限を維持
+  copyExpiry: コピーと同じ
+  expiresAt: "有効期限：{{date}}"
+  createLink: アクセスリンクを作成
+  revoke: アクセスを取り消す
+  regenerate: リンクを再生成
+  confirmRegenerate: 以前のリンクを置き換える
+  regenerateHint: このタブにはリンクの秘密情報がありません。再生成すると新しいアドレスをコピーでき、以前のリンクは使えなくなります。
+  publicEdit: このリンクを持つ人は保存済みメッセージを変更できますが、Kitの削除や共有リンクの管理はできません。
+  saveFirst: アクセスリンクを作成する前にKitを保存してください。作成先のアカウントまたはサーバーが引き続き所有します。
+  savedVersion: リンクからは保存済みのメッセージが開きます。編集内容を相手にも表示するには、先に保存してください。
+  temporaryHint: ログインせずに、サーバー上の一時コピーを共有できます。ブラウザーの下書きはそのまま残り、有効期限が過ぎるとコピーにはアクセスできなくなります。
+  createTemporary: 一時コピーを作成
+  managementLink: 非公開の管理リンク
+  managementHint: 一時コピーの編集、共有リンクの管理、削除にはこのアドレスを使います。他の人には渡さずに保管してください。アクセスリンクには管理権限がありません。
+  openCopy: サーバー上のコピーを開く
+  deleteCopy: 一時コピーと共有リンクを削除
+  importCopy: 自分のメッセージにコピー
+  revoked: 一時コピーを削除しました。
+  failed: 共有を更新できませんでした。もう一度お試しください。
+  unavailable: このリンクは利用できません。有効期限が切れたか、アクセスが取り消された可能性があります。

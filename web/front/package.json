@@ -1,0 +1,41 @@
+{
+  "name": "pokkan-the-bot-front",
+  "private": true,
+  "version": "0.4.0-rc.4",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "check:bundle": "node ./scripts/check-bundle.mjs",
+    "check": "tsc -b",
+    "dev": "vite",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@discordapp/twemoji": "^16.0.1",
+    "emojibase-data": "^17.0.0",
+    "highlight.js": "^11.12.0",
+    "i18next": "^25.8.13",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
+    "react-router": "^7.2.0",
+    "sortablejs": "1.15.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/sortablejs": "^1.15.9",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.8",
+    "wrangler": "^4.131.2",
+    "yaml": "^2.7.0"
+  }
+}

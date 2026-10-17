@@ -1,0 +1,43 @@
+:root {
+  --sl-color-accent-low: #e4eaf8;
+  --sl-color-accent: #3c528f;
+  --sl-color-accent-high: #263965;
+  --sl-font: "Segoe UI", system-ui, sans-serif;
+}
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #283448;
+  --sl-color-accent: #a8bbfb;
+  --sl-color-accent-high: #dfe6ff;
+}
+html,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-4) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--sl-color-gray-4);
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sl-markdown-content img {
+  height: auto;
+  border: 1px solid var(--sl-color-hairline);
+}
+.site-title img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Keep documentation controls as restrained as the product chrome. */
+.pagination-links a,
+starlight-menu-button button {
+  box-shadow: none;
+}

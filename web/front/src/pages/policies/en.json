@@ -1,0 +1,118 @@
+{
+  "updated": "Updated",
+  "contactTitle": "Contact",
+  "operator": "Pokkan is maintained by {creator}. Contact the team through the private form for a privacy request, an abuse report or a review of a restriction. Signing in helps limit spam. If you cannot sign in, use the existing Discord support instead, without posting credentials or private message contents in a public channel.",
+  "contactAction": "Contact and requests",
+  "related": "Related policies",
+  "discordRules": "Discord Community Guidelines",
+  "discordPrivacy": "Discord Privacy Policy",
+  "privacy": {
+    "title": "Privacy",
+    "intro": "This notice explains which information Pokkan receives, why it is needed and what remains in your browser. It covers the editor, saved and shared Kits, Discord authorization and requests sent to the team.",
+    "sections": [
+      {
+        "title": "Why we process information",
+        "paragraphs": [
+          "Account identity, stored messages and sharing permissions are processed to provide the functions you request. Using European privacy standards as a baseline, processing necessary to provide those functions relies on performance of the requested service. Security records, access checks and proportionate abuse controls serve the legitimate interest of keeping the service and its users safe. Requests concerning legal rights are processed to meet applicable legal obligations.",
+          "Discord authorization is permission to connect your account, not blanket consent to unrelated uses of your data. Pokkan does not sell personal data, use message contents to train AI models, or classify content through automated moderation. Content restrictions are reviewed by an operator."
+        ]
+      },
+      {
+        "title": "Discord accounts and servers",
+        "paragraphs": [
+          "Signing in gives Pokkan your Discord ID, username, display name, avatar and banner when available. The identify and guilds permissions support login and discovering servers. Renewable access and refresh tokens are encrypted on the server and are not sent to the editor. The private bot credential is used to verify installations and retrieve authorized server information.",
+          "Pokkan stores versioned snapshots of server names, IDs, icons, banners, features, channels, roles, permissions and relevant overwrites. It retrieves your member roles when checking access and filters channel information for your permissions. A public Kit link does not reveal this catalog or grant access to other server resources. Pokkan does not build member directories, message histories or presence records for this functionality."
+        ]
+      },
+      {
+        "title": "Saved messages and sharing",
+        "paragraphs": [
+          "Saving uploads the Kit name, message, arguments and placeholder definitions, together with its owner, creator attribution and revision. Personal Kits require their owner. Server Kits are available to verified members, with changes controlled by creator and administrator permissions.",
+          "Creating an access link adds view or edit permission without changing ownership. Pokkan keeps a protected version of its secret, who can use it and when it expires. Anyone links can be opened by people outside the server, so share only content you intend those recipients to see. Anonymous sharing uploads an independent temporary copy, lasting 24 hours by default or one hour or seven days by choice. A separate management secret controls that copy.",
+          "Revoking or suspending access prevents further reads and saves through the affected capability, but cannot erase downloads, screenshots or independently imported copies. Link secrets appear in the shared address, which may be retained in browser history or by anyone you send it to. Treat a private management address as a credential."
+        ]
+      },
+      {
+        "title": "Browser storage and Discord delivery",
+        "paragraphs": [
+          "Local drafts, preferences and recovery data use browser storage. Ordinary drafts are separated by account or guest identity, while shared pending edits use account-scoped tab storage. Share secrets and temporary-copy management credentials remain separate from Kit exports. Clearing browser storage can permanently remove work that was never saved elsewhere.",
+          "Your login session uses an encrypted, HttpOnly cookie, marked Secure in production and valid for 14 days. Security and request-limiting cookies or counters support login and abuse prevention. A successfully used webhook URL can be remembered locally for 30 days, separately for each account or guest identity. Clearing its field removes that saved URL. It is not included in Kits, sharing requests or data sent to Pokkan’s servers.",
+          "Sending a message sends the message directly from the browser to Discord. The webhook URL is a Discord capability, so anyone who obtains it may be able to send to its channel. Preview placeholder examples are not silently substituted into the sent message."
+        ]
+      },
+      {
+        "title": "Recipients, media and international processing",
+        "paragraphs": [
+          "Cloudflare hosts the interface and public documentation. Square Cloud hosts the application server and database, while Discord provides authorization, server information and message delivery. These providers can process network addresses and operational request information. Remote images and custom emoji load from their respective hosts, which receive your network address even when Pokkan suppresses the page referrer.",
+          "Provider infrastructure can process data outside your country or the European Economic Area. Contact support for available information about locations and applicable transfer arrangements. This notice does not assert that all processing takes place in the EU or that every international transfer has been independently certified."
+        ]
+      },
+      {
+        "title": "How long information remains",
+        "paragraphs": [
+          "Saved Kits and account records remain until they are deleted or a verified removal request is handled. Removing Pokkan from a server or signing out does not automatically delete its Kits or snapshots. Logout ends the current session without revoking the account-wide Discord grant. Invalidated or explicitly disconnected authorizations are removed, while logging in again may create a new grant.",
+          "Expired access links and temporary copies become inaccessible at their deadline and are deleted during maintenance. Security audit events have a 180-day retention policy and exclude message contents and bearer secrets. Reports are scheduled for deletion after 180 days, or 90 days after closure if earlier. Infrastructure logs follow the providers' operational retention rather than the audit retention period.",
+          "The configured backup workflow retains encrypted artifacts for 30 days. Data deleted from the live database can remain in those backups until they expire. Restoring a backup requires checking and reapplying relevant deletion and restriction decisions. A legal preservation requirement or an unresolved rights request may require retaining the specific information necessary to handle it."
+        ]
+      },
+      {
+        "title": "Your choices and rights",
+        "paragraphs": [
+          "Depending on applicable law, you can request access, correction, deletion, restriction, portability or object to processing based on legitimate interests. You can also complain to the relevant data-protection authority, including an EU supervisory authority or Brazil's ANPD where applicable. These rights have conditions and may need to be balanced with other people's rights.",
+          "Use the request form or support to describe what you need and identify the account or resource concerned. We may need proportionate verification before disclosing or changing personal data. Do not send a Discord password, access token or webhook credential. There is no automatic account-erasure button, and removing personal information from server-owned work requires reviewing its ownership and other members' rights.",
+          "You can delete local data through browser settings, remove a remembered webhook by clearing its field, manage your links through Share and revoke Pokkan under Discord's Authorized Apps settings. Revoking Discord authorization does not itself erase previously saved content."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms and acceptable use",
+    "intro": "Pokkan is for creating, editing, saving, sharing and sending Discord-compatible messages. Use it responsibly, with permission for the content and destinations involved, and follow Discord's applicable terms and community rules.",
+    "sections": [
+      {
+        "title": "Content and access",
+        "paragraphs": [
+          "Keep the rights needed to use and share your text, images and other material. Do not include private information that you are not entitled to disclose. Use Discord only if you meet its minimum age and the age required in your jurisdiction.",
+          "A Kit is a message resource, not permission to control someone else's account or server. Sharing does not transfer ownership, and editing access does not authorize deleting the original, managing its links or performing privileged Discord operations. Public addresses can be forwarded and their content copied."
+        ]
+      },
+      {
+        "title": "Uses that are not allowed",
+        "paragraphs": [
+          "Do not use Pokkan for spam, unsolicited mass messaging, harassment, threats or targeted abuse. Fraud, phishing, impersonation, deceptive credential collection and malicious links are prohibited, as are exploits and attempts to compromise another person or service.",
+          "Do not upload illegal content or unlawfully distribute protected material. Follow Discord's Developer Policy and Community Guidelines, including their protections against exploitation and harmful content. Do not bypass access restrictions, evade a suspension, guess credentials, exhaust the API or turn temporary sharing into permanent bulk storage."
+        ]
+      },
+      {
+        "title": "Reports and proportionate restrictions",
+        "paragraphs": [
+          "Report a shared message through the link beside it, or use the request page or existing support channel for another concern. Explain what is wrong, identify the relevant address and include only information needed for review. Reports are not published, and submitting one does not automatically restrict a Kit.",
+          "An operator can disable sharing for the offending Kit without deleting unrelated messages. Revocation, expiry and technical request limits also restrict access. Regenerating a link cannot undo an operator's resource restriction. The owner or temporary-copy manager can see the restriction and its explanation and request a review through the same channels.",
+          "Pokkan does not claim automated content classification or guaranteed review times. Serious or repeated abuse may justify further proportionate measures available to the operator or hosting provider. Urgent danger or a suspected crime should also be reported to the appropriate authorities and to Discord where relevant."
+        ]
+      },
+      {
+        "title": "Keeping your work and credentials safe",
+        "paragraphs": [
+          "Keep a backup of important work and retain the management address of an anonymous hosted copy if you need to revoke it before expiry. Losing that secret can leave you unable to manage the copy. Service interruptions or access restrictions do not authorize bypassing security controls.",
+          "Discord decides whether it accepts a delivered message. Saving or sharing a Kit does not publish or synchronize a message on Discord, and Pokkan cannot remove copies another person has already made. The Privacy notice explains the handling and retention of account, message and security data."
+        ]
+      }
+    ]
+  },
+  "report": {
+    "title": "Contact and reports",
+    "intro": "Use this form for misuse of Pokkan, a privacy request or a review of a sharing restriction. Signing in helps limit spam and identifies the account making the request.",
+    "supportHint": "If you cannot sign in or need to follow up, use the existing support channel and keep your reference.",
+    "kind": "Reason",
+    "abuse": "Report abuse",
+    "privacy": "Privacy request",
+    "appeal": "Review a restriction",
+    "details": "What should the team review?",
+    "contact": "Reply email (optional)",
+    "safety": "Identify the relevant message or concern and explain what happened. Do not include passwords, webhook URLs, share secrets or unnecessary personal information.",
+    "submit": "Send request",
+    "received": "Your request was recorded. Keep this reference for follow-up:",
+    "failed": "The request could not be sent. Please use support or try again."
+  }
+}

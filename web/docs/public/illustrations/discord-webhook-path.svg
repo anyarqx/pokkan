@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 326" role="img" aria-labelledby="title description">
+  <title id="title">Where to create a Discord webhook</title>
+  <desc id="description">Server menu, Server Settings, Integrations, Webhooks, then New Webhook and Copy Webhook URL.</desc>
+  <rect width="640" height="326" fill="#24262b" rx="6" />
+  <path d="M38 52v226" stroke="#6b74b6" stroke-width="3" />
+  <g fill="#a8bbfb">
+    <circle cx="38" cy="53" r="8" /><circle cx="38" cy="108" r="8" />
+    <circle cx="38" cy="163" r="8" /><circle cx="38" cy="218" r="8" />
+    <circle cx="38" cy="273" r="8" />
+  </g>
+  <g fill="#f2f3f5" font-family="system-ui, sans-serif" font-size="22">
+    <text x="65" y="61">Server menu</text>
+    <text x="65" y="116">Server Settings</text>
+    <text x="65" y="171">Integrations → Webhooks</text>
+    <text x="65" y="226">New Webhook → choose a channel</text>
+    <text x="65" y="281">Copy Webhook URL</text>
+  </g>
+</svg>

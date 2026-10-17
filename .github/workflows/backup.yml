@@ -1,0 +1,70 @@
+name: Production snapshot
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pokkan-production-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BACKUP_ENCRYPTION_KEY: ${{ secrets.BACKUP_ENCRYPTION_KEY }}
+      SQUARE_API_TOKEN: ${{ secrets.SQUARE_API_TOKEN }}
+      SQUARE_APP_ID: ${{ vars.SQUARE_APP_ID }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify backup configuration
+        run: test -n "$BACKUP_ENCRYPTION_KEY" && test -n "$SQUARE_API_TOKEN" && test -n "$SQUARE_APP_ID"
+      - name: Authenticate Square Cloud CLI
+        run: npx -y @squarecloud/cli@3.0.1 auth login --token "$SQUARE_API_TOKEN"
+      - name: Create and download application snapshot
+        run: mkdir -p .backup/raw && cd .backup/raw && ../../scripts/backup.sh --download
+      - name: Encrypt off-site copy
+        run: |
+          tar -C .backup/raw -czf .backup/pokkan-snapshot.tar.gz .
+          openssl enc -aes-256-cbc -pbkdf2 -salt \
+            -in .backup/pokkan-snapshot.tar.gz \
+            -out .backup/pokkan-snapshot.tar.gz.enc \
+            -pass env:BACKUP_ENCRYPTION_KEY
+          rm -rf .backup/raw .backup/pokkan-snapshot.tar.gz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pokkan-production-snapshot-${{ github.run_id }}
+          path: .backup/pokkan-snapshot.tar.gz.enc
+          retention-days: 30
+          if-no-files-found: error
+      - name: Remove the pre-upload copy
+        run: rm -f .backup/pokkan-snapshot.tar.gz.enc
+      - uses: actions/download-artifact@v4
+        with:
+          name: pokkan-production-snapshot-${{ github.run_id }}
+          path: .backup/retrieved
+      - name: Verify encrypted artifact and SQLite restore
+        run: |
+          mkdir -p .backup/restore .backup/unpacked
+          openssl enc -d -aes-256-cbc -pbkdf2 \
+            -in .backup/retrieved/pokkan-snapshot.tar.gz.enc \
+            -out .backup/restored-snapshot.tar.gz \
+            -pass env:BACKUP_ENCRYPTION_KEY
+          tar -C .backup/restore -xzf .backup/restored-snapshot.tar.gz
+          snapshot="$(find .backup/restore -type f -name '*.zip' -print -quit)"
+          test -n "$snapshot"
+          unzip -q "$snapshot" -d .backup/unpacked
+          database="$(find .backup/unpacked -type f -path '*/storage/pokkan_the_bot_production.sqlite3' -print -quit)"
+          test -n "$database" && test -f "$database"
+          test "$(sqlite3 "$database" 'PRAGMA integrity_check;')" = "ok"
+          sqlite3 "$database" 'SELECT COUNT(*) FROM schema_migrations;' >/dev/null
+          sqlite3 "$database" 'SELECT COUNT(*) FROM kits;' >/dev/null
+          rm -rf .backup/restore .backup/unpacked .backup/retrieved .backup/restored-snapshot.tar.gz

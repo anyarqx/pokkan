@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web/front
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/front/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm run test
+      - run: npm run build
+      - run: npm run check:bundle
+
+  docs:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web/docs
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/docs/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:links
+
+  rails:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web/back
+    env:
+      DB_ADAPTER: sqlite3
+      RAILS_ENV: test
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          working-directory: web/back
+      - run: bundle exec brakeman --no-pager
+      - run: bundle exec bundler-audit check --update
+      - run: bundle exec rubocop
+      - run: bundle exec bin/rails db:prepare test
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

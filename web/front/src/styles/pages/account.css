@@ -1,0 +1,302 @@
+.account-page {
+  width: min(100% - 48px, 1100px);
+  margin: 38px auto 72px;
+}
+
+.account-page-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 28px;
+  margin-top: 26px;
+}
+
+.account-page-layout h2 {
+  margin: 0;
+  font-size: 1.03rem;
+  font-weight: 600;
+}
+
+.account-page-layout p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.account-profile {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.account-profile-banner {
+  display: block;
+  width: 100%;
+  height: 116px;
+  object-fit: cover;
+}
+
+.account-profile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 20px;
+}
+
+.account-profile-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.account-profile-selection {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.account-profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.account-profile-identity > img,
+.account-profile-identity > svg {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-profile-identity > div {
+  min-width: 0;
+}
+
+.account-profile-identity h2,
+.account-profile-identity p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-profile-identity p {
+  margin: 2px 0 0;
+}
+.account-profile-main > p {
+  margin: 12px 0 0;
+}
+.account-profile .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.account-servers {
+  min-width: 0;
+}
+.account-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-section-head .icon-button {
+  width: 32px;
+  height: 32px;
+}
+
+.account-context-list {
+  overflow: hidden;
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.account-context-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-width: 0;
+  min-height: 55px;
+  padding: 9px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.account-context-row > :not(.account-guild-banner) {
+  position: relative;
+  z-index: 1;
+}
+
+.account-context-row + .account-context-row {
+  border-top: 1px solid var(--line);
+}
+button.account-context-row:hover,
+a.account-context-row:hover {
+  background: var(--raised-hover);
+}
+.account-context-row[aria-pressed="true"] {
+  background: var(--raised);
+  box-shadow: inset 2px 0 var(--accent);
+}
+
+.account-context-row > img:first-child,
+.account-context-row > svg:first-child {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.account-context-name {
+  flex: 1;
+  min-width: 0;
+}
+.account-context-name strong,
+.account-context-name small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-context-name strong {
+  font-size: 0.84rem;
+  font-weight: 550;
+}
+.account-context-name small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+.account-guild-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.account-context-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-size: 0.79rem;
+  white-space: nowrap;
+}
+.account-context-row.is-unavailable {
+  color: var(--muted);
+}
+
+.account-other-servers {
+  margin-top: 20px;
+}
+.account-metadata {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.79rem;
+}
+.account-metadata .icon-button {
+  width: 28px;
+  height: 28px;
+}
+.account-other-servers summary {
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.81rem;
+}
+.account-other-servers summary:hover {
+  color: var(--text);
+}
+.account-other-servers .account-context-list {
+  margin-top: 10px;
+}
+.account-empty {
+  margin: 17px 0 0;
+}
+
+.account-preferences {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.account-preferences label {
+  color: var(--muted);
+  font-size: 0.81rem;
+}
+.account-preferences select {
+  width: 150px;
+}
+.account-signin {
+  margin-top: 22px;
+}
+
+@media (max-width: 780px) {
+  .account-preferences {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .account-page-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .account-page {
+    width: min(100% - 32px, 980px);
+    margin-top: 26px;
+  }
+  .account-page-layout {
+    margin-top: 20px;
+  }
+  .account-profile-body {
+    padding: 16px;
+  }
+  .account-preferences {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .account-preferences label {
+    flex-basis: 100%;
+  }
+  .account-preferences select {
+    width: 190px;
+  }
+}
+
+@media (max-width: 360px) {
+  .account-context-row {
+    gap: 8px;
+    padding: 8px;
+  }
+  .account-context-name strong {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

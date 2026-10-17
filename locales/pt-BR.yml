@@ -1,0 +1,693 @@
+apiErrors:
+  sharing_restricted: "O compartilhamento deste Kit foi restringido. Procure o suporte para pedir revisão."
+  payload_too_large: "O pedido é muito grande. Reduza o tamanho do Kit antes de tentar novamente."
+  reports_unavailable: "As solicitações estão indisponíveis no momento. Use o suporte."
+  report_invalid: "Confira os detalhes da solicitação e o e-mail opcional."
+  report_rate_limited: "Muitos pedidos. Aguarde ou use o suporte."
+  share_rate_limited: Muitos pedidos de compartilhamento. Aguarde antes de tentar novamente.
+  share_limit: Revogue um link existente antes de criar outro.
+  share_invalid: Não foi possível salvar as configurações do link.
+  share_capacity: O compartilhamento temporário está no limite de armazenamento. Tente mais tarde.
+  request_failed: "A solicitação falhou ({{status}})."
+  authentication_required: Entre para continuar.
+  csrf_invalid: Sua sessão segura expirou. Recarregue e tente novamente.
+  csrf_unavailable: Não foi possível estabelecer uma sessão segura.
+  network_timeout: A API demorou demais para responder.
+  network_unavailable: Não foi possível acessar a API.
+  not_found: O recurso solicitado não foi encontrado.
+  oauth_denied: A autorização no Discord não foi concluída.
+  oauth_failed: Não foi possível concluir a autorização no Discord.
+  oauth_rate_limited: Muitas tentativas de autorização. Tente novamente em instantes.
+  oauth_unavailable: O login com Discord não está configurado.
+  parameter_missing: A solicitação está incompleta.
+  persistence_unavailable: O armazenamento está temporariamente indisponível.
+  webhook_rejected: "O Discord rejeitou o webhook ({{status}})."
+  webhook_thread_invalid: O ID da thread do webhook do Discord é inválido.
+  webhook_timeout: O Discord demorou demais para responder.
+  webhook_unavailable: Não foi possível acessar o Discord deste navegador.
+  webhook_url_invalid: Informe uma URL de webhook do Discord.
+  kit_invalid: Não foi possível salvar o Kit.
+  kit_conflict: Este Kit mudou em outro lugar. Carregue a versão mais recente antes de alterá-lo.
+  context_forbidden: Este servidor não está disponível para sua conta.
+  discord_unavailable: As informações de servidores do Discord estão temporariamente indisponíveis.
+  discord_rate_limited: O Discord pediu uma pausa antes de verificar o acesso ao servidor.
+  guild_not_eligible: Você não pode instalar a Pokkan neste servidor.
+  refresh_cooldown: Aguarde antes de atualizar novamente.
+  authorization_required: Autorize novamente o acesso aos servidores do Discord.
+contexts:
+  choose: Escolher conta ou servidor
+  personal: Conta pessoal
+  personalShort: Pessoal
+  installed: Pokkan instalada
+  notEligible: Você não pode adicionar a Pokkan
+  authorize: Permitir acesso aos servidores
+  authorizeDetail: Permita que a Pokkan veja seus servidores para escolher onde trabalhar.
+  loading: Carregando servidores…
+  unavailable: As informações dos servidores estão indisponíveis.
+  add: Adicionar a Pokkan
+  accountPage: Conta
+  accountDescription: Gerencie sua identidade do Discord e seus servidores disponíveis na Pokkan.
+  signInToManage: Entre com o Discord para gerenciar sua conta e seus servidores.
+  servers: Servidores
+  otherServers: Outros servidores ({{count}})
+  switchPersonal: Voltar à conta pessoal
+  current: Selecionado
+  select: Selecionar
+  refresh: Atualizar servidores
+  refreshMetadata: Atualizar dados do servidor
+  metadata_current: Os dados do servidor estão atualizados.
+  metadata_stale: Os dados do servidor estão desatualizados.
+  metadata_updating: Atualizando dados do servidor…
+  metadata_unavailable: Os dados do servidor estão temporariamente indisponíveis.
+  metadata_rate_limited: O Discord pediu para aguardar antes de atualizar os dados.
+  metadata_bot_removed: A Pokkan não está mais instalada neste servidor.
+  metadata_bot_forbidden: A Pokkan não consegue ler os dados deste servidor.
+  none: Nenhum servidor disponível para esta conta.
+  installation:
+    installed: A Pokkan foi instalada e este servidor está selecionado.
+    unverified: A instalação ainda não foi confirmada. Atualize a lista para conferir novamente.
+    cancelled: A instalação no servidor foi cancelada.
+  authorization:
+    denied: O acesso aos servidores não foi autorizado. Sua conta e seus Kits continuam intactos.
+    failed: Não foi possível concluir a autorização no Discord. Tente novamente em instantes.
+app:
+  addToDiscord: "Adicionar"
+  report: "Contato / Denunciar"
+  renameKit: Renomear Kit
+  kitNameRequired: Digite um nome para o Kit.
+  copyFailed: Não foi possível copiar o texto.
+  legacyChoice: Texto, embeds e enquetes
+  v2Choice: Organize textos, mídias e botões
+  yourKits: Seus Kits
+  serverKits: Kits do servidor
+  startExample: Comece com um exemplo
+  sendMessage: "Enviar mensagem"
+  home: Início
+  kits: Mensagens
+  newKit: Nova mensagem
+  importKit: Importar mensagem
+  about: Sobre
+  privacy: "Privacidade e termos"
+  resources: Recursos
+  support: Suporte
+  youtube: YouTube
+  github: GitHub
+  footer: "{{creator}}"
+  editor: Editor
+  create: Criar
+  save: Salvar
+  discord: Discord
+  legacy: Legacy
+  componentsV2: Components V2
+  kitName: Nome do kit
+  suggestedKitName:
+    legacy: "Mensagem Legacy {{number}}"
+    componentsV2: "Mensagem Components V2 {{number}}"
+    import: "Kit importado {{number}}"
+  createKit: Criar mensagem
+  defaultLegacyContent: "Nova mensagem **Legacy**."
+  defaultV2Content: "# Nova mensagem
+
+    Criada com Components V2."
+  defaultButtonLabel: Continuar
+  importJsonPlaceholder: '{ "content": "Olá" }'
+  importJson: Colar JSON
+  noKits: Nenhuma mensagem ainda. Crie uma ou abra um exemplo.
+  message: Mensagem
+  kit: Kit
+  messagePreview: Pré-visualização da mensagem
+  send: "Enviar"
+  sendNeedsKit: Crie um Kit antes de enviar.
+  selectKit: Escolha um Kit
+  webhookUrl: URL do webhook
+  sendNow: Enviar agora
+  sending: Enviando
+  messageSent: Mensagem enviada.
+  messageSendFailed: Não foi possível enviar a mensagem.
+  signOutFailed: Não foi possível sair agora. Tente novamente.
+  signIn: Entrar com Discord
+  signOut: Sair
+  account: Conta Discord
+  delete: Excluir
+  duplicate: Duplicar
+  confirmDelete: Confirmar exclusão
+  menu: Menu
+  primaryNavigation: Navegação principal
+  language: Idioma
+  footerLinks: Links do rodapé
+  edit: Editar
+  view: Visualizar
+  readOnlyKit: Somente leitura
+  kitAccessChanged: Seu acesso a este Kit mudou. Suas alterações locais continuam aqui, mas não é possível salvar.
+  loading: Carregando…
+  variables: "Placeholders"
+  json: JSON
+  payloadErrors: "{{count}} erros no payload"
+  undo: Desfazer
+  redo: Refazer
+  undoShortcut: "Desfazer (Ctrl / ⌘ Z)"
+  redoShortcut: "Refazer (Ctrl / ⌘ Shift Z)"
+  deleteKit: Excluir kit
+  confirmDeleteKit: "Excluir {{name}}"
+  discard: Descartar
+  saving: Salvando
+  close: Fechar
+  dismiss: Dispensar
+  download: Baixar
+  copy: Copiar
+  copied: Copiado
+  applyJson: Aplicar JSON
+  messageJson: JSON da mensagem
+  discordRequest: Payload do Discord
+  keyboardShortcuts: Atalhos de teclado
+  shortcutHint: Atalhos de componente se aplicam ao componente selecionado e não são executados durante a digitação.
+  attachmentMedia: Mídia de anexo
+  addMediaUrl: Adicionar URL de mídia
+  loadingMedia: Carregando mídia
+  imageUnavailable: Imagem indisponível
+  openSidebar: Abrir barra lateral
+  closeSidebar: Fechar barra lateral
+  kitFormat: Formato
+  invalidJson: JSON inválido.
+  importErrors:
+    invalidJson: Sintaxe JSON inválida.
+    discordObjectRequired: O JSON Discord deve ser um objeto.
+    kitInvalid: Os dados do Kit são inválidos.
+    kitVersionUnsupported: Esta versão do formato de Kit não é compatível.
+  webhookErrors:
+    unsupportedFields: "O envio por webhook não aceita: {{fields}}."
+    multipartRequired: Anexos exigem upload multipart e ainda não podem ser enviados por este kit.
+    interactiveUnsupported: Envie diretamente ao Discord com um webhook. Controles interativos, respostas e upload de anexos não estão disponíveis neste envio.
+  payloadIssuesBeforeCopy: "Corrija {{count}} problemas no payload antes de copiar o JSON Discord."
+  payloadIssuesBeforeDownload: "Corrija {{count}} problemas no payload antes de baixar o JSON Discord."
+  discordExportUnavailable: "A exportação Discord fica disponível após corrigir {{count}} problemas no payload."
+  jsonApplied: JSON aplicado.
+  jsonImportFailed: Não foi possível importar este JSON.
+  shortcutUndo: Desfazer
+  shortcutRedo: Refazer
+  shortcutCopy: Copiar componente selecionado
+  shortcutCut: Recortar componente selecionado
+  shortcutPaste: Colar após o componente selecionado
+  shortcutDuplicate: Duplicar componente selecionado
+  shortcutDelete: Excluir componente selecionado
+  shortcutConfigure: Configurar componente selecionado
+  shortcutMove: Mover componente selecionado
+  shortcutEscape: Selecionar pai ou fechar interface temporária
+  kitSaveFailed: Não foi possível salvar o Kit.
+  kitDeleteFailed: Não foi possível excluir o Kit.
+  kitSaved: Kit salvo.
+  kitConflict: Outra versão deste Kit foi salva. Seu rascunho continua aqui para você conferir antes de carregar a versão mais recente.
+  reloadLatest: Carregar versão recente
+  kitJson: Kit Pokkan
+  fixMessageBeforeSend: Corrija os erros da mensagem antes de enviar.
+  kitLoadFailed: Não foi possível carregar os Kits.
+  guide: "Guia"
+  kitActions: "Ações de {{name}}"
+  webhookHelp: "Criar um webhook no Discord →"
+landing:
+  startGuide: "Siga o guia para iniciantes"
+  stepSend: "Confira a prévia e envie sua mensagem."
+  stepWebhook: "Crie um webhook para seu canal do Discord."
+  stepBuild: "Crie uma mensagem ou abra um exemplo."
+  startTitle: "Do rascunho ao Discord"
+  editorAlt: "Mensagem de Components V2"
+  title: Mais que personalização
+  description: Monte mensagens completas para Discord, enviando elas por webhooks.
+  openKits: "Começar a criar"
+  samples: Exemplos de mensagens
+  legacy: Legacy
+  componentsV2: Discord Components V2
+  polls: Enquetes
+  sampleLinkLabel: Testar
+  sampleLegacyContent: "**Noite de jogos nesta sexta**"
+  sampleEmbedTitle: Noite de jogos
+  sampleEmbedText: Chame alguém e escolha um jogo no chat.
+  sampleFieldWhen: Quando
+  sampleFieldTime: Sexta · 19h
+  sampleFieldWhere: Onde
+  sampleFieldPlace: "#jogos"
+  sampleV2Content: "## Atendimento"
+  sampleV2Detail: Segunda a sexta · 9h–18h
+  samplePollQuestion: Qual horário funciona melhor?
+  samplePollFirst: Manhã
+  samplePollSecond: Noite
+  samplePollThird: Sem preferência
+meta:
+  homeTitle: Editor visual de Discord Components V2
+  homeDescription: Crie visualmente mensagens de webhook do Discord com Components V2, embeds e enquetes.
+  aboutDescription: Um editor visual para mensagens do Discord e Components V2.
+  privacyDescription: Como a Pokkan trata seus dados, seus direitos de privacidade e as condições para usar e compartilhar mensagens.
+  kitsDescription: Crie, importe e envie Kits de mensagens do Discord com a Pokkan.
+  editorDescription: Edite uma mensagem do Discord com a Pokkan.
+errors:
+  backHome: Voltar ao início
+  retry: Tentar novamente
+  404:
+    title: Página não encontrada
+    description: Este endereço não corresponde a uma página disponível da Pokkan.
+  500:
+    title: Não foi possível carregar a Pokkan
+    description: Recarregue a página para tentar novamente.
+about:
+  title: Edite a própria mensagem
+  previewAlt: Mensagem de boas-vindas
+  text: "A Pokkan é um editor visual de mensagens do Discord. Você escreve e organiza tudo na própria mensagem, acompanhando o resultado enquanto prepara um aviso, apresenta sua comunidade ou convida as pessoas para um evento."
+  direct: "Comece escrevendo o que quer contar e selecione as palavras que deseja destacar. Para acrescentar uma imagem ou um botão, use o ponto de inserção no lugar em que eles devem aparecer. Os controles acompanham a parte selecionada, então você pode ajustar uma cor, trocar um emoji e voltar ao texto sem sair da mensagem."
+  context: "Para organizar as mensagens de uma comunidade, escolha um servidor com a Pokkan instalada. Seus membros podem encontrar os Kits e criar novos, enquanto o criador e os administradores cuidam das alterações de cada um. Ao escrever, você pode buscar canais e cargos pelo nome para incluí-los na mensagem."
+  editingTitle: "Da primeira frase à mensagem completa"
+  editing: "Um anúncio pode ser simples, com texto e um embed para reunir os detalhes, ou ganhar uma composição com grupos, imagens e links em Components V2. Se quiser ouvir a comunidade, crie uma enquete e ajuste as opções na própria prévia. Os exemplos da Pokkan já vêm prontos para editar e ajudam a descobrir como essas partes funcionam juntas."
+  kitsTitle: "Aproveite o que você já criou"
+  kits: "Guarde seu aviso semanal como um Kit para reabrir e mudar a data ou o conteúdo na próxima vez, sem montar tudo de novo. Os rascunhos ficam neste navegador e, ao entrar com Discord e salvar na conta, você também pode continuar em outro dispositivo."
+  outputTitle: "Leve a mensagem ao Discord"
+  output: "Para publicar em um canal do Discord, escolha o Kit em Mensagens e informe a URL de webhook desse canal. O guia ao lado do campo mostra como criar o webhook, e a Pokkan indica o que precisa ser ajustado na mensagem para usar essa forma de envio."
+  delivery: "Se você já tem uma mensagem em outra ferramenta, pode trazê-la pelo JSON e continuar no editor. Também é possível copiar o resultado para usar fora da Pokkan ou baixar o Kit completo para guardar uma cópia."
+  examplesTitle: "Experimente com uma mensagem pronta"
+editor:
+  removeContent: Remover conteúdo da mensagem
+  emojiUnavailable: "Emoji indisponível"
+  textStyle: "Estilo de texto"
+  heading1: "Título 1"
+  heading2: "Título 2"
+  heading3: "Título 3"
+  subtext: "Subtexto"
+  clearColor: "Remover cor"
+  colorHex: "Cor hexadecimal"
+  clearEmoji: "Remover emoji"
+  emojiEntry: "Unicode ou <:nome:id>"
+  chooseEmoji: "Escolher emoji"
+  searchEmoji: "Buscar emoji"
+  emojiCategories: "Categorias de emoji"
+  emojiLoading: "Carregando emojis…"
+  emojiNoResults: "Nenhum emoji encontrado"
+  emojiGroups:
+    0: Carinhas
+    1: Pessoas
+    2: Componentes
+    3: Animais
+    4: Comida
+    5: Viagem
+    6: Atividades
+    7: Objetos
+    8: Símbolos
+    9: Bandeiras
+  canvas: Editor de mensagem
+  appBadge: APP
+  now: agora
+  repliesTo: Responde a
+  invalidComponent: Componente inválido
+  spoiler: Spoiler
+  revealSpoiler: Revelar spoiler
+  hideSpoiler: Ocultar spoiler
+  placeholderToken: "Placeholder: {{key}}"
+  invalidTimestamp: Data inválida
+  addAccessory: Adicionar acessório
+  replaceAccessory: "Substituir por {{component}}"
+  addMedia: Adicionar mídia
+  premium: Premium
+  placeholderSuggestions: Sugestões de variáveis
+  insertChannel: Inserir referência de canal
+  insertRole: Inserir referência de cargo
+  addElement: Adicionar elemento
+  embed: Embed
+  replyTo: Responder a
+  messageSettings: Configurações da mensagem
+  configure: Configurar
+  addBefore: Adicionar antes
+  addAfter: Adicionar depois
+  paste: Colar
+  moveUp: Mover para cima
+  moveDown: Mover para baixo
+  capacityV2: 40 / 40 componentes
+  capacityLegacy: 5 / 5 linhas de ação
+  componentId: ID do componente
+  textToSpeech: Texto para voz
+  suppressEmbeds: Suprimir embeds
+  suppressNotifications: Suprimir notificações
+  nonce: Nonce
+  enforceNonce: Exigir nonce
+  sharedClientTheme: Tema compartilhado do cliente
+  reply: Resposta
+  mentionRepliedUser: Mencionar o usuário respondido
+  embedSettings: Configurações do embed
+  author: Autor
+  footer: Rodapé
+  name: Nome
+  url: URL
+  iconUrl: URL do ícone
+  text: Texto
+  thumbnailUrl: URL da miniatura
+  imageUrl: URL da imagem
+  embedUrl: URL do embed
+  timestamp: Data e hora
+  color: Cor
+  attachment: Anexo
+  title: Título
+  description: Descrição
+  close: Fechar
+  moreActions: Mais ações
+  add: Adicionar
+  remove: Remover
+  poll: Enquete
+  pollQuestion: Pergunta da enquete
+  pollAnswer: Resposta da enquete
+  answer: Resposta
+  addAnswer: Adicionar resposta
+  deleteAnswer: Excluir resposta
+  deleteEmbed: Excluir embed
+  dragEmbed: Arrastar embed
+  addField: Adicionar campo
+  field: Campo
+  fieldName: Nome do campo
+  fieldValue: Valor do campo
+  deleteField: Excluir campo
+  dragField: Arrastar campo
+  makeInline: Tornar campo inline
+  makeBlock: Tornar campo em bloco
+  toggleInline: Alternar inline
+  deleteAttachment: Excluir anexo
+  dragAttachment: Arrastar anexo
+  embedImage: Imagem do embed
+  embedThumbnail: Miniatura do embed
+  placeholders: "Placeholders"
+  previewPlaceholderValues: Visualizar valores na mensagem
+  showPlaceholderSource: "Mostrar tokens de Placeholder"
+  showPlaceholderExamples: "Mostrar exemplos de Placeholder"
+  searchPlaceholders: "Buscar Placeholders"
+  search: Buscar
+  custom: Personalizadas
+  addVariable: "Adicionar Placeholder"
+  noMatchingPlaceholders: "Nenhum Placeholder encontrado."
+  deletePlaceholder: "Excluir Placeholder"
+  placeholderKey: "Chave do Placeholder"
+  placeholderLabel: "Nome do Placeholder"
+  placeholderDescription: "Descrição do Placeholder"
+  placeholderType: "Tipo do Placeholder"
+  placeholderExample: "Exemplo do Placeholder"
+  variable: "Placeholder"
+  customTemplateValue: "Valor de Placeholder personalizado."
+  example: Exemplo
+  dragComponent: Arrastar componente
+  deleteComponent: Excluir componente
+  unknownPreserved: "Mantido no JSON da Kit; omitido do JSON do Discord."
+  revealSpoilerFile: Revelar arquivo com spoiler
+  writeHere: Escreva aqui
+  componentText: Texto do componente
+  messageContent: Conteúdo da mensagem
+  selectOption: Selecione uma opção
+  selectUser: Selecione uma pessoa
+  selectRole: Selecione um cargo
+  selectMentionable: Selecione uma pessoa ou cargo
+  selectChannel: Selecione um canal
+  formatting: Formatação
+  bold: Negrito
+  italic: Itálico
+  underline: Sublinhado
+  strike: Tachado
+  inlineCode: Código em linha
+  codeBlock: Bloco de código
+  quote: Citação
+  bulletedList: Lista com marcadores
+  numberedList: Lista numerada
+  link: Link
+  attachmentUrl: URL do anexo
+  showDivider: Exibir linha divisória
+  spacing: Espaçamento
+  small: Pequeno
+  large: Grande
+  style: Estilo
+  primary: Primário
+  secondary: Secundário
+  success: Sucesso
+  danger: Perigo
+  customId: ID personalizado
+  skuId: ID do SKU
+  disabled: Desabilitado
+  minimumSelections: Mínimo de seleções
+  maximumSelections: Máximo de seleções
+  channelTypes: Tipos de canal
+  durationHours: Duração em horas
+  allowMultipleAnswers: Permitir várias respostas
+  pollSelectOne: Selecione uma resposta
+  pollSelectMany: Selecione uma ou mais respostas
+  pollVotes_one: "{{count}} voto"
+  pollVotes_other: "{{count}} votos"
+  pollTimeRemaining: "{{hours}}h restantes"
+  pollDaysRemaining_one: "{{count}} dia restante"
+  pollDaysRemaining_other: "{{count}} dias restantes"
+  pollEnded: Enquete encerrada
+  showResults: Ver resultados
+  vote: Votar
+  allowedMentions: Menções permitidas
+  allUsers: Todos os usuários
+  allRoles: Todos os cargos
+  everyoneAndHere: "@everyone e @here"
+  specificUserIds: IDs de usuários específicos
+  specificRoleIds: IDs de cargos específicos
+  discordIdsPlaceholder: Um ou mais IDs do Discord
+  idsHint: Até 100 IDs, separados por vírgulas ou espaços.
+  messageReference: Referência da mensagem
+  addReplyOrForward: Adicionar resposta ou encaminhamento
+  kind: Tipo
+  forward: Encaminhamento
+  messageId: ID da mensagem
+  channelId: ID do canal
+  guildId: ID do servidor
+  failIfMissing: Falhar se a mensagem não existir
+  optionalDiscordId: ID do Discord opcional
+  discordId: ID do Discord
+  stickers: Figurinhas
+  addSticker: Adicionar figurinha
+  stickerId: ID da figurinha
+  stickerIdAt: "ID da figurinha {{index}}"
+  removeStickerAt: "Remover figurinha {{index}}"
+  stickerHint: Até 3 IDs de figurinhas. O Discord resolve a mídia quando a mensagem é enviada.
+  discordDefaultHint: Deixe vazio para usar o padrão do Discord.
+  emoji: Emoji
+  attachmentReferenceHint: Componentes de arquivo aceitam apenas uma referência attachment://.
+  galleryItems: Itens da galeria
+  galleryItem: Item da galeria
+  addItem: Adicionar item
+  itemAt: "Item {{index}}"
+  dragGalleryItem: Arrastar item da galeria
+  moveItemUp: Mover item para cima
+  moveItemDown: Mover item para baixo
+  deleteItem: Excluir item
+  mediaUrl: URL da mídia
+  galleryHint: Até 10 itens de mídia.
+  options: Opções
+  option: Opção
+  addOption: Adicionar opção
+  optionAt: "Opção {{index}}"
+  dragOption: Arrastar opção
+  moveOptionUp: Mover opção para cima
+  moveOptionDown: Mover opção para baixo
+  deleteOption: Excluir opção
+  label: Rótulo
+  value: Valor
+  selectedByDefault: Selecionada por padrão
+  optionsHint: De 1 a 25 opções.
+  defaultValues: Valores padrão
+  addValue: Adicionar valor
+  defaultValueIdAt: "ID do valor padrão {{index}}"
+  defaultValueTypeAt: "Tipo do valor padrão {{index}}"
+  removeDefaultValueAt: "Remover valor padrão {{index}}"
+  defaultValuesHint: Cada padrão deve corresponder ao tipo da entidade e ao intervalo de seleção configurado.
+  invalidJsonHint: JSON inválido — ele não será aplicado até ser corrigido.
+  validJsonHint: O JSON é aplicado quando se torna válido.
+  rawJson: JSON bruto
+  payloadValidation: Validação do payload
+  payloadIssueCount: "{{count}} problema(s) no payload"
+  components:
+    actionRow: Linha de ação
+    button: Botão
+    stringSelect: Select de texto
+    userSelect: Select de usuário
+    roleSelect: Select de cargo
+    mentionableSelect: Select de menção
+    channelSelect: Select de canal
+    section: Seção
+    textDisplay: Bloco de texto
+    thumbnail: Miniatura
+    mediaGallery: Galeria de mídia
+    file: Arquivo
+    separator: Separador
+    container: Contêiner
+  parents:
+    root: raiz da mensagem
+    sectionAccessory: acessório da seção
+  entityTypes:
+    user: Usuário
+    role: Cargo
+    channel: Canal
+  placeholderTypes:
+    string: Texto
+    number: Número
+    boolean: Booleano
+    url: URL
+    color: Cor
+    snowflake: ID do Discord
+  placeholderCategories:
+    bot: Bot
+    channel: Canal
+    guild: Servidor
+    message: Mensagem
+    user: Usuário
+  placeholderBuiltIns:
+    userName:
+      { label: Nome do usuário, description: Nome de exibição do usuário. }
+    userId: { label: ID do usuário, description: Snowflake Discord do usuário. }
+    userMention:
+      { label: Menção do usuário, description: Menção formatada do usuário. }
+    userAvatar:
+      { label: Avatar do usuário, description: URL do avatar do usuário. }
+    guildName: { label: Nome do servidor, description: Nome do servidor atual. }
+    guildId:
+      { label: ID do servidor, description: Snowflake Discord do servidor. }
+    channelName: { label: Nome do canal, description: Nome do canal atual. }
+    channelId: { label: ID do canal, description: Snowflake Discord do canal. }
+    messageId:
+      { label: ID da mensagem, description: ID da mensagem em processamento. }
+    botName: { label: Nome do bot, description: Nome de exemplo do bot. }
+  unsupportedComponent: Componente não suportado
+  validation:
+    embedFieldRequired: Um campo de embed precisa de nome e valor.
+    componentBoolean: "{{field}} deve ser true ou false."
+    buttonUrlLimit: "URLs de botões podem ter até 512 caracteres."
+    invalidEmoji: "Use um emoji Unicode ou um ID de emoji personalizado válido."
+    interactiveButtonFields: "Um botão de interação não pode ter url ou sku_id."
+    embedColor: "A cor deve ser um inteiro de 24 bits."
+    v2FieldForbidden: "{{field}} não é válido em mensagens Components V2."
+    v2ComponentLimit: Components V2 permite no máximo 40 componentes.
+    v2CompletionReserve: Esta mensagem não tem mais espaço para completar a estrutura obrigatória de componentes.
+    legacyRowLimit: Mensagens Legacy permitem no máximo 5 linhas de ação.
+    unsupportedComponent: "Componente não suportado mantido na Kit e omitido do JSON do Discord."
+    invalidComponentParent: "{{component}} não é válido dentro de {{parent}}."
+    actionRowChildrenMin: Uma linha de ação exige ao menos um filho válido.
+    actionRowChildrenMax: Uma linha de ação permite no máximo 5 filhos.
+    actionRowComposition: Uma linha de ação pode conter um select ou até cinco botões.
+    sectionChildrenMin: Uma seção exige ao menos um bloco de texto.
+    sectionChildrenMax: Uma seção permite no máximo 3 blocos de texto.
+    textDisplayEmpty: O bloco de texto não pode estar vazio.
+    sectionAccessory: Uma seção exige um acessório.
+    separatorSpacing: O espaçamento do separador deve ser 1 ou 2.
+    customIdLimit: custom_id é limitado a 100 caracteres.
+    customIdUnique: custom_id deve ser único dentro da mensagem.
+    componentIdInteger: O ID do componente deve ser um inteiro de 32 bits.
+    componentIdUnique: O ID do componente deve ser único dentro da mensagem.
+    buttonStyle: O estilo do botão deve estar entre 1 e 6.
+    buttonLabelLimit: Rótulos de botão são limitados a 80 caracteres.
+    linkButtonUrl: Um botão de link exige uma URL.
+    linkButtonCustomId: Um botão de link não pode ter custom_id.
+    linkButtonSku: Um botão de link não pode ter sku_id.
+    premiumButtonSku: Um botão premium exige sku_id.
+    premiumButtonField: "Um botão premium não pode ter {{field}}."
+    interactiveButtonCustomId: Um botão interativo exige custom_id.
+    selectCustomId: Um select exige custom_id.
+    selectPlaceholderLimit: O placeholder do select é limitado a 150 caracteres.
+    stringSelectOptionsMin: Um select de texto exige ao menos uma opção.
+    stringSelectOptionsMax: Um select de texto permite no máximo 25 opções.
+    optionLabelLength: Rótulos de opção exigem de 1 a 100 caracteres.
+    optionValueLength: Valores de opção exigem de 1 a 100 caracteres.
+    selectMin: Selects de mensagem exigem de 1 a 25 seleções mínimas.
+    selectMax: O máximo de seleções deve estar entre 1 e 25.
+    selectRange: O mínimo de seleções não pode exceder o máximo.
+    stringSelectDefaults: Select de texto usa option.default em vez de default_values.
+    defaultValuesRange: Os valores padrão devem respeitar o intervalo de seleção.
+    defaultValueInvalid: "O valor padrão deve conter um ID válido dos tipos {{types}}."
+    accentColor: A cor de destaque deve ser um inteiro de 24 bits.
+    mediaUrl: É necessária uma URL de mídia.
+    fileAttachmentUrl: Componentes de arquivo aceitam apenas URLs attachment://.
+    galleryItemsMin: A galeria de mídia exige ao menos um item.
+    galleryItemsMax: A galeria de mídia permite no máximo 10 itens.
+    contentLimit: O conteúdo da mensagem é limitado a 2000 caracteres.
+    embedCount: Uma mensagem permite até 10 embeds.
+    embedPropertyLimit: "A propriedade {{field}} do embed é limitada a {{limit}} caracteres."
+    embedAuthorLimit: O nome do autor do embed é limitado a 256 caracteres.
+    embedFooterLimit: O texto do rodapé do embed é limitado a 2048 caracteres.
+    embedFieldsCount: Um embed permite até 25 campos.
+    embedFieldName: Nomes de campo do embed são limitados a 256 caracteres.
+    embedFieldValue: Valores de campo do embed são limitados a 1024 caracteres.
+    embedTextLimit: O texto combinado dos embeds é limitado a 6000 caracteres.
+    stickerLimit: Uma mensagem permite até 3 figurinhas.
+    attachmentDescriptionLimit: Descrições de anexos são limitadas a 1024 caracteres.
+    settableFlags: Apenas flags de mensagem compatíveis com Pokkan podem ser exportadas.
+    nonceType: nonce deve ser uma string ou um inteiro.
+    nonceLimit: nonce é limitado a 25 caracteres.
+    mentionUsersLimit: Menções permitidas aceitam até 100 usuários.
+    mentionRolesLimit: Menções permitidas aceitam até 100 cargos.
+    mentionUsersConflict: allowed_mentions.parse users não pode ser combinado com users explícitos.
+    mentionRolesConflict: allowed_mentions.parse roles não pode ser combinado com roles explícitos.
+    pollObject: A enquete deve ser um objeto.
+    pollQuestion: Perguntas de enquete exigem de 1 a 300 caracteres.
+    pollAnswersMin: Enquetes exigem ao menos 2 respostas.
+    pollAnswersMax: Enquetes permitem no máximo 10 respostas.
+    pollAnswerText: Respostas de enquete exigem de 1 a 55 caracteres.
+    pollDuration: A duração da enquete deve estar entre 1 hora e 32 dias.
+    pollLayout: layout_type da enquete deve ser 1.
+    referenceObject: A referência de mensagem deve ser um objeto.
+    referenceType: O tipo da referência deve ser Resposta (0) ou Encaminhamento (1).
+    referenceMessageId: Uma referência de mensagem exige message_id.
+    forwardChannelId: Uma referência de encaminhamento exige channel_id.
+  mutations:
+    destinationMissing: O destino não existe mais.
+    v2ComponentLimit: Mensagens Components V2 permitem no máximo 40 componentes.
+    componentNotAllowed: Este componente não é permitido aqui.
+    legacyRowsOnly: Linhas interativas estão disponíveis apenas em mensagens Legacy.
+    legacyRowKind: Apenas botões e selects de mensagem podem iniciar uma linha Legacy.
+    componentsMissing: A coleção de componentes não existe mais.
+    legacyRowLimit: Mensagens Legacy permitem no máximo 5 linhas de ação.
+    clipboardInvalid: A área de transferência não contém um componente.
+    pasteUnsupported: Componentes não suportados são preservados, mas não podem ser colados na árvore editável.
+    pasteV2Limit: Colar este componente excederia o limite de 40 componentes V2.
+    duplicateUnavailable: Este componente não pode ser duplicado.
+    parentMissing: O componente pai não existe mais.
+    duplicateUnsupported: Componentes não suportados não podem ser duplicados.
+    duplicateCapacity: Duplicar este componente excederia a capacidade do pai.
+    duplicateV2Limit: Duplicar este componente excederia o limite de 40 componentes V2.
+    sourceMissing: O componente de origem não existe mais.
+    moveRejected: O destino não aceita o componente ou está cheio.
+    moveMissing: A origem ou o destino não existe mais.
+    collectionMissing: A coleção de destino não existe mais.
+sharing:
+  viewAccess: Compartilhado · leitura
+  editAccess: Compartilhado · edição
+  temporaryCopy: Cópia temporária
+  title: Compartilhar
+  directLink: URL direta do Kit
+  directHint: Este endereço mantém as permissões que o Kit já tem na conta ou no servidor.
+  accessLink: Link de acesso
+  copyLink: Copiar link
+  copied: Link copiado.
+  permission: Permissão
+  view: Pode visualizar
+  edit: Pode editar
+  audience: Quem pode abrir
+  members: Membros do servidor conectados
+  anyone: Qualquer pessoa com o link
+  expires: Expira
+  hour: Em 1 hora
+  day: Em 24 horas
+  week: Em 7 dias
+  month: Em 30 dias
+  never: Sem expiração
+  keepExpiry: Manter a expiração atual
+  copyExpiry: Igual à cópia
+  expiresAt: "Expira em {{date}}"
+  createLink: Criar link de acesso
+  revoke: Revogar acesso
+  regenerate: Gerar outro link
+  confirmRegenerate: Substituir o link anterior
+  regenerateHint: O segredo não está disponível nesta aba. Gere outro link para copiar um novo endereço, invalidando o anterior.
+  publicEdit: Qualquer pessoa com este link poderá alterar a mensagem salva, mas não poderá excluí-la nem gerenciar seus links.
+  saveFirst: Salve o Kit antes de criar links de acesso. Ele continuará pertencendo à conta ou ao servidor em que foi criado.
+  savedVersion: Os links abrem a mensagem salva. Salve suas alterações pendentes para que os destinatários possam vê-las.
+  temporaryHint: Compartilhe uma cópia hospedada sem entrar na conta. Seu rascunho local permanece separado, e a cópia fica indisponível quando o prazo termina.
+  createTemporary: Criar cópia temporária
+  managementLink: Link privado de gerenciamento
+  managementHint: Guarde este endereço com você para editar a cópia temporária, gerenciar seus links ou excluí-la. Os links de acesso não concedem essas permissões.
+  openCopy: Abrir cópia hospedada
+  deleteCopy: Excluir cópia temporária e revogar seus links
+  importCopy: Copiar para minhas mensagens
+  revoked: Cópia temporária excluída.
+  failed: Não foi possível atualizar o compartilhamento. Tente novamente.
+  unavailable: Este link está indisponível. Ele pode ter expirado ou sido revogado.
