@@ -17,7 +17,7 @@
     "@discordapp/twemoji": "^16.0.1",
     "emojibase-data": "^17.0.0",
     "highlight.js": "^11.12.0",
-    "i18next": "^25.8.13",
+    "i18next": "^26.5.4",
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
